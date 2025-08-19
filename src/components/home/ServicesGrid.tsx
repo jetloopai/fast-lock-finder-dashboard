@@ -100,7 +100,7 @@ const ServicesGrid = () => {
                 }}
               >
                 <CardHeader className="text-center">
-                  <div className="mx-auto w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 icon-float">
+                  <div className="mx-auto w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 icon-pulse">
                     <IconComponent className="h-8 w-8 text-accent-foreground" />
                   </div>
                   <CardTitle className="text-lg">{service.title}</CardTitle>

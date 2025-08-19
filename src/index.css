@@ -153,7 +153,7 @@ All colors MUST be HSL.
   }
 
   .animate-float {
-    animation: float 4s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
   }
 
   /* Scroll-triggered animations - initially hidden */
@@ -253,7 +253,18 @@ All colors MUST be HSL.
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-8px);
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes iconPulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 hsl(var(--accent) / 0.2);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px 5px hsl(var(--accent) / 0.3);
     }
   }
 
@@ -279,7 +290,7 @@ All colors MUST be HSL.
     text-shadow: 0 0 10px hsl(var(--accent) / 0.5);
   }
 
-  .icon-float {
-    animation: float 3s ease-in-out infinite;
+  .icon-pulse {
+    animation: iconPulse 3s ease-in-out infinite;
   }
 }
