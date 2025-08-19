@@ -50,13 +50,25 @@ const Footer = () => {
                 Emergency Lockouts
               </Link>
               <Link to="/services/residential" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                Residential
+                Residential Locksmith
               </Link>
               <Link to="/services/commercial" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                Commercial
+                Commercial Locksmith
               </Link>
               <Link to="/services/automotive" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                Automotive
+                Automotive Locksmith
+              </Link>
+              <Link to="/services/rekeying" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Lock Rekeying
+              </Link>
+              <Link to="/services/smart-locks" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Smart Locks
+              </Link>
+              <Link to="/services/key-duplication" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Key Duplication
+              </Link>
+              <Link to="/services/safes" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Safe Services
               </Link>
             </nav>
           </div>

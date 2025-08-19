@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import ServiceAreas from "./pages/ServiceAreas";
 import CityPage from "./pages/CityPage";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Emergency from "./pages/services/Emergency";
 import Residential from "./pages/services/Residential";
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/services/safes" element={<Safes />} />
             <Route path="/service-areas" element={<ServiceAreas />} />
             <Route path="/service-areas/:citySlug" element={<CityPage />} />
+            <Route path="/about" element={<About />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
