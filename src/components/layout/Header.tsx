@@ -19,10 +19,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">F</span>
-            </div>
-            <span className="font-bold text-xl text-primary">FastLockFinder</span>
+            <img 
+              src="/lovable-uploads/f6abcd6d-055f-4b46-b777-5991e5e31014.png" 
+              alt="FastLockFinder Logo" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
