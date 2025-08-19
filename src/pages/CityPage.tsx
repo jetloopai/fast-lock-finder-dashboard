@@ -210,44 +210,6 @@ const CityPage = () => {
         </div>
       </section>
 
-      {/* Surrounding Areas */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              We Also Cover These Surrounding Areas
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              FastLockFinder provides 24/7 locksmith services throughout the {city.region.toLowerCase()}
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {Object.values(cityData)
-              .filter(relatedCity => relatedCity.region === city.region && relatedCity.slug !== city.slug)
-              .slice(0, 8)
-              .map((relatedCity) => (
-                <Card key={relatedCity.slug} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-4">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <MapPin className="h-4 w-4 text-accent" />
-                      <h3 className="font-semibold text-sm">{relatedCity.name}</h3>
-                    </div>
-                    <p className="text-xs text-muted-foreground mb-3">
-                      Near {relatedCity.landmarks[0]}
-                    </p>
-                    <Button variant="outline" size="sm" className="w-full text-xs" asChild>
-                      <Link to={`/service-areas/${relatedCity.slug}-locksmith`}>
-                        View Services
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-          </div>
-        </div>
-      </section>
-
       {/* Closing CTA */}
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
