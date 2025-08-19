@@ -15,7 +15,7 @@ const useScrollAnimation = (threshold = 0.1) => {
       },
       {
         threshold,
-        rootMargin: '50px 0px -50px 0px', // Start animation slightly before element enters viewport
+        rootMargin: '100px 0px -30px 0px', // Start animation earlier for better response
       }
     );
 

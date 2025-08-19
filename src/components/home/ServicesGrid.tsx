@@ -118,7 +118,7 @@ const ServicesGrid = () => {
         >
           {services.map((service, index) => {
             const IconComponent = service.icon;
-            const cardDelay = gridVisible ? `${index * 100}ms` : '0ms';
+            const cardDelay = gridVisible ? `${Math.min(index * 50, 300)}ms` : '0ms';
             return (
               <Card 
                 key={index} 

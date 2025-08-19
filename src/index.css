@@ -206,7 +206,7 @@ All colors MUST be HSL.
   .scroll-scale {
     opacity: 0;
     transform: scale(0.8);
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
   }
 
   .scroll-scale.visible {
