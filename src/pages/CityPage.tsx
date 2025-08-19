@@ -14,11 +14,13 @@ const CityPage = () => {
     return <div>City not found</div>;
   }
 
-  // The citySlug from the route already has the city name without "-locksmith"
-  const city = getCityBySlug(citySlug);
+  // Extract city slug from the full URL parameter (remove "-locksmith" suffix)
+  const actualCitySlug = citySlug.replace("-locksmith", "");
+  const city = getCityBySlug(actualCitySlug);
   
   if (!city) {
-    console.log("City not found for slug:", citySlug);
+    console.log("City not found for slug:", actualCitySlug);
+    console.log("Original param:", citySlug);
     console.log("Available cities:", Object.keys(cityData));
     return <div>City not found</div>;
   }
