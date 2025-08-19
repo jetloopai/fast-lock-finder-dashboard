@@ -134,7 +134,7 @@ const CityPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <Link key={index} to={service.href}>
-                <Card className="text-center hover:shadow-lg transition-shadow h-full gradient-card-subtle border border-border/50 shadow-sm">
+                <Card className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105 h-full gradient-service-card border border-border/50 shadow-sm">
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                       <service.icon className="h-6 w-6 text-accent-foreground" />

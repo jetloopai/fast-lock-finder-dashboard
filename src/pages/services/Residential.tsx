@@ -58,7 +58,7 @@ const Residential = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover-lift">
+            <Card className="hover-lift gradient-service-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Lock className="h-6 w-6 text-accent-foreground" />
@@ -90,7 +90,7 @@ const Residential = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover-lift">
+            <Card className="hover-lift gradient-service-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-accent-foreground" />
@@ -122,7 +122,7 @@ const Residential = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover-lift">
+            <Card className="hover-lift gradient-service-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />
@@ -154,7 +154,7 @@ const Residential = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover-lift">
+            <Card className="hover-lift gradient-service-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Home className="h-6 w-6 text-accent-foreground" />
@@ -186,7 +186,7 @@ const Residential = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover-lift">
+            <Card className="hover-lift gradient-service-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-accent-foreground" />
@@ -218,7 +218,7 @@ const Residential = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover-lift">
+            <Card className="hover-lift gradient-service-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />

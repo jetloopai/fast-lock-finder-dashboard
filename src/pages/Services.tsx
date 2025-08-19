@@ -128,7 +128,7 @@ const Services = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <Card key={index} className="hover-lift h-full gradient-card-subtle border border-border/50 shadow-sm">
+                <Card key={index} className="hover-lift h-full gradient-service-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300">
                   <CardHeader>
                     <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-4">
                       <IconComponent className="h-8 w-8 text-accent-foreground" />
