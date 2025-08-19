@@ -260,13 +260,13 @@ const CityPage = () => {
             Don't wait - we're standing by to help you get back inside quickly and safely.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-accent" asChild>
+            <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent" asChild>
               <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
                 <span>Call: (555) FAST-LOCK</span>
               </a>
             </Button>
-            <Button variant="default" size="lg" className="bg-white text-accent hover:bg-white/90">
+            <Button variant="default" size="lg" className="bg-accent-foreground text-accent hover:bg-accent-foreground/90">
               Request Service Online
             </Button>
           </div>
