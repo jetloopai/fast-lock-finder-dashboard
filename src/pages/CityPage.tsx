@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getCityBySlug, cityData } from "@/data/cities";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -30,14 +30,14 @@ const CityPage = () => {
   const secondaryLandmark = city.landmarks[1] || city.landmarks[0];
 
   const services = [
-    { icon: Lock, name: "Emergency Lockouts", description: "Car, home, and business lockouts" },
-    { icon: Home, name: "Residential Services", description: "Lock installation, repair, and rekeying" },
-    { icon: Building, name: "Commercial Services", description: "Business security and access control" },
-    { icon: Car, name: "Automotive Services", description: "Car key replacement and programming" },
-    { icon: Key, name: "Key Duplication", description: "Professional key cutting services" },
-    { icon: Wrench, name: "Smart Locks", description: "Installation and programming" },
-    { icon: Shield, name: "Safes", description: "Installation, repair, and opening" },
-    { icon: Lock, name: "Rekeying", description: "Change locks without replacement" }
+    { icon: Lock, name: "Emergency Lockouts", description: "Car, home, and business lockouts", href: "/services/emergency" },
+    { icon: Home, name: "Residential Services", description: "Lock installation, repair, and rekeying", href: "/services/residential" },
+    { icon: Building, name: "Commercial Services", description: "Business security and access control", href: "/services/commercial" },
+    { icon: Car, name: "Automotive Services", description: "Car key replacement and programming", href: "/services/automotive" },
+    { icon: Key, name: "Key Duplication", description: "Professional key cutting services", href: "/services/key-duplication" },
+    { icon: Wrench, name: "Smart Locks", description: "Installation and programming", href: "/services/smart-locks" },
+    { icon: Shield, name: "Safes", description: "Installation, repair, and opening", href: "/services/safes" },
+    { icon: Lock, name: "Rekeying", description: "Change locks without replacement", href: "/services/rekeying" }
   ];
 
   return (
@@ -129,15 +129,20 @@ const CityPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="h-6 w-6 text-accent-foreground" />
-                  </div>
-                  <h3 className="font-semibold mb-2">{service.name}</h3>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
-                </CardContent>
-              </Card>
+              <Link key={index} to={service.href}>
+                <Card className="text-center hover:shadow-lg transition-shadow h-full">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                      <service.icon className="h-6 w-6 text-accent-foreground" />
+                    </div>
+                    <h3 className="font-semibold mb-2">{service.name}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">{service.description}</p>
+                    <Button variant="outline" size="sm" className="w-full">
+                      Learn More
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
