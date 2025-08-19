@@ -18,7 +18,7 @@ const ServiceAreasMap = () => {
           {/* Google My Map Embed */}
           <div className="relative w-full h-[480px] md:h-[600px] mb-6">
             <iframe
-              src="https://www.google.com/maps/d/u/0/embed?mid=1vKPj1vdUgZTfhndPSOw0EFaf13cssPU&ehbc=2E312F"
+              src="https://www.google.com/maps/d/embed?mid=1I_qM5snqLFX__R-FGMjF0DrABUrC4v4&ehbc=2E312F&noprof=1"
               className="w-full h-full rounded-lg shadow-md border border-border/30"
               style={{ border: 0 }}
               allowFullScreen
