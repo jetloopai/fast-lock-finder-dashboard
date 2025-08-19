@@ -1,20 +1,20 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building, Lock, Shield, Key, CheckCircle, Phone, Users, Clock } from "lucide-react";
+import { Copy, Key, Shield, Phone, CheckCircle, Clock, Wrench } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-const Commercial = () => {
+const KeyDuplication = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Commercial Locksmith Chicago | Business Security Services | Access Control</title>
+        <title>Key Duplication Chicago | Key Copying Service | Duplicate Keys</title>
         <meta 
           name="description" 
-          content="Professional commercial locksmith Chicago - business security, access control systems, master keys & emergency commercial lockouts. Licensed business locksmith." 
+          content="Professional key duplication Chicago - house keys, car keys, office keys & high-security key copying. Fast, accurate key duplication service near you." 
         />
-        <meta name="keywords" content="commercial locksmith Chicago, business locksmith, access control, master key systems, commercial lock repair, office locksmith, business security" />
-        <link rel="canonical" href="https://fastlockfinder.com/services/commercial" />
+        <meta name="keywords" content="key duplication Chicago, key copying, duplicate keys, copy keys, spare keys, key cutting service, key duplication near me" />
+        <link rel="canonical" href="https://fastlockfinder.com/services/key-duplication" />
       </Helmet>
 
       {/* Hero Section */}
@@ -22,11 +22,11 @@ const Commercial = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Commercial Locksmith Services
+              Professional Key Duplication Chicago
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Protect your business with professional commercial locksmith services. From access control systems 
-              to emergency lockouts, FastLockFinder keeps your business secure and operational 24/7.
+              Need spare keys? FastLockFinder provides fast, accurate key duplication services for homes, 
+              cars, and businesses. Professional key cutting with precision and reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
@@ -36,23 +36,58 @@ const Commercial = () => {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Business Security Consultation
+                Get Keys Made Today
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Commercial Services */}
+      {/* Key Duplication Benefits */}
+      <section className="py-12 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Fast Service</h3>
+                <p className="text-sm text-muted-foreground">Most keys duplicated while you wait</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Precision Cutting</h3>
+                <p className="text-sm text-muted-foreground">Professional equipment ensures perfect copies</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Copy className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">All Key Types</h3>
+                <p className="text-sm text-muted-foreground">Standard to high-security key duplication</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Types */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Complete Business Security Solutions
+              Complete Key Duplication Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Your business deserves enterprise-level security. Our commercial locksmith services provide 
-              comprehensive solutions for businesses of all sizes.
+              Professional key cutting and duplication for all types of keys, from standard house keys 
+              to specialized high-security systems.
             </p>
           </div>
 
@@ -60,62 +95,30 @@ const Commercial = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-accent-foreground" />
-                </div>
-                <CardTitle>Access Control Systems</CardTitle>
-                <CardDescription>
-                  Advanced access control solutions to manage who enters your business and when.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Keycard entry systems</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Biometric scanners</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Remote access management</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Employee tracking</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-lift">
-              <CardHeader>
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Master Key Systems</CardTitle>
+                <CardTitle>House Key Duplication</CardTitle>
                 <CardDescription>
-                  Efficient master key systems that provide security while maintaining convenience.
+                  Standard residential key copying for all family members and spare keys.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Custom key hierarchies</span>
+                    <span>Standard house keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Grand master keys</span>
+                    <span>Deadbolt keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Restricted key systems</span>
+                    <span>Mailbox keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Key control programs</span>
+                    <span>Same-day service</span>
                   </li>
                 </ul>
               </CardContent>
@@ -124,30 +127,30 @@ const Commercial = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Clock className="h-6 w-6 text-accent-foreground" />
+                  <Wrench className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Emergency Lockouts</CardTitle>
+                <CardTitle>Car Key Duplication</CardTitle>
                 <CardDescription>
-                  24/7 emergency commercial lockout service to get your business back online fast.
+                  Automotive key cutting for all vehicle makes and models.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Office building lockouts</span>
+                    <span>Standard car keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Retail store emergencies</span>
+                    <span>Transponder keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Warehouse access</span>
+                    <span>Laser-cut keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Priority response</span>
+                    <span>Key programming available</span>
                   </li>
                 </ul>
               </CardContent>
@@ -158,28 +161,28 @@ const Commercial = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>High-Security Locks</CardTitle>
+                <CardTitle>Office Key Duplication</CardTitle>
                 <CardDescription>
-                  Advanced commercial-grade locks designed to protect valuable assets and inventory.
+                  Commercial key copying for businesses and office environments.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Grade 1 deadbolts</span>
+                    <span>Office building keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Anti-drill cylinders</span>
+                    <span>Cabinet keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Magnetic locks</span>
+                    <span>Master key systems</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Electric strikes</span>
+                    <span>Bulk duplication</span>
                   </li>
                 </ul>
               </CardContent>
@@ -188,30 +191,30 @@ const Commercial = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Building className="h-6 w-6 text-accent-foreground" />
+                  <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Security Consulting</CardTitle>
+                <CardTitle>High-Security Keys</CardTitle>
                 <CardDescription>
-                  Professional security assessments and recommendations for your business.
+                  Specialized duplication for restricted and high-security key systems.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Vulnerability assessments</span>
+                    <span>Restricted key systems</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Security planning</span>
+                    <span>Medeco keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Compliance guidance</span>
+                    <span>ASSA ABLOY keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Budget planning</span>
+                    <span>Authorization required</span>
                   </li>
                 </ul>
               </CardContent>
@@ -220,30 +223,62 @@ const Commercial = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Lock className="h-6 w-6 text-accent-foreground" />
+                  <Copy className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Lock Maintenance</CardTitle>
+                <CardTitle>Specialty Key Cutting</CardTitle>
                 <CardDescription>
-                  Regular maintenance programs to keep your commercial locks functioning perfectly.
+                  Custom key cutting for unusual locks and specialty applications.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Scheduled maintenance</span>
+                    <span>Antique lock keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Lubrication services</span>
+                    <span>Safe keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Preventive repairs</span>
+                    <span>Skeleton keys</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Performance optimization</span>
+                    <span>Custom solutions</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover-lift">
+              <CardHeader>
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <Clock className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <CardTitle>Emergency Key Service</CardTitle>
+                <CardDescription>
+                  Fast key duplication when you need spare keys urgently.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>While-you-wait service</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Mobile key cutting</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Same-day availability</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Quality guarantee</span>
                   </li>
                 </ul>
               </CardContent>
@@ -252,53 +287,53 @@ const Commercial = () => {
         </div>
       </section>
 
-      {/* Industries We Serve */}
+      {/* Process */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Industries We Serve
+              How Our Key Duplication Works
             </h2>
             <p className="text-xl text-muted-foreground">
-              Specialized commercial locksmith services tailored to your industry's unique security needs
+              Professional key cutting process for accurate, reliable duplicates
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="h-8 w-8 text-accent-foreground" />
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
+                1
               </div>
-              <h3 className="font-semibold mb-2">Office Buildings</h3>
+              <h3 className="font-semibold mb-2">Key Analysis</h3>
               <p className="text-sm text-muted-foreground">
-                Professional offices, corporate headquarters, and business complexes
+                We examine your original key to determine the best cutting method
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-accent-foreground" />
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
+                2
               </div>
-              <h3 className="font-semibold mb-2">Retail Stores</h3>
+              <h3 className="font-semibold mb-2">Precision Cutting</h3>
               <p className="text-sm text-muted-foreground">
-                Shopping centers, boutiques, and retail establishments of all sizes
+                Professional key cutting machines ensure accurate duplication
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-accent-foreground" />
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
+                3
               </div>
-              <h3 className="font-semibold mb-2">Healthcare</h3>
+              <h3 className="font-semibold mb-2">Quality Testing</h3>
               <p className="text-sm text-muted-foreground">
-                Medical offices, clinics, hospitals, and healthcare facilities
+                Each duplicate key is tested to ensure proper function
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lock className="h-8 w-8 text-accent-foreground" />
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
+                4
               </div>
-              <h3 className="font-semibold mb-2">Industrial</h3>
+              <h3 className="font-semibold mb-2">Final Inspection</h3>
               <p className="text-sm text-muted-foreground">
-                Warehouses, manufacturing facilities, and industrial complexes
+                Complete quality check before delivery to ensure perfection
               </p>
             </div>
           </div>
@@ -309,11 +344,11 @@ const Commercial = () => {
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Secure Your Business Today
+            Need Keys Duplicated Today?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Don't leave your business vulnerable. Contact FastLockFinder for a comprehensive 
-            security consultation and professional commercial locksmith services.
+            Don't get caught without spare keys. Contact FastLockFinder for fast, accurate key duplication 
+            services with professional quality and reliability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent" asChild>
@@ -323,7 +358,7 @@ const Commercial = () => {
               </a>
             </Button>
             <Button variant="default" size="lg" className="bg-accent-foreground text-accent hover:bg-accent-foreground/90">
-              Schedule Consultation
+              Get Keys Made Now
             </Button>
           </div>
         </div>
@@ -332,4 +367,4 @@ const Commercial = () => {
   );
 };
 
-export default Commercial;
+export default KeyDuplication;

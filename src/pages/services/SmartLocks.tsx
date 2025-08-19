@@ -1,20 +1,20 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building, Lock, Shield, Key, CheckCircle, Phone, Users, Clock } from "lucide-react";
+import { Smartphone, Wifi, Shield, Key, CheckCircle, Phone, Battery } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-const Commercial = () => {
+const SmartLocks = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Commercial Locksmith Chicago | Business Security Services | Access Control</title>
+        <title>Smart Lock Installation Chicago | Keyless Entry Systems | Digital Locks</title>
         <meta 
           name="description" 
-          content="Professional commercial locksmith Chicago - business security, access control systems, master keys & emergency commercial lockouts. Licensed business locksmith." 
+          content="Professional smart lock installation Chicago - keyless entry, digital locks, WiFi smart locks & app-controlled security. Expert smart lock installation & setup." 
         />
-        <meta name="keywords" content="commercial locksmith Chicago, business locksmith, access control, master key systems, commercial lock repair, office locksmith, business security" />
-        <link rel="canonical" href="https://fastlockfinder.com/services/commercial" />
+        <meta name="keywords" content="smart lock installation Chicago, keyless entry, digital locks, smart home security, WiFi locks, app controlled locks, electronic locks" />
+        <link rel="canonical" href="https://fastlockfinder.com/services/smart-locks" />
       </Helmet>
 
       {/* Hero Section */}
@@ -22,11 +22,11 @@ const Commercial = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Commercial Locksmith Services
+              Smart Lock Installation Chicago
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Protect your business with professional commercial locksmith services. From access control systems 
-              to emergency lockouts, FastLockFinder keeps your business secure and operational 24/7.
+              Upgrade to modern smart lock technology with FastLockFinder's professional installation services. 
+              Enjoy keyless entry, remote access, and enhanced security for your home or business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
@@ -36,23 +36,58 @@ const Commercial = () => {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Business Security Consultation
+                Smart Lock Consultation
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Commercial Services */}
+      {/* Smart Lock Features */}
+      <section className="py-12 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">App Control</h3>
+                <p className="text-sm text-muted-foreground">Control your locks from anywhere with smartphone apps</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Key className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Keyless Entry</h3>
+                <p className="text-sm text-muted-foreground">No more lost keys - use codes, apps, or biometrics</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Enhanced Security</h3>
+                <p className="text-sm text-muted-foreground">Advanced encryption and monitoring capabilities</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Smart Lock Types */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Complete Business Security Solutions
+              Smart Lock Installation Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Your business deserves enterprise-level security. Our commercial locksmith services provide 
-              comprehensive solutions for businesses of all sizes.
+              Professional installation of the latest smart lock technology, customized for your security needs 
+              and lifestyle preferences.
             </p>
           </div>
 
@@ -60,30 +95,62 @@ const Commercial = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-accent-foreground" />
+                  <Wifi className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Access Control Systems</CardTitle>
+                <CardTitle>WiFi Smart Locks</CardTitle>
                 <CardDescription>
-                  Advanced access control solutions to manage who enters your business and when.
+                  Connect directly to your home WiFi for remote access and control.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Keycard entry systems</span>
+                    <span>Remote access from anywhere</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Biometric scanners</span>
+                    <span>Real-time notifications</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Remote access management</span>
+                    <span>Guest access management</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Employee tracking</span>
+                    <span>Activity logging</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover-lift">
+              <CardHeader>
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <Smartphone className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <CardTitle>Bluetooth Smart Locks</CardTitle>
+                <CardDescription>
+                  Proximity-based locks that unlock automatically when you approach.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Auto-unlock feature</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Low power consumption</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Phone app control</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Enhanced privacy</span>
                   </li>
                 </ul>
               </CardContent>
@@ -94,60 +161,28 @@ const Commercial = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Master Key Systems</CardTitle>
+                <CardTitle>Keypad Smart Locks</CardTitle>
                 <CardDescription>
-                  Efficient master key systems that provide security while maintaining convenience.
+                  Digital keypads with customizable access codes for family and guests.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Custom key hierarchies</span>
+                    <span>Multiple user codes</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Grand master keys</span>
+                    <span>Temporary access codes</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Restricted key systems</span>
+                    <span>Backlit keypad</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Key control programs</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-lift">
-              <CardHeader>
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Clock className="h-6 w-6 text-accent-foreground" />
-                </div>
-                <CardTitle>Emergency Lockouts</CardTitle>
-                <CardDescription>
-                  24/7 emergency commercial lockout service to get your business back online fast.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Office building lockouts</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Retail store emergencies</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Warehouse access</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Priority response</span>
+                    <span>Weather resistant</span>
                   </li>
                 </ul>
               </CardContent>
@@ -158,28 +193,28 @@ const Commercial = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>High-Security Locks</CardTitle>
+                <CardTitle>Biometric Smart Locks</CardTitle>
                 <CardDescription>
-                  Advanced commercial-grade locks designed to protect valuable assets and inventory.
+                  Advanced fingerprint and facial recognition technology for ultimate security.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Grade 1 deadbolts</span>
+                    <span>Fingerprint recognition</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Anti-drill cylinders</span>
+                    <span>Facial recognition</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Magnetic locks</span>
+                    <span>Multiple user storage</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Electric strikes</span>
+                    <span>Anti-spoofing technology</span>
                   </li>
                 </ul>
               </CardContent>
@@ -188,30 +223,30 @@ const Commercial = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Building className="h-6 w-6 text-accent-foreground" />
+                  <Battery className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Security Consulting</CardTitle>
+                <CardTitle>Z-Wave Smart Locks</CardTitle>
                 <CardDescription>
-                  Professional security assessments and recommendations for your business.
+                  Integrate with home automation systems for complete smart home control.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Vulnerability assessments</span>
+                    <span>Smart home integration</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Security planning</span>
+                    <span>Automation compatibility</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Compliance guidance</span>
+                    <span>Voice control support</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Budget planning</span>
+                    <span>Extended battery life</span>
                   </li>
                 </ul>
               </CardContent>
@@ -220,30 +255,30 @@ const Commercial = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Lock className="h-6 w-6 text-accent-foreground" />
+                  <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Lock Maintenance</CardTitle>
+                <CardTitle>Hybrid Smart Locks</CardTitle>
                 <CardDescription>
-                  Regular maintenance programs to keep your commercial locks functioning perfectly.
+                  Combine traditional key access with smart technology features.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Scheduled maintenance</span>
+                    <span>Traditional key backup</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Lubrication services</span>
+                    <span>Smart features available</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Preventive repairs</span>
+                    <span>Retrofit compatible</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Performance optimization</span>
+                    <span>Easy installation</span>
                   </li>
                 </ul>
               </CardContent>
@@ -252,54 +287,36 @@ const Commercial = () => {
         </div>
       </section>
 
-      {/* Industries We Serve */}
+      {/* Popular Brands */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Industries We Serve
+              Popular Smart Lock Brands We Install
             </h2>
             <p className="text-xl text-muted-foreground">
-              Specialized commercial locksmith services tailored to your industry's unique security needs
+              Professional installation of leading smart lock manufacturers
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="h-8 w-8 text-accent-foreground" />
-              </div>
-              <h3 className="font-semibold mb-2">Office Buildings</h3>
-              <p className="text-sm text-muted-foreground">
-                Professional offices, corporate headquarters, and business complexes
-              </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+            <div className="p-4">
+              <h3 className="font-semibold">August</h3>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-accent-foreground" />
-              </div>
-              <h3 className="font-semibold mb-2">Retail Stores</h3>
-              <p className="text-sm text-muted-foreground">
-                Shopping centers, boutiques, and retail establishments of all sizes
-              </p>
+            <div className="p-4">
+              <h3 className="font-semibold">Yale</h3>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-accent-foreground" />
-              </div>
-              <h3 className="font-semibold mb-2">Healthcare</h3>
-              <p className="text-sm text-muted-foreground">
-                Medical offices, clinics, hospitals, and healthcare facilities
-              </p>
+            <div className="p-4">
+              <h3 className="font-semibold">Schlage</h3>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lock className="h-8 w-8 text-accent-foreground" />
-              </div>
-              <h3 className="font-semibold mb-2">Industrial</h3>
-              <p className="text-sm text-muted-foreground">
-                Warehouses, manufacturing facilities, and industrial complexes
-              </p>
+            <div className="p-4">
+              <h3 className="font-semibold">Kwikset</h3>
+            </div>
+            <div className="p-4">
+              <h3 className="font-semibold">Nest x Yale</h3>
+            </div>
+            <div className="p-4">
+              <h3 className="font-semibold">Samsung</h3>
             </div>
           </div>
         </div>
@@ -309,11 +326,11 @@ const Commercial = () => {
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Secure Your Business Today
+            Ready to Upgrade to Smart Lock Technology?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Don't leave your business vulnerable. Contact FastLockFinder for a comprehensive 
-            security consultation and professional commercial locksmith services.
+            Experience the convenience and security of smart locks. Contact FastLockFinder for professional 
+            smart lock installation and setup services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent" asChild>
@@ -323,7 +340,7 @@ const Commercial = () => {
               </a>
             </Button>
             <Button variant="default" size="lg" className="bg-accent-foreground text-accent hover:bg-accent-foreground/90">
-              Schedule Consultation
+              Schedule Installation
             </Button>
           </div>
         </div>
@@ -332,4 +349,4 @@ const Commercial = () => {
   );
 };
 
-export default Commercial;
+export default SmartLocks;

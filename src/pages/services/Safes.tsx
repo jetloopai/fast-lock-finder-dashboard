@@ -1,20 +1,20 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building, Lock, Shield, Key, CheckCircle, Phone, Users, Clock } from "lucide-react";
+import { Shield, Lock, Key, Phone, CheckCircle, Wrench, AlertTriangle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-const Commercial = () => {
+const Safes = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Commercial Locksmith Chicago | Business Security Services | Access Control</title>
+        <title>Safe Locksmith Chicago | Safe Opening | Safe Installation & Repair</title>
         <meta 
           name="description" 
-          content="Professional commercial locksmith Chicago - business security, access control systems, master keys & emergency commercial lockouts. Licensed business locksmith." 
+          content="Professional safe locksmith Chicago - safe opening, combination reset, safe installation & repair. Emergency safe lockout service for all safe types." 
         />
-        <meta name="keywords" content="commercial locksmith Chicago, business locksmith, access control, master key systems, commercial lock repair, office locksmith, business security" />
-        <link rel="canonical" href="https://fastlockfinder.com/services/commercial" />
+        <meta name="keywords" content="safe locksmith Chicago, safe opening, safe installation, safe repair, combination reset, gun safe, home safe, commercial safe" />
+        <link rel="canonical" href="https://fastlockfinder.com/services/safes" />
       </Helmet>
 
       {/* Hero Section */}
@@ -22,11 +22,11 @@ const Commercial = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Commercial Locksmith Services
+              Professional Safe Locksmith Chicago
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Protect your business with professional commercial locksmith services. From access control systems 
-              to emergency lockouts, FastLockFinder keeps your business secure and operational 24/7.
+              Locked out of your safe? Need installation or repair? FastLockFinder provides expert safe services 
+              for home and commercial safes, gun safes, and vault systems across Chicago's suburbs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
@@ -36,23 +36,58 @@ const Commercial = () => {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Business Security Consultation
+                Emergency Safe Opening
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Commercial Services */}
+      {/* Safe Emergency Stats */}
+      <section className="py-12 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Emergency Service</h3>
+                <p className="text-sm text-muted-foreground">24/7 safe lockout emergency response</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">All Safe Types</h3>
+                <p className="text-sm text-muted-foreground">Home, commercial, gun safes & more</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Wrench className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Expert Service</h3>
+                <p className="text-sm text-muted-foreground">Specialized safe technicians</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Safe Services */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Complete Business Security Solutions
+              Complete Safe Locksmith Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Your business deserves enterprise-level security. Our commercial locksmith services provide 
-              comprehensive solutions for businesses of all sizes.
+              Professional safe services for all your security needs, from emergency safe opening 
+              to installation and maintenance of all safe types.
             </p>
           </div>
 
@@ -60,94 +95,30 @@ const Commercial = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-accent-foreground" />
-                </div>
-                <CardTitle>Access Control Systems</CardTitle>
-                <CardDescription>
-                  Advanced access control solutions to manage who enters your business and when.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Keycard entry systems</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Biometric scanners</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Remote access management</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Employee tracking</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-lift">
-              <CardHeader>
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Master Key Systems</CardTitle>
+                <CardTitle>Safe Opening Service</CardTitle>
                 <CardDescription>
-                  Efficient master key systems that provide security while maintaining convenience.
+                  Professional safe opening when you're locked out or forgot the combination.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Custom key hierarchies</span>
+                    <span>Digital safe opening</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Grand master keys</span>
+                    <span>Combination safe opening</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Restricted key systems</span>
+                    <span>Key safe opening</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Key control programs</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="hover-lift">
-              <CardHeader>
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Clock className="h-6 w-6 text-accent-foreground" />
-                </div>
-                <CardTitle>Emergency Lockouts</CardTitle>
-                <CardDescription>
-                  24/7 emergency commercial lockout service to get your business back online fast.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Office building lockouts</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Retail store emergencies</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Warehouse access</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Priority response</span>
+                    <span>No damage methods</span>
                   </li>
                 </ul>
               </CardContent>
@@ -158,28 +129,28 @@ const Commercial = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>High-Security Locks</CardTitle>
+                <CardTitle>Safe Installation</CardTitle>
                 <CardDescription>
-                  Advanced commercial-grade locks designed to protect valuable assets and inventory.
+                  Professional safe installation for home and business security needs.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Grade 1 deadbolts</span>
+                    <span>Home safe installation</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Anti-drill cylinders</span>
+                    <span>Gun safe setup</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Magnetic locks</span>
+                    <span>Commercial vault installation</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Electric strikes</span>
+                    <span>Floor & wall mounting</span>
                   </li>
                 </ul>
               </CardContent>
@@ -188,30 +159,30 @@ const Commercial = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Building className="h-6 w-6 text-accent-foreground" />
+                  <Wrench className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Security Consulting</CardTitle>
+                <CardTitle>Combination Reset</CardTitle>
                 <CardDescription>
-                  Professional security assessments and recommendations for your business.
+                  Reset forgotten combinations and reprogram digital safe access codes.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Vulnerability assessments</span>
+                    <span>Digital code reset</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Security planning</span>
+                    <span>Mechanical combination change</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Compliance guidance</span>
+                    <span>Master code programming</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Budget planning</span>
+                    <span>User manual training</span>
                   </li>
                 </ul>
               </CardContent>
@@ -222,28 +193,92 @@ const Commercial = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Lock className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Lock Maintenance</CardTitle>
+                <CardTitle>Safe Repair Services</CardTitle>
                 <CardDescription>
-                  Regular maintenance programs to keep your commercial locks functioning perfectly.
+                  Expert repair for damaged safe locks, hinges, and electronic components.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Scheduled maintenance</span>
+                    <span>Lock mechanism repair</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Lubrication services</span>
+                    <span>Hinge replacement</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Preventive repairs</span>
+                    <span>Electronic component repair</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Performance optimization</span>
+                    <span>Battery replacement</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover-lift">
+              <CardHeader>
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <Shield className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <CardTitle>Gun Safe Services</CardTitle>
+                <CardDescription>
+                  Specialized services for gun safes and firearm security systems.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Gun safe opening</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Biometric setup</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Quick access configuration</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Compliance consultation</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover-lift">
+              <CardHeader>
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                  <AlertTriangle className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <CardTitle>Emergency Safe Service</CardTitle>
+                <CardDescription>
+                  24/7 emergency safe services when you need immediate access.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>24/7 availability</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Rapid response</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>Emergency opening</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4 text-accent" />
+                    <span>After-hours service</span>
                   </li>
                 </ul>
               </CardContent>
@@ -252,54 +287,100 @@ const Commercial = () => {
         </div>
       </section>
 
-      {/* Industries We Serve */}
+      {/* Safe Types */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Industries We Serve
+              Safe Types We Service
             </h2>
             <p className="text-xl text-muted-foreground">
-              Specialized commercial locksmith services tailored to your industry's unique security needs
+              Expert service for all types of safes and security storage systems
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="h-8 w-8 text-accent-foreground" />
-              </div>
-              <h3 className="font-semibold mb-2">Office Buildings</h3>
-              <p className="text-sm text-muted-foreground">
-                Professional offices, corporate headquarters, and business complexes
-              </p>
+            <Card className="text-center hover-lift">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-accent-foreground" />
+                </div>
+                <h3 className="font-semibold mb-2">Home Safes</h3>
+                <p className="text-sm text-muted-foreground">
+                  Personal safes for jewelry, documents, and valuables
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-lift">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Lock className="h-8 w-8 text-accent-foreground" />
+                </div>
+                <h3 className="font-semibold mb-2">Gun Safes</h3>
+                <p className="text-sm text-muted-foreground">
+                  Firearm storage safes and quick access gun safes
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-lift">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Wrench className="h-8 w-8 text-accent-foreground" />
+                </div>
+                <h3 className="font-semibold mb-2">Commercial Safes</h3>
+                <p className="text-sm text-muted-foreground">
+                  Business safes, drop safes, and commercial vaults
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover-lift">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Key className="h-8 w-8 text-accent-foreground" />
+                </div>
+                <h3 className="font-semibold mb-2">Vault Systems</h3>
+                <p className="text-sm text-muted-foreground">
+                  Bank vaults, large commercial vault systems
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Safe Brands */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Safe Brands We Service
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Expert service for all major safe manufacturers
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+            <div className="p-4">
+              <h3 className="font-semibold">SentrySafe</h3>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-accent-foreground" />
-              </div>
-              <h3 className="font-semibold mb-2">Retail Stores</h3>
-              <p className="text-sm text-muted-foreground">
-                Shopping centers, boutiques, and retail establishments of all sizes
-              </p>
+            <div className="p-4">
+              <h3 className="font-semibold">Stack-On</h3>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-accent-foreground" />
-              </div>
-              <h3 className="font-semibold mb-2">Healthcare</h3>
-              <p className="text-sm text-muted-foreground">
-                Medical offices, clinics, hospitals, and healthcare facilities
-              </p>
+            <div className="p-4">
+              <h3 className="font-semibold">Liberty Safe</h3>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lock className="h-8 w-8 text-accent-foreground" />
-              </div>
-              <h3 className="font-semibold mb-2">Industrial</h3>
-              <p className="text-sm text-muted-foreground">
-                Warehouses, manufacturing facilities, and industrial complexes
-              </p>
+            <div className="p-4">
+              <h3 className="font-semibold">Cannon Safe</h3>
+            </div>
+            <div className="p-4">
+              <h3 className="font-semibold">AMSEC</h3>
+            </div>
+            <div className="p-4">
+              <h3 className="font-semibold">Browning</h3>
             </div>
           </div>
         </div>
@@ -309,11 +390,11 @@ const Commercial = () => {
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Secure Your Business Today
+            Need Safe Locksmith Service?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Don't leave your business vulnerable. Contact FastLockFinder for a comprehensive 
-            security consultation and professional commercial locksmith services.
+            Whether you're locked out of your safe or need professional installation, FastLockFinder's 
+            safe experts are ready to help with fast, reliable service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent" asChild>
@@ -323,7 +404,7 @@ const Commercial = () => {
               </a>
             </Button>
             <Button variant="default" size="lg" className="bg-accent-foreground text-accent hover:bg-accent-foreground/90">
-              Schedule Consultation
+              Schedule Safe Service
             </Button>
           </div>
         </div>
@@ -332,4 +413,4 @@ const Commercial = () => {
   );
 };
 
-export default Commercial;
+export default Safes;

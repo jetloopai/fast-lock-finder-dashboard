@@ -8,11 +8,13 @@ const Residential = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Residential Locksmith Services | Home Security | FastLockFinder</title>
+        <title>Residential Locksmith Chicago | Home Security Services | Lock Installation</title>
         <meta 
           name="description" 
-          content="Professional residential locksmith services for your home. Lock installation, repair, rekeying, and security upgrades across Chicago's South & Southwest suburbs." 
+          content="Professional residential locksmith Chicago - home lock installation, repair, rekeying & security upgrades. Licensed home locksmith serving South & Southwest suburbs." 
         />
+        <meta name="keywords" content="residential locksmith Chicago, home locksmith, lock installation, home security, house locksmith, residential lock repair, home lock rekeying" />
+        <link rel="canonical" href="https://fastlockfinder.com/services/residential" />
       </Helmet>
 
       {/* Hero Section */}

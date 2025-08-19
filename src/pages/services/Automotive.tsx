@@ -8,11 +8,13 @@ const Automotive = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Automotive Locksmith Services | Car Key Replacement | FastLockFinder</title>
+        <title>Auto Locksmith Chicago | Car Key Replacement | Emergency Car Lockout</title>
         <meta 
           name="description" 
-          content="Professional automotive locksmith services. Car key replacement, ignition repair, and emergency car lockouts across Chicago's South & Southwest suburbs." 
+          content="Professional auto locksmith Chicago - car key replacement, emergency car lockouts, ignition repair & transponder programming. 24/7 automotive locksmith service." 
         />
+        <meta name="keywords" content="auto locksmith Chicago, car locksmith, car key replacement, automotive locksmith, car lockout service, ignition repair, transponder key programming" />
+        <link rel="canonical" href="https://fastlockfinder.com/services/automotive" />
       </Helmet>
 
       {/* Hero Section */}

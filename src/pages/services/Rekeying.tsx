@@ -8,11 +8,13 @@ const Rekeying = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Lock Rekeying Services | Change Locks Without Replacement | FastLockFinder</title>
+        <title>Lock Rekeying Chicago | Rekey Locks Service | Change Lock Keys</title>
         <meta 
           name="description" 
-          content="Professional lock rekeying services to change your locks without replacement. Cost-effective security upgrades for homes and businesses in Chicago suburbs." 
+          content="Professional lock rekeying Chicago - change your locks without replacement. Cost-effective rekey service for homes & businesses. Same-day lock rekeying available." 
         />
+        <meta name="keywords" content="lock rekeying Chicago, rekey locks, change lock keys, lock rekeying service, rekey house locks, commercial rekeying, rekeying near me" />
+        <link rel="canonical" href="https://fastlockfinder.com/services/rekeying" />
       </Helmet>
 
       {/* Hero Section */}
