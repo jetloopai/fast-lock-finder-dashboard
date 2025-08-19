@@ -35,7 +35,7 @@ const Commercial = () => {
                   <span>Call: (555) FAST-LOCK</span>
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 Business Security Consultation
               </Button>
             </div>

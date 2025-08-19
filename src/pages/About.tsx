@@ -61,7 +61,7 @@ const About = () => {
               professional, and reliable locksmith services available 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
                 <a href="tel:+1-555-FAST-LOCK">Call: (555) FAST-LOCK</a>
               </Button>
               <Button variant="secondary" size="lg" asChild>
