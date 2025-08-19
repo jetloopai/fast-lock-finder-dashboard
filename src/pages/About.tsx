@@ -207,7 +207,7 @@ const About = () => {
           <p className="text-lg mb-8 opacity-90">
             From Oak Lawn to Orland Park, from Burbank to Tinley Park - we're your local locksmith experts.
           </p>
-          <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent" asChild>
+          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
             <Link to="/service-areas">View All Service Areas</Link>
           </Button>
         </div>
