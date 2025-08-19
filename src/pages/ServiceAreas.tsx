@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Clock } from "lucide-react";
+import ServiceAreasMap from "@/components/common/ServiceAreasMap";
 
 const southSuburbs = [
   { name: "Oak Lawn", slug: "oak-lawn" },
@@ -109,6 +110,9 @@ const ServiceAreas = () => {
           </div>
         </div>
       </section>
+
+      {/* Service Areas Map */}
+      <ServiceAreasMap />
 
       {/* Service Areas Grid */}
       <section className="py-20 bg-background">
