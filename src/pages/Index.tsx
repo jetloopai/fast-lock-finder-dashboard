@@ -6,7 +6,7 @@ import HowItWorks from "@/components/home/HowItWorks";
 import Reviews from "@/components/home/Reviews";
 import FAQ from "@/components/home/FAQ";
 import ClosingCTA from "@/components/home/ClosingCTA";
-import CityReviews from "@/components/home/CityReviews";
+
 import EmergencySituations from "@/components/home/EmergencySituations";
 import PricingInfo from "@/components/home/PricingInfo";
 import BrandsEquipment from "@/components/home/BrandsEquipment";
@@ -72,7 +72,7 @@ const Index = () => {
       <PricingInfo />
       <HowItWorks />
       <BrandsEquipment />
-      <CityReviews cityName="Oak Lawn" landmark1="Oak Lawn Park District" landmark2="Christ Hospital" />
+      
       <Reviews />
       <FAQ />
       <ClosingCTA />
