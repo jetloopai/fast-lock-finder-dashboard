@@ -154,7 +154,7 @@ export const cityData: Record<string, City> = {
   "sauk-village": {
     name: "Sauk Village",
     slug: "sauk-village",
-    landmarks: ["Strassburg School", "Sauk Trail Industrial Park"],
+    landmarks: ["Strassburg School", "Sauk Trail Woods"],
     region: "South Suburbs"
   },
   "glenwood": {
@@ -174,7 +174,7 @@ export const cityData: Record<string, City> = {
   "bridgeview": {
     name: "Bridgeview",
     slug: "bridgeview",
-    landmarks: ["SeatGeek Stadium", "Toyota Park area"],
+    landmarks: ["SeatGeek Stadium", "Reavis High School"],
     region: "Southwest Suburbs"
   },
   "hickory-hills": {
@@ -198,7 +198,7 @@ export const cityData: Record<string, City> = {
   "bedford-park": {
     name: "Bedford Park",
     slug: "bedford-park",
-    landmarks: ["Bedford Industrial Corridor", "Toyota Park area"],
+    landmarks: ["CSX Intermodal Terminal", "SeatGeek Stadium area"],
     region: "Southwest Suburbs"
   },
   "chicago-ridge": {
