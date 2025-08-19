@@ -9,6 +9,11 @@ import Services from "./pages/Services";
 import ServiceAreas from "./pages/ServiceAreas";
 import CityPage from "./pages/CityPage";
 import NotFound from "./pages/NotFound";
+import Emergency from "./pages/services/Emergency";
+import Residential from "./pages/services/Residential";
+import Commercial from "./pages/services/Commercial";
+import Automotive from "./pages/services/Automotive";
+import Rekeying from "./pages/services/Rekeying";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +27,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/emergency" element={<Emergency />} />
+            <Route path="/services/residential" element={<Residential />} />
+            <Route path="/services/commercial" element={<Commercial />} />
+            <Route path="/services/automotive" element={<Automotive />} />
+            <Route path="/services/rekeying" element={<Rekeying />} />
             <Route path="/service-areas" element={<ServiceAreas />} />
             <Route path="/service-areas/:citySlug" element={<CityPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
