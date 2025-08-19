@@ -43,7 +43,7 @@ const ClosingCTA = () => {
               <div className="text-primary-foreground/80">Always Available</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-accent">48 Cities</div>
+              <div className="text-3xl font-bold text-accent">50+ Cities</div>
               <div className="text-primary-foreground/80">South & Southwest Suburbs</div>
             </div>
           </div>

@@ -92,7 +92,7 @@ const ServiceAreas = () => {
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="h-8 w-8 text-accent-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">48 Cities</h3>
+                <h3 className="text-xl font-semibold mb-2">50+ Cities</h3>
                 <p className="text-muted-foreground">Complete coverage across South & Southwest suburbs</p>
               </CardContent>
             </Card>
