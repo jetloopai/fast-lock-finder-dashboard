@@ -255,7 +255,7 @@ const Emergency = () => {
             to get you unlocked and back inside within minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild>
+            <Button variant="default" size="lg" asChild>
               <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
                 <span>Call: (555) FAST-LOCK</span>
