@@ -22,7 +22,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/f6abcd6d-055f-4b46-b777-5991e5e31014.png" 
               alt="FastLockFinder Logo" 
-              className="h-10 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 
