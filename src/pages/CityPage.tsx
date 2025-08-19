@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Phone, Clock, Shield, Star, MapPin, Home, Building, Car, Key, Lock, DollarSign, Wrench } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import CityReviews from "@/components/home/CityReviews";
 
 const CityPage = () => {
   const { citySlug } = useParams();
@@ -161,6 +162,9 @@ const CityPage = () => {
           </Card>
         </div>
       </section>
+
+      {/* City Reviews */}
+      <CityReviews cityName={city.name} landmark1={primaryLandmark} landmark2={secondaryLandmark} />
 
       {/* FAQ Section */}
       <section className="py-20 bg-background">
