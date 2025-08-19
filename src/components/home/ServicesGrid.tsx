@@ -65,10 +65,10 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-20 bg-secondary animate-fade-in">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-slide-up">
             Complete Locksmith Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -81,9 +81,9 @@ const ServicesGrid = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="hover-lift group">
+              <Card key={index} className="hover-lift hover-glow group animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardHeader className="text-center">
-                  <div className="mx-auto w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="mx-auto w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 icon-float">
                     <IconComponent className="h-8 w-8 text-accent-foreground" />
                   </div>
                   <CardTitle className="text-lg">{service.title}</CardTitle>
@@ -100,7 +100,7 @@ const ServicesGrid = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="cta" size="lg" asChild>
+          <Button variant="cta" size="lg" className="animate-glow hover-glow" asChild>
             <Link to="/services">View All Services</Link>
           </Button>
         </div>
