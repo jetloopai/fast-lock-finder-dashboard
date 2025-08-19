@@ -1,0 +1,103 @@
+import { Link } from "react-router-dom";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-primary text-primary-foreground">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                <span className="text-accent-foreground font-bold text-lg">F</span>
+              </div>
+              <span className="font-bold text-xl">FastLockFinder</span>
+            </div>
+            <p className="text-primary-foreground/80">
+              Fast, reliable 24/7 locksmith service across Chicago's South & Southwest suburbs.
+            </p>
+            <div className="flex items-center space-x-2 text-primary-foreground/80">
+              <Clock className="h-4 w-4" />
+              <span>24/7 Emergency Service</span>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Quick Links</h3>
+            <nav className="flex flex-col space-y-2">
+              <Link to="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Home
+              </Link>
+              <Link to="/services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Services
+              </Link>
+              <Link to="/service-areas" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Service Areas
+              </Link>
+              <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                About Us
+              </Link>
+            </nav>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Services</h3>
+            <nav className="flex flex-col space-y-2">
+              <Link to="/services/emergency" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Emergency Lockouts
+              </Link>
+              <Link to="/services/residential" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Residential
+              </Link>
+              <Link to="/services/commercial" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Commercial
+              </Link>
+              <Link to="/services/automotive" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Automotive
+              </Link>
+            </nav>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Contact</h3>
+            <div className="space-y-3">
+              <a 
+                href="tel:+1-555-FAST-LOCK"
+                className="flex items-center space-x-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              >
+                <Phone className="h-4 w-4" />
+                <span>(555) FAST-LOCK</span>
+              </a>
+              <div className="flex items-center space-x-2 text-primary-foreground/80">
+                <MapPin className="h-4 w-4" />
+                <span>Chicago, IL</span>
+              </div>
+              <div className="flex items-center space-x-2 text-primary-foreground/80">
+                <Mail className="h-4 w-4" />
+                <span>info@fastlockfinder.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
+          <p className="text-primary-foreground/60">
+            &copy; 2024 FastLockFinder. All rights reserved. | 
+            <Link to="/privacy" className="hover:text-primary-foreground transition-colors ml-1">
+              Privacy Policy
+            </Link> | 
+            <Link to="/terms" className="hover:text-primary-foreground transition-colors ml-1">
+              Terms of Service
+            </Link>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
