@@ -14,7 +14,9 @@ const CityPage = () => {
     return <div>City not found</div>;
   }
 
-  const city = getCityBySlug(citySlug);
+  // Extract city name from URL (remove "-locksmith" suffix)
+  const cityName = citySlug.replace("-locksmith", "");
+  const city = getCityBySlug(cityName);
   
   if (!city) {
     return <div>City not found</div>;
