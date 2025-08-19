@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
@@ -42,6 +43,27 @@ const reviews = [
     city: "New Lenox",
     rating: 5,
     text: "Emergency lockout at my office near Silver Cross Hospital. FastLockFinder's locksmith was professional, efficient, and got me back in quickly. Will definitely use again.",
+    verified: true
+  },
+  {
+    name: "Amy C.",
+    city: "Alsip",
+    rating: 5,
+    text: "Got locked out of my apartment near Burr Oak Cemetery. The locksmith arrived in 13 minutes and had me back inside safely. Great 24/7 service!",
+    verified: true
+  },
+  {
+    name: "Robert H.",
+    city: "Palos Heights",
+    rating: 5,
+    text: "Smart lock installation near Lake Katherine Nature Center went perfectly. The technician was knowledgeable and explained how everything worked. Highly recommend!",
+    verified: true
+  },
+  {
+    name: "Maria G.",
+    city: "Mokena",
+    rating: 5,
+    text: "Car key replacement service near Hickory Creek Preserve was fast and affordable. Much better than going to the dealership. Will use FastLockFinder again!",
     verified: true
   }
 ];

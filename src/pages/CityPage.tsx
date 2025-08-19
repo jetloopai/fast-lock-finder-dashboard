@@ -45,7 +45,7 @@ const CityPage = () => {
         <title>{city.name} Locksmith | FastLockFinder 24/7 Service</title>
         <meta 
           name="description" 
-          content={`Locked out in ${city.name}? Fast 15-minute arrival, 24/7 locksmith service for homes, cars, and businesses.`} 
+          content={`Locked out in ${city.name}? Fast 15-minute arrival, 24/7 locksmith service for homes, cars, and businesses near ${primaryLandmark} and ${secondaryLandmark}.`} 
         />
         <link rel="canonical" href={`https://fastlockfinder.com/service-areas/${city.slug}-locksmith`} />
       </Helmet>
@@ -58,8 +58,10 @@ const CityPage = () => {
               Locksmith in {city.name}, IL – Fast 24/7 Service
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              FastLockFinder provides 24/7 locksmith service in {city.name} with an average 15-minute arrival time. 
-              Whether you're locked out near {primaryLandmark} or anywhere else in {city.name}, we're here to help.
+              When you're locked out in {city.name}, Illinois, FastLockFinder provides rapid 24/7 locksmith services with an average 15-minute response time. 
+              Our licensed professionals serve the entire {city.name} community, from the {primaryLandmark} area to {secondaryLandmark} and everywhere in between. 
+              Whether you need emergency lockout assistance, residential security upgrades, commercial lock services, or automotive key replacement, 
+              we're your trusted local locksmith in {city.name}'s {city.region.toLowerCase()}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
@@ -120,7 +122,7 @@ const CityPage = () => {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From emergency lockouts to security upgrades, FastLockFinder provides comprehensive locksmith services 
-              throughout {city.name} and the surrounding {city.region.toLowerCase()}.
+              throughout {city.name} and the surrounding {city.region.toLowerCase()}, including areas near {primaryLandmark} and {secondaryLandmark}.
             </p>
           </div>
           
