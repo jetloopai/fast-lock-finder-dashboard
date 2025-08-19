@@ -49,18 +49,18 @@ const About = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
               About FastLockFinder
             </h1>
-            <p className="text-xl text-primary-foreground/90 mb-8">
-              Your trusted locksmith partner serving Chicago's South & Southwest suburbs 
-              for over 15 years. We're committed to keeping you secure with fast, 
-              professional, and reliable locksmith services available 24/7.
+            <p className="text-xl text-primary-foreground/90 mb-8 animate-fade-in-delay">
+              Chicago's trusted locksmith service provider. Over 10 years of experience serving 
+              the South & Southwest suburbs with professional, reliable locksmith solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-left">
               <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
                 <a href="tel:+1-555-FAST-LOCK">Call: (555) FAST-LOCK</a>
               </Button>
@@ -79,7 +79,7 @@ const About = () => {
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
               return (
-                <Card key={index} className="text-center">
+                <Card key={index} className="text-center gradient-card-subtle border border-border/50 shadow-sm">
                   <CardContent className="pt-6">
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                       <IconComponent className="h-6 w-6 text-accent-foreground" />
@@ -122,7 +122,7 @@ const About = () => {
               </div>
             </div>
             <div className="space-y-6">
-              <Card>
+              <Card className="gradient-card-subtle border border-border/50 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Shield className="h-5 w-5 text-accent" />
@@ -136,7 +136,7 @@ const About = () => {
                   </CardDescription>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="gradient-card-subtle border border-border/50 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Clock className="h-5 w-5 text-accent" />
@@ -150,7 +150,7 @@ const About = () => {
                   </CardDescription>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="gradient-card-subtle border border-border/50 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Wrench className="h-5 w-5 text-accent" />

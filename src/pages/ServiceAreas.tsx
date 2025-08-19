@@ -62,14 +62,15 @@ const ServiceAreas = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="relative bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
             Service Areas
           </h1>
-          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-            FastLockFinder proudly serves Chicago's South & Southwest suburbs with 24/7 locksmith services. 
-            Find your city below for local locksmith coverage and 15-minute average response times.
+          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto animate-fade-in-delay">
+            FastLockFinder serves Chicago's South & Southwest suburbs with fast, reliable locksmith services. 
+            Our professional locksmiths are available 24/7 in your area.
           </p>
         </div>
       </section>
@@ -78,7 +79,7 @@ const ServiceAreas = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <Card className="text-center">
+            <Card className="text-center gradient-card-subtle border border-border/50 shadow-sm">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-accent-foreground" />
@@ -87,7 +88,7 @@ const ServiceAreas = () => {
                 <p className="text-muted-foreground">Response time across all service areas</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center gradient-card-subtle border border-border/50 shadow-sm">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="h-8 w-8 text-accent-foreground" />
@@ -96,7 +97,7 @@ const ServiceAreas = () => {
                 <p className="text-muted-foreground">Complete coverage across South & Southwest suburbs</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center gradient-card-subtle border border-border/50 shadow-sm">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-accent-foreground" />
@@ -115,7 +116,7 @@ const ServiceAreas = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* South Suburbs */}
             <div>
-              <Card>
+              <Card className="gradient-card-subtle border border-border/50 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl text-center">South Suburbs</CardTitle>
                 </CardHeader>
@@ -140,7 +141,7 @@ const ServiceAreas = () => {
 
             {/* Southwest Suburbs */}
             <div>
-              <Card>
+              <Card className="gradient-card-subtle border border-border/50 shadow-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl text-center">Southwest Suburbs</CardTitle>
                 </CardHeader>

@@ -108,12 +108,13 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="relative bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
             Professional Locksmith Services
           </h1>
-          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
+          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto animate-fade-in-delay">
             FastLockFinder provides comprehensive locksmith services across Chicago's South & Southwest suburbs. 
             From emergency lockouts to advanced security systems, we've got you covered 24/7.
           </p>
@@ -127,7 +128,7 @@ const Services = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <Card key={index} className="hover-lift h-full">
+                <Card key={index} className="hover-lift h-full gradient-card-subtle border border-border/50 shadow-sm">
                   <CardHeader>
                     <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-4">
                       <IconComponent className="h-8 w-8 text-accent-foreground" />

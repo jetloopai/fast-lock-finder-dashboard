@@ -57,19 +57,18 @@ const CityPage = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Locksmith in {city.name}, IL – Fast 24/7 Service
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
+              24/7 Locksmith in {city.name}
             </h1>
-            <p className="text-xl text-primary-foreground/90 mb-8">
-              When you're locked out in {city.name}, Illinois, FastLockFinder provides rapid 24/7 locksmith services with an average 15-minute response time. 
-              Our licensed professionals serve the entire {city.name} community, from the {primaryLandmark} area to {secondaryLandmark} and everywhere in between. 
-              Whether you need emergency lockout assistance, residential security upgrades, commercial lock services, or automotive key replacement, 
-              we're your trusted local locksmith in {city.name}'s {city.region.toLowerCase()}.
+            <p className="text-xl text-primary-foreground/90 mb-8 animate-fade-in-delay">
+              Fast, reliable locksmith services in {city.name}. Professional locksmiths available 24/7 
+              with 15-minute average response time. Licensed, bonded, and insured.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-left">
               <Button variant="cta" size="lg" asChild>
                 <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
@@ -88,7 +87,7 @@ const CityPage = () => {
       <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="text-center">
+            <Card className="text-center gradient-card-subtle border border-border/50 shadow-sm">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-6 w-6 text-accent-foreground" />
@@ -97,7 +96,7 @@ const CityPage = () => {
                 <p className="text-sm text-muted-foreground">Response time in {city.name}</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center gradient-card-subtle border border-border/50 shadow-sm">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-6 w-6 text-accent-foreground" />
@@ -106,7 +105,7 @@ const CityPage = () => {
                 <p className="text-sm text-muted-foreground">Professional service you can trust</p>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center gradient-card-subtle border border-border/50 shadow-sm">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="h-6 w-6 text-accent-foreground" />
@@ -135,7 +134,7 @@ const CityPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <Link key={index} to={service.href}>
-                <Card className="text-center hover:shadow-lg transition-shadow h-full">
+                <Card className="text-center hover:shadow-lg transition-shadow h-full gradient-card-subtle border border-border/50 shadow-sm">
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                       <service.icon className="h-6 w-6 text-accent-foreground" />
