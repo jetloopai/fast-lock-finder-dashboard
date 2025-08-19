@@ -143,25 +143,6 @@ const CityPage = () => {
         </div>
       </section>
 
-      {/* Customer Review */}
-      <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto">
-            <CardContent className="p-8 text-center">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-current text-accent" />
-                ))}
-              </div>
-              <blockquote className="text-lg mb-4">
-                "I was locked out near {primaryLandmark} in {city.name}, and FastLockFinder arrived in under 15 minutes. 
-                Professional, fast, and affordable. Highly recommend for anyone in {city.name}!"
-              </blockquote>
-              <cite className="text-muted-foreground">- Sarah M., {city.name} Resident</cite>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       {/* City Reviews */}
       <CityReviews cityName={city.name} landmark1={primaryLandmark} landmark2={secondaryLandmark} />
