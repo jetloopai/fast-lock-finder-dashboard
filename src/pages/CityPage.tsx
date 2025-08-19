@@ -153,42 +153,6 @@ const CityPage = () => {
         </div>
       </section>
 
-      {/* We Also Cover These Surrounding Areas */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              We Also Cover These Surrounding Areas
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              FastLockFinder provides the same fast, reliable 24/7 locksmith service throughout the {city.region.toLowerCase()}.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-            {surroundingCities.map((surroundingCity) => (
-              <Link key={surroundingCity.slug} to={`/service-areas/${surroundingCity.slug}-locksmith`}>
-                <Card className="hover:shadow-md transition-all duration-200 hover:scale-105 h-full border-l-4 border-l-accent">
-                  <CardContent className="p-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
-                        <MapPin className="h-4 w-4 text-accent" />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="font-medium text-sm truncate">{surroundingCity.name}</h3>
-                        <p className="text-xs text-muted-foreground truncate">
-                          {surroundingCity.landmarks[0]}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* City Reviews */}
       <CityReviews cityName={city.name} landmark1={primaryLandmark} landmark2={secondaryLandmark} />
 
@@ -246,6 +210,42 @@ const CityPage = () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* We Also Cover These Surrounding Areas */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              We Also Cover These Surrounding Areas
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              FastLockFinder provides the same fast, reliable 24/7 locksmith service throughout the {city.region.toLowerCase()}.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+            {surroundingCities.map((surroundingCity) => (
+              <Link key={surroundingCity.slug} to={`/service-areas/${surroundingCity.slug}-locksmith`}>
+                <Card className="hover:shadow-md transition-all duration-200 hover:scale-105 h-full border-l-4 border-l-accent">
+                  <CardContent className="p-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <MapPin className="h-4 w-4 text-accent" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="font-medium text-sm truncate">{surroundingCity.name}</h3>
+                        <p className="text-xs text-muted-foreground truncate">
+                          {surroundingCity.landmarks[0]}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
