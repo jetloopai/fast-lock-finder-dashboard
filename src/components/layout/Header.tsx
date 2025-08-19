@@ -39,9 +39,9 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Phone CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" asChild>
+          {/* Phone CTA & Mobile Menu */}
+          <div className="flex items-center space-x-2">
+            <Button variant="outline" size="sm" className="hidden md:flex" asChild>
               <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
                 <span>(555) FAST-LOCK</span>
@@ -50,19 +50,20 @@ const Header = () => {
             <Button variant="cta" size="sm" asChild>
               <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>Call Now</span>
+                <span className="hidden sm:inline">Call Now</span>
+                <span className="sm:hidden">Call</span>
               </a>
             </Button>
+            
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
 
         {/* Mobile Menu */}
