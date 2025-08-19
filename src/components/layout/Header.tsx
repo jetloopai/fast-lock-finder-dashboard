@@ -47,8 +47,11 @@ const Header = () => {
                 <span>(555) FAST-LOCK</span>
               </a>
             </Button>
-            <Button variant="hero" size="sm">
-              Get Unlocked Fast
+            <Button variant="cta" size="sm" asChild>
+              <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
+                <Phone className="h-4 w-4" />
+                <span>Call Now</span>
+              </a>
             </Button>
           </div>
 
@@ -83,8 +86,11 @@ const Header = () => {
                     <span>(555) FAST-LOCK</span>
                   </a>
                 </Button>
-                <Button variant="hero" size="sm">
-                  Get Unlocked Fast
+                <Button variant="cta" size="sm" asChild>
+                  <a href="tel:+1-555-FAST-LOCK" className="flex items-center justify-center space-x-2">
+                    <Phone className="h-4 w-4" />
+                    <span>Call Now</span>
+                  </a>
                 </Button>
               </div>
             </nav>
