@@ -165,21 +165,22 @@ const CityPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
             {surroundingCities.map((surroundingCity) => (
               <Link key={surroundingCity.slug} to={`/service-areas/${surroundingCity.slug}-locksmith`}>
-                <Card className="hover:shadow-lg transition-shadow h-full">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                      <MapPin className="h-6 w-6 text-accent-foreground" />
+                <Card className="hover:shadow-md transition-all duration-200 hover:scale-105 h-full border-l-4 border-l-accent">
+                  <CardContent className="p-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <MapPin className="h-4 w-4 text-accent" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="font-medium text-sm truncate">{surroundingCity.name}</h3>
+                        <p className="text-xs text-muted-foreground truncate">
+                          {surroundingCity.landmarks[0]}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="font-semibold mb-2 text-center">{surroundingCity.name}</h3>
-                    <p className="text-sm text-muted-foreground text-center mb-3">
-                      Near {surroundingCity.landmarks[0]}
-                    </p>
-                    <Button variant="outline" size="sm" className="w-full">
-                      View Services
-                    </Button>
                   </CardContent>
                 </Card>
               </Link>
