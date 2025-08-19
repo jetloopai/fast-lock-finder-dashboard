@@ -8,11 +8,13 @@ const Emergency = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Emergency Lockout Service | FastLockFinder 24/7 Chicago Suburbs</title>
+        <title>Emergency Locksmith Chicago | 24/7 Lockout Service | 15-Min Response</title>
         <meta 
           name="description" 
-          content="24/7 emergency lockout service across Chicago's South & Southwest suburbs. Average 15-minute arrival time for car, home, and business lockouts. Call now!" 
+          content="Emergency locksmith Chicago suburbs - 24/7 car, home & business lockout service. Fast 15-minute response, licensed technicians. Call now for immediate help!" 
         />
+        <meta name="keywords" content="emergency locksmith, 24/7 locksmith Chicago, car lockout service, home lockout, business lockout, fast locksmith, emergency key replacement, locked out of car, locked out of house" />
+        <link rel="canonical" href="https://fastlockfinder.com/services/emergency" />
       </Helmet>
 
       {/* Hero Section */}
@@ -20,11 +22,11 @@ const Emergency = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              24/7 Emergency Lockout Service
+              Emergency Locksmith Chicago | 24/7 Lockout Service
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Locked out? Don't panic! FastLockFinder provides rapid emergency lockout service across Chicago's 
-              South & Southwest suburbs with an average 15-minute arrival time, 24 hours a day, 7 days a week.
+              Locked out of your car, home, or business? Our emergency locksmith service covers Chicago's 
+              South & Southwest suburbs with rapid 15-minute response times. Licensed, bonded, and available 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
@@ -81,11 +83,11 @@ const Emergency = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Emergency Lockout Services
+              Emergency Locksmith Services Chicago
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              No matter what type of lockout emergency you're facing, our professional locksmiths 
-              are equipped and ready to get you back inside quickly and safely.
+              Need an emergency locksmith? Our licensed Chicago locksmith technicians provide fast lockout service 
+              for cars, homes, and businesses. No damage guaranteed - we'll get you back inside safely.
             </p>
           </div>
 
@@ -95,9 +97,9 @@ const Emergency = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Car Lockouts</CardTitle>
+                <CardTitle>Emergency Car Lockout Service</CardTitle>
                 <CardDescription>
-                  Locked out of your vehicle? We'll get you back on the road fast.
+                  Locked out of your car? Our emergency auto locksmith will unlock your vehicle fast with no damage.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -127,9 +129,9 @@ const Emergency = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Home Lockouts</CardTitle>
+                <CardTitle>Emergency Home Lockout Service</CardTitle>
                 <CardDescription>
-                  Locked out of your house? We'll get you back home safely.
+                  Locked out of your house? Our residential locksmith provides immediate home lockout assistance.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -159,9 +161,9 @@ const Emergency = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Business Lockouts</CardTitle>
+                <CardTitle>Commercial Emergency Locksmith</CardTitle>
                 <CardDescription>
-                  Locked out of your business? We understand urgency matters.
+                  Locked out of your business? Our commercial locksmith provides priority emergency service.
                 </CardDescription>
               </CardHeader>
               <CardContent>
