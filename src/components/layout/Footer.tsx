@@ -8,12 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-lg">F</span>
-              </div>
-              <span className="font-bold text-xl">FastLockFinder</span>
-            </div>
+            <img 
+              src="/lovable-uploads/f6abcd6d-055f-4b46-b777-5991e5e31014.png" 
+              alt="FastLockFinder Logo" 
+              className="h-12 w-auto"
+            />
             <p className="text-primary-foreground/80">
               Fast, reliable 24/7 locksmith service across Chicago's South & Southwest suburbs.
             </p>
