@@ -30,41 +30,6 @@ const reviews = [
     rating: 5,
     text: "My business lock broke during the weekend near downtown Homewood. They came out on Saturday evening and fixed it perfectly. Highly recommend their commercial services.",
     verified: true
-  },
-  {
-    name: "Lisa P.",
-    city: "Frankfort",
-    rating: 5,
-    text: "Locked out of my car at Historic Downtown Frankfort. Called FastLockFinder and they were there in 14 minutes. Great communication and fair pricing.",
-    verified: true
-  },
-  {
-    name: "Tom B.",
-    city: "New Lenox",
-    rating: 5,
-    text: "Emergency lockout at my office near Silver Cross Hospital. FastLockFinder's locksmith was professional, efficient, and got me back in quickly. Will definitely use again.",
-    verified: true
-  },
-  {
-    name: "Amy C.",
-    city: "Alsip",
-    rating: 5,
-    text: "Got locked out of my apartment near Burr Oak Cemetery. The locksmith arrived in 13 minutes and had me back inside safely. Great 24/7 service!",
-    verified: true
-  },
-  {
-    name: "Robert H.",
-    city: "Palos Heights",
-    rating: 5,
-    text: "Smart lock installation near Lake Katherine Nature Center went perfectly. The technician was knowledgeable and explained how everything worked. Highly recommend!",
-    verified: true
-  },
-  {
-    name: "Maria G.",
-    city: "Mokena",
-    rating: 5,
-    text: "Car key replacement service near Hickory Creek Preserve was fast and affordable. Much better than going to the dealership. Will use FastLockFinder again!",
-    verified: true
   }
 ];
 
