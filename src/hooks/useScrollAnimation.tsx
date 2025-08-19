@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const useScrollAnimation = (threshold = 0.1) => {
+const useScrollAnimation = (threshold = 0.05) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
@@ -15,7 +15,7 @@ const useScrollAnimation = (threshold = 0.1) => {
       },
       {
         threshold,
-        rootMargin: '100px 0px -30px 0px', // Start animation earlier for better response
+        rootMargin: '200px 0px 0px 0px', // Start animation much earlier when approaching viewport
       }
     );
 
