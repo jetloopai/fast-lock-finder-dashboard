@@ -74,6 +74,53 @@ const ServiceAreas = () => {
         </div>
       </section>
 
+      {/* Interactive Coverage Map */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-[#0D2B3A]" style={{ fontFamily: 'Inter' }}>
+            Interactive Coverage Map
+          </h2>
+          <p className="text-lg text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Tap a pin to open your city page for pricing, FAQs, and reviews. Average arrival time is 15 minutes, 24/7.
+          </p>
+          
+          <div className="flf-map-wrap" aria-label="FastLockFinder Service Areas Map">
+            <iframe 
+              src="https://www.google.com/maps/d/embed?mid=1ELPqmrEz2HwGsXt8dSw3nJwqcFpbLL4&ehbc=2E312F"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ border: 0 }}
+              title="FastLockFinder Coverage Map — South & Southwest Suburbs"
+              allowFullScreen>
+            </iframe>
+          </div>
+          
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              .flf-map-wrap {
+                position: relative;
+                width: 100%;
+                padding-top: 56.25%;
+                border-radius: 12px;
+                overflow: hidden;
+              }
+              .flf-map-wrap iframe {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+              }
+              @media (min-width: 1200px) {
+                .flf-map-wrap {
+                  padding-top: 45%;
+                }
+              }
+            `
+          }} />
+        </div>
+      </section>
+
       {/* Coverage Overview */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
