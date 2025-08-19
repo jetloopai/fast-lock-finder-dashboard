@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { getCityBySlug, cityData } from "@/data/cities";
+import { getCityBySlug, cityData, getAllCities } from "@/data/cities";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -28,6 +28,11 @@ const CityPage = () => {
 
   const primaryLandmark = city.landmarks[0];
   const secondaryLandmark = city.landmarks[1] || city.landmarks[0];
+
+  // Get surrounding cities from the same region, excluding current city
+  const surroundingCities = getAllCities()
+    .filter(c => c.region === city.region && c.slug !== city.slug)
+    .slice(0, 8); // Show up to 8 cities
 
   const services = [
     { icon: Lock, name: "Emergency Lockouts", description: "Car, home, and business lockouts", href: "/services/emergency" },
@@ -148,6 +153,40 @@ const CityPage = () => {
         </div>
       </section>
 
+      {/* We Also Cover These Surrounding Areas */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              We Also Cover These Surrounding Areas
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              FastLockFinder provides the same fast, reliable 24/7 locksmith service throughout the {city.region.toLowerCase()}.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {surroundingCities.map((surroundingCity) => (
+              <Link key={surroundingCity.slug} to={`/service-areas/${surroundingCity.slug}-locksmith`}>
+                <Card className="hover:shadow-lg transition-shadow h-full">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                      <MapPin className="h-6 w-6 text-accent-foreground" />
+                    </div>
+                    <h3 className="font-semibold mb-2 text-center">{surroundingCity.name}</h3>
+                    <p className="text-sm text-muted-foreground text-center mb-3">
+                      Near {surroundingCity.landmarks[0]}
+                    </p>
+                    <Button variant="outline" size="sm" className="w-full">
+                      View Services
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* City Reviews */}
       <CityReviews cityName={city.name} landmark1={primaryLandmark} landmark2={secondaryLandmark} />
