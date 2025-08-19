@@ -21,7 +21,7 @@ const About = () => {
   const stats = [
     { icon: Clock, label: "Years of Experience", value: "15+" },
     { icon: Users, label: "Happy Customers", value: "5,000+" },
-    { icon: MapPin, label: "Cities Served", value: "25+" },
+    { icon: MapPin, label: "Cities Served", value: "50+" },
     { icon: Award, label: "Licensed & Insured", value: "100%" }
   ];
 
@@ -110,7 +110,7 @@ const About = () => {
                   has grown into the area's most trusted locksmith company.
                 </p>
                 <p>
-                  Today, we serve over 25 cities across the region, maintaining our founding principles 
+                  Today, we serve over 50 cities across the region, maintaining our founding principles 
                   of integrity, professionalism, and rapid response times. Our team of licensed and 
                   insured technicians is available 24/7 to handle any locksmith emergency or scheduled service.
                 </p>
@@ -202,7 +202,7 @@ const About = () => {
       <section className="py-16 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Serving 25+ Cities Across Chicago South & Southwest Suburbs
+            Serving 50+ Cities Across Chicago South & Southwest Suburbs
           </h2>
           <p className="text-lg mb-8 opacity-90">
             From Oak Lawn to Orland Park, from Burbank to Tinley Park - we're your local locksmith experts.
