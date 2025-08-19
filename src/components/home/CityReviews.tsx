@@ -24,13 +24,13 @@ const getCityReviews = (cityName: string, landmark1: string, landmark2: string) 
     {
       name: "Jennifer L.",
       rating: 5,
-      text: `Needed my locks rekeyed after moving to a new home near ${landmark1}. FastLockFinder was professional, quick, and explained everything clearly.`,
+      text: `Needed my locks rekeyed after moving to a new home in ${cityName}. FastLockFinder was professional, quick, and explained everything clearly.`,
       verified: true
     },
     {
       name: "David K.",
       rating: 5,
-      text: `My business lock broke during the weekend near ${landmark2}. They came out on Saturday evening and fixed it perfectly. Highly recommend their commercial services.`,
+      text: `My business lock broke during the weekend in downtown ${cityName}. They came out on Saturday evening and fixed it perfectly. Highly recommend their commercial services.`,
       verified: true
     }
   ];
