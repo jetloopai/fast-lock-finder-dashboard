@@ -18,6 +18,7 @@ import Rekeying from "./pages/services/Rekeying";
 import SmartLocks from "./pages/services/SmartLocks";
 import KeyDuplication from "./pages/services/KeyDuplication";
 import Safes from "./pages/services/Safes";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
