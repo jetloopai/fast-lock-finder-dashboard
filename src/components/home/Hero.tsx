@@ -35,7 +35,7 @@ const Hero = () => {
             {/* Proof Points */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 animate-fade-in-delay">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center icon-pulse" style={{animationDelay: '0.5s'}}>
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center icon-glow" style={{animationDelay: '0.5s'}}>
                   <Clock className="h-6 w-6 text-accent-foreground" />
                 </div>
                 <div>
@@ -44,7 +44,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center icon-pulse" style={{animationDelay: '1s'}}>
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center icon-glow" style={{animationDelay: '1s'}}>
                   <Clock className="h-6 w-6 text-accent-foreground" />
                 </div>
                 <div>
@@ -53,7 +53,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center icon-pulse" style={{animationDelay: '1.5s'}}>
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center icon-glow" style={{animationDelay: '1.5s'}}>
                   <MapPin className="h-6 w-6 text-accent-foreground" />
                 </div>
                 <div>

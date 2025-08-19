@@ -257,14 +257,12 @@ All colors MUST be HSL.
     }
   }
 
-  @keyframes iconPulse {
+  @keyframes iconGlow {
     0%, 100% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 hsl(var(--accent) / 0.2);
+      box-shadow: 0 0 5px hsl(var(--accent) / 0.2);
     }
     50% {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px 5px hsl(var(--accent) / 0.3);
+      box-shadow: 0 0 15px hsl(var(--accent) / 0.4);
     }
   }
 
@@ -290,7 +288,7 @@ All colors MUST be HSL.
     text-shadow: 0 0 10px hsl(var(--accent) / 0.5);
   }
 
-  .icon-pulse {
-    animation: iconPulse 3s ease-in-out infinite;
+  .icon-glow {
+    animation: iconGlow 4s ease-in-out infinite;
   }
 }
