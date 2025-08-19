@@ -11,6 +11,7 @@ import {
   Shield 
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const services = [
   {
@@ -64,11 +65,17 @@ const services = [
 ];
 
 const ServicesGrid = () => {
+  const [headerRef, headerVisible] = useScrollAnimation();
+  const [gridRef, gridVisible] = useScrollAnimation();
+  
   return (
-    <section className="py-20 bg-secondary animate-fade-in">
+    <section className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-slide-up">
+        <div 
+          ref={headerRef as any}
+          className={`text-center mb-16 scroll-fade ${headerVisible ? 'visible' : ''}`}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Complete Locksmith Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -77,11 +84,21 @@ const ServicesGrid = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div 
+          ref={gridRef as any}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 scroll-scale ${gridVisible ? 'visible' : ''}`}
+        >
           {services.map((service, index) => {
             const IconComponent = service.icon;
+            const cardDelay = gridVisible ? `${index * 100}ms` : '0ms';
             return (
-              <Card key={index} className="hover-lift hover-glow group animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+              <Card 
+                key={index} 
+                className="hover-lift hover-glow group" 
+                style={{
+                  transitionDelay: cardDelay
+                }}
+              >
                 <CardHeader className="text-center">
                   <div className="mx-auto w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 icon-float">
                     <IconComponent className="h-8 w-8 text-accent-foreground" />
