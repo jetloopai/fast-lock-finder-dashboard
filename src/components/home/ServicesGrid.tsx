@@ -8,7 +8,11 @@ import {
   RotateCcw, 
   Smartphone, 
   Copy, 
-  Shield 
+  Shield,
+  Mail,
+  FileText,
+  Warehouse,
+  Lock
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
@@ -61,6 +65,30 @@ const services = [
     title: "Safe Services",
     description: "Safe opening, installation, and repair for residential and commercial.",
     link: "/services/safes"
+  },
+  {
+    icon: Mail,
+    title: "Mailbox Services",
+    description: "Mailbox lock repair, replacement, and master key services.",
+    link: "/services/mailboxes"
+  },
+  {
+    icon: FileText,
+    title: "File Cabinet Services",
+    description: "File cabinet lock repair, replacement, and key services.",
+    link: "/services/file-cabinets"
+  },
+  {
+    icon: Warehouse,
+    title: "Storage Unit Services",
+    description: "Storage unit lock installation, repair, and emergency access.",
+    link: "/services/storage-units"
+  },
+  {
+    icon: Lock,
+    title: "Padlock Services",
+    description: "Professional padlock installation and high-security solutions.",
+    link: "/services/padlocks"
   }
 ];
 

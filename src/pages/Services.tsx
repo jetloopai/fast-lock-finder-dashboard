@@ -10,7 +10,11 @@ import {
   RotateCcw, 
   Smartphone, 
   Copy, 
-  Shield 
+  Shield,
+  Mail,
+  FileText,
+  Warehouse,
+  Lock
 } from "lucide-react";
 
 const services = [
@@ -69,6 +73,34 @@ const services = [
     description: "Complete safe services including installation, opening, and repair for residential and commercial.",
     features: ["Safe opening", "Safe installation", "Safe repair", "Combination changes"],
     link: "/services/safes"
+  },
+  {
+    icon: Mail,
+    title: "Mailbox Services",
+    description: "Professional mailbox lock repair, replacement, and master key services for residential and commercial properties.",
+    features: ["Mailbox lock repair", "Lock replacement", "Master key systems", "USPS approved locks"],
+    link: "/services/mailboxes"
+  },
+  {
+    icon: FileText,
+    title: "File Cabinet Services",
+    description: "File cabinet lock repair, replacement, and key services to secure your important documents.",
+    features: ["Lock repair", "Key replacement", "New installations", "Emergency opening"],
+    link: "/services/file-cabinets"
+  },
+  {
+    icon: Warehouse,
+    title: "Storage Unit Services",
+    description: "Storage unit lock services including lock installation, repair, and emergency access solutions.",
+    features: ["Lock installation", "Emergency access", "Lock repair", "High-security locks"],
+    link: "/services/storage-units"
+  },
+  {
+    icon: Lock,
+    title: "Padlock Services",
+    description: "Professional padlock services including installation, repair, and high-security padlock solutions.",
+    features: ["Padlock installation", "High-security options", "Weather-resistant locks", "Key services"],
+    link: "/services/padlocks"
   }
 ];
 
