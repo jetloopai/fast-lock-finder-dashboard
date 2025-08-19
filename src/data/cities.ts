@@ -10,25 +10,25 @@ export const cityData: Record<string, City> = {
   "oak-lawn": {
     name: "Oak Lawn",
     slug: "oak-lawn",
-    landmarks: ["Advocate Christ Medical Center", "Stony Creek Golf Course"],
+    landmarks: ["Advocate Christ Medical Center", "Stony Creek Golf Course", "Oak View Community Center", "Centennial Aquatic Center"],
     region: "South Suburbs"
   },
   "evergreen-park": {
     name: "Evergreen Park",
     slug: "evergreen-park",
-    landmarks: ["Little Company of Mary Hospital", "Evergreen Plaza"],
+    landmarks: ["Little Company of Mary Hospital", "Evergreen Plaza", "Drury Lane Theatre"],
     region: "South Suburbs"
   },
   "alsip": {
     name: "Alsip",
     slug: "alsip",
-    landmarks: ["Burr Oak Cemetery", "Apollo Recreation Center"],
+    landmarks: ["Burr Oak Cemetery", "Apollo Recreation Center", "Holy Sepulchre Cemetery", "Restvale Cemetery"],
     region: "South Suburbs"
   },
   "blue-island": {
     name: "Blue Island",
     slug: "blue-island",
-    landmarks: ["Metra Rock Island Station", "Blue Island Beer Company"],
+    landmarks: ["Metra Rock Island Station", "Blue Island Beer Company", "Olde Western Historic District", "Joshua P. Young House"],
     region: "South Suburbs"
   },
   "calumet-city": {
@@ -82,7 +82,7 @@ export const cityData: Record<string, City> = {
   "homewood": {
     name: "Homewood",
     slug: "homewood",
-    landmarks: ["Homewood-Flossmoor High School", "Dolphin Lake Park"],
+    landmarks: ["Homewood-Flossmoor High School", "Dolphin Lake Park", "Dorband-Howe House Museum"],
     region: "South Suburbs"
   },
   "flossmoor": {
@@ -186,7 +186,7 @@ export const cityData: Record<string, City> = {
   "justice": {
     name: "Justice",
     slug: "justice",
-    landmarks: ["Argo Community High School", "I-294 interchange"],
+    landmarks: ["Argo Community High School", "I-294 interchange", "Emmett Till Memorial"],
     region: "Southwest Suburbs"
   },
   "summit": {
@@ -210,7 +210,7 @@ export const cityData: Record<string, City> = {
   "worth": {
     name: "Worth",
     slug: "worth",
-    landmarks: ["Water's Edge Golf Club", "Worth Metra Station"],
+    landmarks: ["Water's Edge Golf Club", "Worth Metra Station", "Worth Park District"],
     region: "Southwest Suburbs"
   },
   "palos-hills": {
@@ -252,13 +252,13 @@ export const cityData: Record<string, City> = {
   "crestwood": {
     name: "Crestwood",
     slug: "crestwood",
-    landmarks: ["Rivercrest Shopping Center", "Crestwood Recreation Center"],
+    landmarks: ["Rivercrest Shopping Center", "Crestwood Recreation Center", "Cal-Sag Channel"],
     region: "Southwest Suburbs"
   },
   "midlothian": {
     name: "Midlothian",
     slug: "midlothian",
-    landmarks: ["Bremen High School", "Natalie Creek Trail"],
+    landmarks: ["Bremen High School", "Natalie Creek Trail", "Midlothian Meadows Forest Preserve"],
     region: "Southwest Suburbs"
   },
   "frankfort": {
