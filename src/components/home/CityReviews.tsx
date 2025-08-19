@@ -30,7 +30,7 @@ const getCityReviews = (cityName: string, landmark1: string, landmark2: string) 
     {
       name: "David K.",
       rating: 5,
-      text: `My business lock broke during the weekend in downtown ${cityName}. They came out on Saturday evening and fixed it perfectly. Highly recommend their commercial services.`,
+      text: `My business lock broke during the weekend in ${cityName}. They came out on Saturday evening and fixed it perfectly. Highly recommend their commercial services.`,
       verified: true
     }
   ];
