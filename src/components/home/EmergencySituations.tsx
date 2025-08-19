@@ -72,7 +72,7 @@ const EmergencySituations = () => {
             We serve all of Chicago's South & Southwest suburbs with fast, professional service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
+            <Button variant="default" size="lg">
               Call Emergency Line: (555) FAST-LOCK
             </Button>
             <Button variant="default" size="lg" className="bg-accent-foreground text-accent hover:bg-accent-foreground/90">
