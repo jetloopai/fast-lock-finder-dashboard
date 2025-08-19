@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { getCityBySlug } from "@/data/cities";
+import { getCityBySlug, cityData } from "@/data/cities";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,11 +14,12 @@ const CityPage = () => {
     return <div>City not found</div>;
   }
 
-  // Extract city name from URL (remove "-locksmith" suffix)
-  const cityName = citySlug.replace("-locksmith", "");
-  const city = getCityBySlug(cityName);
+  // The citySlug from the route already has the city name without "-locksmith"
+  const city = getCityBySlug(citySlug);
   
   if (!city) {
+    console.log("City not found for slug:", citySlug);
+    console.log("Available cities:", Object.keys(cityData));
     return <div>City not found</div>;
   }
 
