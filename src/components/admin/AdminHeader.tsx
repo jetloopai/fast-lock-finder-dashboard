@@ -14,6 +14,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { LogOut, User2, Settings } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface AdminHeaderProps {
   user: User;
@@ -22,6 +23,7 @@ interface AdminHeaderProps {
 export function AdminHeader({ user }: AdminHeaderProps) {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const isMobile = useIsMobile();
 
   const handleSignOut = async () => {
     try {
@@ -50,17 +52,24 @@ export function AdminHeader({ user }: AdminHeaderProps) {
 
   return (
     <header className="h-16 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex h-16 items-center justify-between px-6">
-        <div className="flex items-center gap-4">
+      <div className={`flex h-16 items-center justify-between ${isMobile ? 'px-4' : 'px-6'}`}>
+        <div className="flex items-center gap-4 min-w-0">
           <SidebarTrigger />
-          <div>
-            <h1 className="text-lg font-semibold text-foreground">
-              Admin Dashboard
+          {!isMobile && (
+            <div className="min-w-0">
+              <h1 className="text-lg font-semibold text-foreground">
+                Admin Dashboard
+              </h1>
+              <p className="text-sm text-muted-foreground">
+                Manage your locksmith business
+              </p>
+            </div>
+          )}
+          {isMobile && (
+            <h1 className="text-lg font-semibold text-foreground truncate">
+              Dashboard
             </h1>
-            <p className="text-sm text-muted-foreground">
-              Manage your locksmith business
-            </p>
-          </div>
+          )}
         </div>
 
         <div className="flex items-center gap-4">

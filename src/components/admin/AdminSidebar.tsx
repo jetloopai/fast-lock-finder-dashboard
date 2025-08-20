@@ -20,6 +20,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const navigationItems = [
   {
@@ -59,6 +60,7 @@ export function AdminSidebar() {
   const location = useLocation();
   const currentPath = location.pathname;
   const collapsed = state === "collapsed";
+  const isMobile = useIsMobile();
 
   const isActive = (path: string) => {
     if (path === "/admin") {
@@ -73,7 +75,10 @@ export function AdminSidebar() {
       : "hover:bg-sidebar-accent/50";
 
   return (
-    <Sidebar className={collapsed ? "w-14" : "w-64"} collapsible="icon">
+    <Sidebar 
+      className={isMobile ? "w-64" : collapsed ? "w-14" : "w-64"} 
+      collapsible={isMobile ? "offcanvas" : "icon"}
+    >
       <SidebarContent>
         {/* Logo/Brand */}
         <div className="p-4 border-b border-sidebar-border">
@@ -81,7 +86,7 @@ export function AdminSidebar() {
             <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
               <Lock className="w-4 h-4 text-accent-foreground" />
             </div>
-            {!collapsed && (
+            {(!collapsed || isMobile) && (
               <div>
                 <h2 className="font-bold text-sidebar-foreground">FastLockFinder</h2>
                 <p className="text-xs text-sidebar-foreground/70">Admin Dashboard</p>
@@ -104,7 +109,7 @@ export function AdminSidebar() {
                       className={getNavCls(isActive(item.url))}
                     >
                       <item.icon className="w-4 h-4" />
-                      {!collapsed && <span>{item.title}</span>}
+                      {(!collapsed || isMobile) && <span>{item.title}</span>}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -125,7 +130,7 @@ export function AdminSidebar() {
                     className={getNavCls(isActive("/admin/settings"))}
                   >
                     <Settings className="w-4 h-4" />
-                    {!collapsed && <span>Settings</span>}
+                    {(!collapsed || isMobile) && <span>Settings</span>}
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>

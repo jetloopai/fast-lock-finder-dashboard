@@ -11,6 +11,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Plus, Search, Eye, UserCheck, Phone, MapPin, Briefcase } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useToast } from "@/hooks/use-toast";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { MobileLeadCard } from "@/components/admin/MobileLeadCard";
 
 interface Lead {
   id: string;
@@ -45,6 +47,7 @@ const Leads = () => {
     status: "new" as const,
   });
   const { toast } = useToast();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     fetchLeads();
@@ -293,7 +296,7 @@ const Leads = () => {
         </div>
 
         {/* Filters */}
-        <div className="flex gap-4">
+        <div className={`flex gap-4 ${isMobile ? 'flex-col' : ''}`}>
           <Card className="flex-1">
             <CardContent className="pt-6">
               <div className="relative">
@@ -307,10 +310,10 @@ const Leads = () => {
               </div>
             </CardContent>
           </Card>
-          <Card>
+          <Card className={isMobile ? 'w-full' : ''}>
             <CardContent className="pt-6">
               <Select value={statusFilter} onValueChange={setStatusFilter}>
-                <SelectTrigger className="w-40">
+                <SelectTrigger className={isMobile ? 'w-full' : 'w-40'}>
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
                 <SelectContent>
@@ -326,94 +329,114 @@ const Leads = () => {
           </Card>
         </div>
 
-        {/* Leads Table */}
-        <Card>
-          <CardHeader>
-            <CardTitle>All Leads ({filteredLeads.length})</CardTitle>
-            <CardDescription>
-              Customer leads and their current status
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Customer</TableHead>
-                  <TableHead>Service</TableHead>
-                  <TableHead>Location</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Created</TableHead>
-                  <TableHead>Actions</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {filteredLeads.map((lead) => (
-                  <TableRow key={lead.id}>
-                    <TableCell>
-                      <div className="space-y-1">
-                        <div className="font-medium">{lead.name || "Unknown"}</div>
-                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                          <Phone className="h-3 w-3" />
-                          {lead.phone}
+        {/* Leads Display */}
+        {isMobile ? (
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-medium">All Leads ({filteredLeads.length})</h3>
+            </div>
+            <div className="space-y-3">
+              {filteredLeads.map((lead) => (
+                <MobileLeadCard
+                  key={lead.id}
+                  lead={lead}
+                  locksmiths={locksmiths}
+                  onStatusUpdate={updateStatus}
+                  onAssignLocksmith={assignLocksmith}
+                  getStatusBadgeVariant={getStatusBadgeVariant}
+                />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <Card>
+            <CardHeader>
+              <CardTitle>All Leads ({filteredLeads.length})</CardTitle>
+              <CardDescription>
+                Customer leads and their current status
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Customer</TableHead>
+                    <TableHead>Service</TableHead>
+                    <TableHead>Location</TableHead>
+                    <TableHead>Status</TableHead>
+                    <TableHead>Created</TableHead>
+                    <TableHead>Actions</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {filteredLeads.map((lead) => (
+                    <TableRow key={lead.id}>
+                      <TableCell>
+                        <div className="space-y-1">
+                          <div className="font-medium">{lead.name || "Unknown"}</div>
+                          <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                            <Phone className="h-3 w-3" />
+                            {lead.phone}
+                          </div>
                         </div>
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex items-center gap-1">
-                        <Briefcase className="h-3 w-3" />
-                        {lead.service_type || "Not specified"}
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex items-center gap-1">
-                        <MapPin className="h-3 w-3" />
-                        {lead.zip || "No location"}
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <Select value={lead.status} onValueChange={(value) => updateStatus(lead.id, value as "new" | "missed" | "in_progress" | "complete")}>
-                        <SelectTrigger className="w-32">
-                          <Badge variant={getStatusBadgeVariant(lead.status)}>
-                            {lead.status}
-                          </Badge>
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="new">New</SelectItem>
-                          <SelectItem value="assigned">Assigned</SelectItem>
-                          <SelectItem value="in_progress">In Progress</SelectItem>
-                          <SelectItem value="completed">Completed</SelectItem>
-                          <SelectItem value="cancelled">Cancelled</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </TableCell>
-                    <TableCell className="text-sm text-muted-foreground">
-                      {new Date(lead.created_at).toLocaleDateString()}
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex gap-2">
-                        <Select onValueChange={(value) => assignLocksmith(lead.id, value)}>
+                      </TableCell>
+                      <TableCell>
+                        <div className="flex items-center gap-1">
+                          <Briefcase className="h-3 w-3" />
+                          {lead.service_type || "Not specified"}
+                        </div>
+                      </TableCell>
+                      <TableCell>
+                        <div className="flex items-center gap-1">
+                          <MapPin className="h-3 w-3" />
+                          {lead.zip || "No location"}
+                        </div>
+                      </TableCell>
+                      <TableCell>
+                        <Select value={lead.status} onValueChange={(value) => updateStatus(lead.id, value as "new" | "missed" | "in_progress" | "complete")}>
                           <SelectTrigger className="w-32">
-                            <SelectValue placeholder="Assign" />
+                            <Badge variant={getStatusBadgeVariant(lead.status)}>
+                              {lead.status}
+                            </Badge>
                           </SelectTrigger>
                           <SelectContent>
-                            {locksmiths.map((locksmith) => (
-                              <SelectItem key={locksmith.id} value={locksmith.id}>
-                                {locksmith.name}
-                              </SelectItem>
-                            ))}
+                            <SelectItem value="new">New</SelectItem>
+                            <SelectItem value="assigned">Assigned</SelectItem>
+                            <SelectItem value="in_progress">In Progress</SelectItem>
+                            <SelectItem value="completed">Completed</SelectItem>
+                            <SelectItem value="cancelled">Cancelled</SelectItem>
                           </SelectContent>
                         </Select>
-                        <Button variant="outline" size="sm">
-                          <Eye className="h-3 w-3" />
-                        </Button>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </CardContent>
-        </Card>
+                      </TableCell>
+                      <TableCell className="text-sm text-muted-foreground">
+                        {new Date(lead.created_at).toLocaleDateString()}
+                      </TableCell>
+                      <TableCell>
+                        <div className="flex gap-2">
+                          <Select onValueChange={(value) => assignLocksmith(lead.id, value)}>
+                            <SelectTrigger className="w-32">
+                              <SelectValue placeholder="Assign" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              {locksmiths.map((locksmith) => (
+                                <SelectItem key={locksmith.id} value={locksmith.id}>
+                                  {locksmith.name}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          <Button variant="outline" size="sm">
+                            <Eye className="h-3 w-3" />
+                          </Button>
+                        </div>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+        )}
       </div>
     </>
   );

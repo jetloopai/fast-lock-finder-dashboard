@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AdminSidebar } from "./AdminSidebar";
 import { AdminHeader } from "./AdminHeader";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface AdminLayoutProps {
   children: ReactNode;
@@ -14,6 +15,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // Set up auth state listener
@@ -51,9 +53,9 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-background">
         <AdminSidebar />
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col min-w-0">
           <AdminHeader user={user} />
-          <main className="flex-1 p-6 overflow-auto">
+          <main className={`flex-1 overflow-auto ${isMobile ? 'p-4' : 'p-6'}`}>
             {children}
           </main>
         </div>

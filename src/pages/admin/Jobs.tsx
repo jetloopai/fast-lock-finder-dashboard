@@ -10,6 +10,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Search, DollarSign, Clock, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useToast } from "@/hooks/use-toast";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { MobileJobCard } from "@/components/admin/MobileJobCard";
 
 interface Job {
   id: string;
@@ -31,6 +33,7 @@ const Jobs = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const { toast } = useToast();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     fetchJobs();
@@ -161,7 +164,7 @@ const Jobs = () => {
         </div>
 
         {/* Filters */}
-        <div className="flex gap-4">
+        <div className={`flex gap-4 ${isMobile ? 'flex-col' : ''}`}>
           <Card className="flex-1">
             <CardContent className="pt-6">
               <div className="relative">
@@ -175,10 +178,10 @@ const Jobs = () => {
               </div>
             </CardContent>
           </Card>
-          <Card>
+          <Card className={isMobile ? 'w-full' : ''}>
             <CardContent className="pt-6">
               <Select value={statusFilter} onValueChange={setStatusFilter}>
-                <SelectTrigger className="w-40">
+                <SelectTrigger className={isMobile ? 'w-full' : 'w-40'}>
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
                 <SelectContent>
@@ -192,96 +195,114 @@ const Jobs = () => {
           </Card>
         </div>
 
-        {/* Jobs Table */}
-        <Card>
-          <CardHeader>
-            <CardTitle>All Jobs ({filteredJobs.length})</CardTitle>
-            <CardDescription>
-              Job tracking and payment management
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Job ID</TableHead>
-                  <TableHead>Client</TableHead>
-                  <TableHead>Type</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Pricing</TableHead>
-                  <TableHead>Created</TableHead>
-                  <TableHead>Actions</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {filteredJobs.map((job) => (
-                  <TableRow key={job.id}>
-                    <TableCell className="font-mono text-sm">
-                      {job.id.substring(0, 8)}...
-                    </TableCell>
-                    <TableCell className="font-medium">
-                      {job.client_name || "Unknown Client"}
-                    </TableCell>
-                    <TableCell>{job.job_type || "Not specified"}</TableCell>
-                    <TableCell>
-                      <Select value={job.status} onValueChange={(value) => updateJobStatus(job.id, value)}>
-                        <SelectTrigger className="w-32">
-                          <Badge variant={getStatusBadgeVariant(job.status)}>
-                            {job.status === "in_progress" ? "In Progress" : job.status}
-                          </Badge>
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="in_progress">In Progress</SelectItem>
-                          <SelectItem value="completed">Completed</SelectItem>
-                          <SelectItem value="cancelled">Cancelled</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </TableCell>
-                    <TableCell>
-                      <div className="space-y-1">
-                        {job.final_price ? (
-                          <div className="flex items-center gap-1 text-sm">
-                            <DollarSign className="h-3 w-3" />
-                            ${job.final_price}
-                          </div>
-                        ) : (
-                          <div className="text-sm text-muted-foreground">Not set</div>
-                        )}
-                        {job.your_cut && job.their_cut && (
-                          <div className="text-xs text-muted-foreground">
-                            You: ${job.your_cut} • Them: ${job.their_cut}
-                          </div>
-                        )}
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <div className="space-y-1">
-                        <div className="flex items-center gap-1 text-sm">
-                          <Clock className="h-3 w-3" />
-                          {new Date(job.created_at).toLocaleDateString()}
-                        </div>
-                        {job.completed_at && (
-                          <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                            <CheckCircle className="h-3 w-3" />
-                            {new Date(job.completed_at).toLocaleDateString()}
-                          </div>
-                        )}
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <Button variant="outline" size="sm">
-                        Edit Pricing
-                      </Button>
-                    </TableCell>
+        {/* Jobs Display */}
+        {isMobile ? (
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-medium">All Jobs ({filteredJobs.length})</h3>
+            </div>
+            <div className="space-y-3">
+              {filteredJobs.map((job) => (
+                <MobileJobCard
+                  key={job.id}
+                  job={job}
+                  onStatusUpdate={updateJobStatus}
+                  getStatusBadgeVariant={getStatusBadgeVariant}
+                />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <Card>
+            <CardHeader>
+              <CardTitle>All Jobs ({filteredJobs.length})</CardTitle>
+              <CardDescription>
+                Job tracking and payment management
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Job ID</TableHead>
+                    <TableHead>Client</TableHead>
+                    <TableHead>Type</TableHead>
+                    <TableHead>Status</TableHead>
+                    <TableHead>Pricing</TableHead>
+                    <TableHead>Created</TableHead>
+                    <TableHead>Actions</TableHead>
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </CardContent>
-        </Card>
+                </TableHeader>
+                <TableBody>
+                  {filteredJobs.map((job) => (
+                    <TableRow key={job.id}>
+                      <TableCell className="font-mono text-sm">
+                        {job.id.substring(0, 8)}...
+                      </TableCell>
+                      <TableCell className="font-medium">
+                        {job.client_name || "Unknown Client"}
+                      </TableCell>
+                      <TableCell>{job.job_type || "Not specified"}</TableCell>
+                      <TableCell>
+                        <Select value={job.status} onValueChange={(value) => updateJobStatus(job.id, value)}>
+                          <SelectTrigger className="w-32">
+                            <Badge variant={getStatusBadgeVariant(job.status)}>
+                              {job.status === "in_progress" ? "In Progress" : job.status}
+                            </Badge>
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="in_progress">In Progress</SelectItem>
+                            <SelectItem value="completed">Completed</SelectItem>
+                            <SelectItem value="cancelled">Cancelled</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </TableCell>
+                      <TableCell>
+                        <div className="space-y-1">
+                          {job.final_price ? (
+                            <div className="flex items-center gap-1 text-sm">
+                              <DollarSign className="h-3 w-3" />
+                              ${job.final_price}
+                            </div>
+                          ) : (
+                            <div className="text-sm text-muted-foreground">Not set</div>
+                          )}
+                          {job.your_cut && job.their_cut && (
+                            <div className="text-xs text-muted-foreground">
+                              You: ${job.your_cut} • Them: ${job.their_cut}
+                            </div>
+                          )}
+                        </div>
+                      </TableCell>
+                      <TableCell>
+                        <div className="space-y-1">
+                          <div className="flex items-center gap-1 text-sm">
+                            <Clock className="h-3 w-3" />
+                            {new Date(job.created_at).toLocaleDateString()}
+                          </div>
+                          {job.completed_at && (
+                            <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                              <CheckCircle className="h-3 w-3" />
+                              {new Date(job.completed_at).toLocaleDateString()}
+                            </div>
+                          )}
+                        </div>
+                      </TableCell>
+                      <TableCell>
+                        <Button variant="outline" size="sm">
+                          Edit Pricing
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Summary Cards */}
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className={`grid gap-4 ${isMobile ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
