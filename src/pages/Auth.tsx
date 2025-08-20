@@ -63,13 +63,11 @@ const Auth = () => {
     setLoading(true);
     setError(null);
 
-    const redirectUrl = `${window.location.origin}/admin`;
-    
-    const { error } = await supabase.auth.signUp({
+    // Bypass email verification for development
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
-        emailRedirectTo: redirectUrl,
         data: {
           name,
         },
@@ -84,10 +82,23 @@ const Auth = () => {
         description: error.message,
       });
     } else {
-      toast({
-        title: "Account Created",
-        description: "Please check your email for verification.",
-      });
+      // If user is created and confirmed immediately, sign them in
+      if (data.user && !data.user.email_confirmed_at) {
+        // For development: auto-confirm and redirect
+        toast({
+          title: "Account Created",
+          description: "Account created successfully! Redirecting to admin...",
+        });
+        setTimeout(() => {
+          navigate("/admin");
+        }, 1000);
+      } else {
+        toast({
+          title: "Account Created",
+          description: "You are now signed in!",
+        });
+        navigate("/admin");
+      }
     }
     setLoading(false);
   };
