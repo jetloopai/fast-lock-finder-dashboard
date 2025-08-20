@@ -387,7 +387,7 @@ const DispatchCodes = () => {
                       </div>
                     </TableCell>
                     <TableCell>
-                      <Select value={code.status} onValueChange={(value) => updateCodeStatus(code.id, value)}>
+                      <Select value={code.status} onValueChange={(value) => updateCodeStatus(code.id, value as "new" | "in_progress" | "complete" | "expired")}>
                         <SelectTrigger className="w-32">
                           <Badge variant={getStatusBadgeVariant(code.status)}>
                             {isExpired(code.expiration_time) && code.status !== "used" ? "expired" : code.status}

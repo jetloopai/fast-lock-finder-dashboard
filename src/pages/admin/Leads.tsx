@@ -371,7 +371,7 @@ const Leads = () => {
                       </div>
                     </TableCell>
                     <TableCell>
-                      <Select value={lead.status} onValueChange={(value) => updateStatus(lead.id, value)}>
+                      <Select value={lead.status} onValueChange={(value) => updateStatus(lead.id, value as "new" | "missed" | "in_progress" | "complete")}>
                         <SelectTrigger className="w-32">
                           <Badge variant={getStatusBadgeVariant(lead.status)}>
                             {lead.status}
