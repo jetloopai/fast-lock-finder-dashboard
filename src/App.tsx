@@ -20,6 +20,16 @@ import KeyDuplication from "./pages/services/KeyDuplication";
 import Safes from "./pages/services/Safes";
 import ScrollToTop from "./components/common/ScrollToTop";
 
+// Admin Pages
+import Auth from "./pages/Auth";
+import AdminLayout from "./components/admin/AdminLayout";
+import Dashboard from "./pages/admin/Dashboard";
+import Locksmiths from "./pages/admin/Locksmiths";
+import Leads from "./pages/admin/Leads";
+import Jobs from "./pages/admin/Jobs";
+import DispatchCodes from "./pages/admin/DispatchCodes";
+import CallLogs from "./pages/admin/CallLogs";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -44,6 +54,16 @@ const App = () => (
             <Route path="/service-areas" element={<ServiceAreas />} />
             <Route path="/service-areas/:citySlug" element={<CityPage />} />
             <Route path="/about" element={<About />} />
+            
+            {/* Admin Routes */}
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/admin" element={<AdminLayout><Dashboard /></AdminLayout>} />
+            <Route path="/admin/locksmiths" element={<AdminLayout><Locksmiths /></AdminLayout>} />
+            <Route path="/admin/leads" element={<AdminLayout><Leads /></AdminLayout>} />
+            <Route path="/admin/jobs" element={<AdminLayout><Jobs /></AdminLayout>} />
+            <Route path="/admin/dispatch-codes" element={<AdminLayout><DispatchCodes /></AdminLayout>} />
+            <Route path="/admin/call-logs" element={<AdminLayout><CallLogs /></AdminLayout>} />
+            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
