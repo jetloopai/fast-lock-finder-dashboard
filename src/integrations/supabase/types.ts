@@ -14,7 +14,249 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      call_logs: {
+        Row: {
+          client_phone: string | null
+          created_at: string | null
+          duration_seconds: number | null
+          end_time: string | null
+          id: string
+          job_id: string | null
+          locksmith_id: string | null
+          recording_url: string | null
+          start_time: string | null
+          status: Database["public"]["Enums"]["call_status"] | null
+        }
+        Insert: {
+          client_phone?: string | null
+          created_at?: string | null
+          duration_seconds?: number | null
+          end_time?: string | null
+          id?: string
+          job_id?: string | null
+          locksmith_id?: string | null
+          recording_url?: string | null
+          start_time?: string | null
+          status?: Database["public"]["Enums"]["call_status"] | null
+        }
+        Update: {
+          client_phone?: string | null
+          created_at?: string | null
+          duration_seconds?: number | null
+          end_time?: string | null
+          id?: string
+          job_id?: string | null
+          locksmith_id?: string | null
+          recording_url?: string | null
+          start_time?: string | null
+          status?: Database["public"]["Enums"]["call_status"] | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "call_logs_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "call_logs_locksmith_id_fkey"
+            columns: ["locksmith_id"]
+            isOneToOne: false
+            referencedRelation: "locksmiths"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      dispatch_codes: {
+        Row: {
+          code: string
+          created_at: string | null
+          expiration_time: string | null
+          id: string
+          lead_id: string | null
+          locksmith_id: string | null
+          status: Database["public"]["Enums"]["code_status"] | null
+        }
+        Insert: {
+          code: string
+          created_at?: string | null
+          expiration_time?: string | null
+          id?: string
+          lead_id?: string | null
+          locksmith_id?: string | null
+          status?: Database["public"]["Enums"]["code_status"] | null
+        }
+        Update: {
+          code?: string
+          created_at?: string | null
+          expiration_time?: string | null
+          id?: string
+          lead_id?: string | null
+          locksmith_id?: string | null
+          status?: Database["public"]["Enums"]["code_status"] | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "dispatch_codes_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "leads"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "dispatch_codes_locksmith_id_fkey"
+            columns: ["locksmith_id"]
+            isOneToOne: false
+            referencedRelation: "locksmiths"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      jobs: {
+        Row: {
+          client_name: string | null
+          completed_at: string | null
+          created_at: string | null
+          final_price: number | null
+          id: string
+          job_type: string | null
+          lead_id: string | null
+          locksmith_id: string | null
+          status: Database["public"]["Enums"]["job_status"] | null
+          their_cut: number | null
+          your_cut: number | null
+        }
+        Insert: {
+          client_name?: string | null
+          completed_at?: string | null
+          created_at?: string | null
+          final_price?: number | null
+          id?: string
+          job_type?: string | null
+          lead_id?: string | null
+          locksmith_id?: string | null
+          status?: Database["public"]["Enums"]["job_status"] | null
+          their_cut?: number | null
+          your_cut?: number | null
+        }
+        Update: {
+          client_name?: string | null
+          completed_at?: string | null
+          created_at?: string | null
+          final_price?: number | null
+          id?: string
+          job_type?: string | null
+          lead_id?: string | null
+          locksmith_id?: string | null
+          status?: Database["public"]["Enums"]["job_status"] | null
+          their_cut?: number | null
+          your_cut?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "jobs_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "leads"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "jobs_locksmith_id_fkey"
+            columns: ["locksmith_id"]
+            isOneToOne: false
+            referencedRelation: "locksmiths"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      leads: {
+        Row: {
+          assigned_locksmith_id: string | null
+          created_at: string | null
+          dispatch_code_id: string | null
+          id: string
+          name: string | null
+          phone: string
+          service_type: string | null
+          status: Database["public"]["Enums"]["lead_status"] | null
+          zip: string | null
+        }
+        Insert: {
+          assigned_locksmith_id?: string | null
+          created_at?: string | null
+          dispatch_code_id?: string | null
+          id?: string
+          name?: string | null
+          phone: string
+          service_type?: string | null
+          status?: Database["public"]["Enums"]["lead_status"] | null
+          zip?: string | null
+        }
+        Update: {
+          assigned_locksmith_id?: string | null
+          created_at?: string | null
+          dispatch_code_id?: string | null
+          id?: string
+          name?: string | null
+          phone?: string
+          service_type?: string | null
+          status?: Database["public"]["Enums"]["lead_status"] | null
+          zip?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "leads_assigned_locksmith_id_fkey"
+            columns: ["assigned_locksmith_id"]
+            isOneToOne: false
+            referencedRelation: "locksmiths"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "leads_dispatch_code_fk"
+            columns: ["dispatch_code_id"]
+            isOneToOne: false
+            referencedRelation: "dispatch_codes"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      locksmiths: {
+        Row: {
+          active: boolean | null
+          assigned_zips: string[] | null
+          created_at: string | null
+          default_cut_percent: number | null
+          email: string | null
+          id: string
+          name: string
+          payment_method: string | null
+          phone: string
+        }
+        Insert: {
+          active?: boolean | null
+          assigned_zips?: string[] | null
+          created_at?: string | null
+          default_cut_percent?: number | null
+          email?: string | null
+          id?: string
+          name: string
+          payment_method?: string | null
+          phone: string
+        }
+        Update: {
+          active?: boolean | null
+          assigned_zips?: string[] | null
+          created_at?: string | null
+          default_cut_percent?: number | null
+          email?: string | null
+          id?: string
+          name?: string
+          payment_method?: string | null
+          phone?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +265,10 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      call_status: "answered" | "missed" | "failed"
+      code_status: "new" | "in_progress" | "complete" | "expired"
+      job_status: "in_progress" | "complete" | "missed"
+      lead_status: "new" | "in_progress" | "complete" | "missed"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +395,11 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      call_status: ["answered", "missed", "failed"],
+      code_status: ["new", "in_progress", "complete", "expired"],
+      job_status: ["in_progress", "complete", "missed"],
+      lead_status: ["new", "in_progress", "complete", "missed"],
+    },
   },
 } as const
