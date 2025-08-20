@@ -15,6 +15,76 @@ const SmartLocks = () => {
         />
         <meta name="keywords" content="smart lock installation Chicago, keyless entry, digital locks, smart home security, WiFi locks, app controlled locks, electronic locks" />
         <link rel="canonical" href="https://fastlockfinder.com/services/smart-locks" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Smart Lock Installation Chicago | Keyless Entry Systems" />
+        <meta property="og:description" content="Professional smart lock installation - WiFi, Bluetooth, keypad, biometric locks. Expert setup for keyless entry systems in Chicago suburbs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fastlockfinder.com/services/smart-locks" />
+        <meta property="og:image" content="https://fastlockfinder.com/og-smart-locks.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Smart Lock Installation Chicago | Keyless Entry" />
+        <meta name="twitter:description" content="Professional smart lock installation - WiFi, Bluetooth, keypad, biometric locks. Expert setup for keyless entry systems." />
+        <meta name="twitter:image" content="https://fastlockfinder.com/og-smart-locks.jpg" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Smart Lock Installation Services",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "FastLockFinder",
+              "url": "https://fastlockfinder.com",
+              "telephone": "(555) FAST-LOCK"
+            },
+            "serviceType": "Smart Lock Installation",
+            "description": "Professional installation of smart locks including WiFi, Bluetooth, keypad, and biometric locks for enhanced security.",
+            "areaServed": {
+              "@type": "Place",
+              "name": "Chicago South & Southwest Suburbs"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Smart Lock Types",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "WiFi Smart Lock Installation"
+                  }
+                },
+                {
+                  "@type": "Offer", 
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Bluetooth Smart Lock Installation"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service", 
+                    "name": "Keypad Smart Lock Installation"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Biometric Smart Lock Installation"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
