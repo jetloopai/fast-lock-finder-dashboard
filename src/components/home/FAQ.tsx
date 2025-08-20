@@ -37,8 +37,24 @@ const FAQ = () => {
   const [titleRef, titleVisible] = useScrollAnimation();
   const [accordionRef, accordionVisible] = useScrollAnimation();
   
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+  
   return (
     <section className="py-20 bg-secondary">
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
       <div className="container mx-auto px-4">
         <div 
           ref={titleRef as any}

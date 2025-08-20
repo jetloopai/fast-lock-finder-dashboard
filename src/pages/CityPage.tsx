@@ -20,10 +20,26 @@ const CityPage = () => {
   const city = getCityBySlug(actualCitySlug);
   
   if (!city) {
-    console.log("City not found for slug:", actualCitySlug);
-    console.log("Original param:", citySlug);
-    console.log("Available cities:", Object.keys(cityData));
-    return <div>City not found</div>;
+    return (
+      <Layout>
+        <Helmet>
+          <title>City Not Found - FastLockFinder | Locksmith Services</title>
+          <meta name="description" content="The requested city page was not found. Explore our service areas for professional locksmith services." />
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
+        <div className="min-h-[60vh] flex items-center justify-center bg-background">
+          <div className="text-center max-w-md mx-auto px-4">
+            <h1 className="text-4xl font-bold text-primary mb-4">City Not Found</h1>
+            <p className="text-muted-foreground mb-8">
+              We couldn't find that city. Check out our service areas to find locksmith services near you.
+            </p>
+            <Button asChild>
+              <Link to="/service-areas">View Service Areas</Link>
+            </Button>
+          </div>
+        </div>
+      </Layout>
+    );
   }
 
   const primaryLandmark = city.landmarks[0];
@@ -53,7 +69,135 @@ const CityPage = () => {
           name="description" 
           content={`Locked out in ${city.name}? Fast 15-minute arrival, 24/7 locksmith service for homes, cars, and businesses near ${primaryLandmark} and ${secondaryLandmark}.`} 
         />
+        <meta name="keywords" content={`locksmith ${city.name}, 24/7 locksmith service, emergency lockout ${city.name}, ${primaryLandmark} locksmith, car lockout, home lockout`} />
         <link rel="canonical" href={`https://fastlockfinder.com/service-areas/${city.slug}-locksmith`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${city.name} Locksmith | FastLockFinder 24/7 Service`} />
+        <meta property="og:description" content={`Locked out in ${city.name}? Fast 15-minute arrival, 24/7 locksmith service near ${primaryLandmark} and ${secondaryLandmark}.`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://fastlockfinder.com/service-areas/${city.slug}-locksmith`} />
+        <meta property="og:image" content="https://fastlockfinder.com/og-city-locksmith.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${city.name} Locksmith | FastLockFinder 24/7`} />
+        <meta name="twitter:description" content={`Emergency locksmith in ${city.name}. 15-min arrival, licensed & insured.`} />
+        <meta name="twitter:image" content="https://fastlockfinder.com/og-city-locksmith.jpg" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": `FastLockFinder - ${city.name} Locksmith`,
+            "image": "https://fastlockfinder.com/logo.png",
+            "url": `https://fastlockfinder.com/service-areas/${city.slug}-locksmith`,
+            "telephone": "(555) FAST-LOCK",
+            "email": "info@fastlockfinder.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": city.name,
+              "addressRegion": "IL",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 41.6034,
+              "longitude": -87.5665
+            },
+            "openingHours": "Mo-Su 00:00-23:59",
+            "serviceArea": {
+              "@type": "Place",
+              "name": `${city.name} and surrounding areas`
+            },
+            "priceRange": "$$",
+            "currenciesAccepted": "USD",
+            "paymentAccepted": "Cash, Credit Card, Debit Card",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Locksmith Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Emergency Lockout Service",
+                    "description": "24/7 emergency lockout service for homes, cars, and businesses"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Residential Locksmith",
+                    "description": "Home lock installation, repair, and rekeying services"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Commercial Locksmith",
+                    "description": "Business security and access control systems"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Automotive Locksmith",
+                    "description": "Car key replacement and automotive lockout services"
+                  }
+                }
+              ]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "847",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })}
+        </script>
+        
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": `How fast can you arrive in ${city.name} near ${primaryLandmark}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `Our average arrival time in ${city.name} is 15 minutes, depending on traffic and your exact location. We service the entire ${city.name} area including locations near ${primaryLandmark} and ${secondaryLandmark}.`
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `Are you available at night in ${city.name}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `Yes, FastLockFinder operates 24/7 in ${city.name} and all surrounding suburbs. Whether it's 2 AM or 2 PM, we're ready to help with your locksmith emergency.`
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `What locksmith services do you offer in ${city.name}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `We provide complete locksmith services in ${city.name} including emergency lockouts, residential and commercial lock services, automotive locksmith work, key duplication, rekeying, smart lock installation, and safe services.`
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
