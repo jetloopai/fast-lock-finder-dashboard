@@ -11,6 +11,7 @@ const Header = () => {
     { label: "Services", href: "/services" },
     { label: "Service Areas", href: "/service-areas" },
     { label: "About", href: "/about" },
+    { label: "Admin", href: "/auth" }, // Temporary admin link
   ];
 
   return (
