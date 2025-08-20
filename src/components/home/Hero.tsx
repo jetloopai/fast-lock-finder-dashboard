@@ -68,8 +68,12 @@ const Hero = () => {
           <div className="relative animate-slide-in-right">
             <img 
               src={heroImage} 
-              alt="FastLockFinder locksmith van arriving quickly in Chicago suburbs"
+              alt="Professional FastLockFinder locksmith van providing 24/7 emergency locksmith services in Chicago South and Southwest suburbs"
+              title="FastLockFinder Emergency Locksmith Service"
               className="w-full h-auto rounded-lg shadow-2xl"
+              width="600"
+              height="400"
+              loading="eager"
             />
           </div>
         </div>

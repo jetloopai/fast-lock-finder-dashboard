@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Clock } from "lucide-react";
 import ServiceAreasMap from "@/components/common/ServiceAreasMap";
+import { Helmet } from "react-helmet-async";
 
 const southSuburbs = [
   { name: "Oak Lawn", slug: "oak-lawn" },
@@ -62,6 +63,52 @@ const southwestSuburbs = [
 const ServiceAreas = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Service Areas | Chicago South & Southwest Suburbs Locksmith | FastLockFinder</title>
+        <meta 
+          name="description" 
+          content="Locksmith service areas across Chicago South & Southwest suburbs - Oak Lawn, Orland Park, Tinley Park, Blue Island and 50+ cities. 15-min average response." 
+        />
+        <meta name="keywords" content="locksmith service areas Chicago, Oak Lawn locksmith, Orland Park locksmith, Tinley Park locksmith, Blue Island locksmith, Chicago suburbs locksmith" />
+        <link rel="canonical" href="https://fastlockfinder.com/service-areas" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Service Areas | Chicago South & Southwest Suburbs Locksmith" />
+        <meta property="og:description" content="50+ cities served with 15-minute average response time. Professional locksmith services across Chicago suburbs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fastlockfinder.com/service-areas" />
+        <meta property="og:image" content="https://fastlockfinder.com/og-service-areas.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Service Areas | Chicago Suburbs Locksmith" />
+        <meta name="twitter:description" content="50+ cities served with 15-minute average response time. Professional locksmith services." />
+        <meta name="twitter:image" content="https://fastlockfinder.com/og-service-areas.jpg" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "FastLockFinder",
+            "serviceArea": [
+              "Oak Lawn, IL", "Orland Park, IL", "Tinley Park, IL", "Blue Island, IL", 
+              "Evergreen Park, IL", "Hickory Hills, IL", "Palos Hills, IL", "Chicago Ridge, IL"
+            ],
+            "geo": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "41.6528",
+                "longitude": "-87.7319"
+              },
+              "geoRadius": "30000"
+            }
+          })}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>

@@ -15,6 +15,47 @@ const Residential = () => {
         />
         <meta name="keywords" content="residential locksmith Chicago, home locksmith, lock installation, home security, house locksmith, residential lock repair, home lock rekeying" />
         <link rel="canonical" href="https://fastlockfinder.com/services/residential" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Residential Locksmith Chicago | Home Security Services" />
+        <meta property="og:description" content="Professional home locksmith services - lock installation, repair, rekeying & security upgrades. Licensed professionals serving Chicago suburbs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fastlockfinder.com/services/residential" />
+        <meta property="og:image" content="https://fastlockfinder.com/og-residential.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Residential Locksmith Chicago | Home Security" />
+        <meta name="twitter:description" content="Professional home locksmith services - lock installation, repair, rekeying & security upgrades." />
+        <meta name="twitter:image" content="https://fastlockfinder.com/og-residential.jpg" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Residential Locksmith Services",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "FastLockFinder",
+              "url": "https://fastlockfinder.com",
+              "telephone": "(555) FAST-LOCK"
+            },
+            "serviceType": "Residential Locksmith",
+            "description": "Professional home security solutions including lock installation, repair, and upgrade services.",
+            "areaServed": {
+              "@type": "Place",
+              "name": "Chicago South & Southwest Suburbs"
+            },
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "price": "Contact for pricing"
+            }
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

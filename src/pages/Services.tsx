@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { 
   Key, 
   Home, 
@@ -107,6 +108,49 @@ const services = [
 const Services = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Locksmith Services Chicago | Emergency, Residential, Commercial | FastLockFinder</title>
+        <meta 
+          name="description" 
+          content="Professional locksmith services in Chicago South & Southwest suburbs - 24/7 emergency, residential, commercial, automotive locksmith. Licensed & insured." 
+        />
+        <meta name="keywords" content="locksmith services Chicago, emergency locksmith, residential locksmith, commercial locksmith, automotive locksmith, key duplication, smart locks, safes" />
+        <link rel="canonical" href="https://fastlockfinder.com/services" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Professional Locksmith Services | Chicago South & Southwest Suburbs" />
+        <meta property="og:description" content="24/7 locksmith services - emergency lockouts, residential, commercial, automotive. Licensed professionals serving Chicago suburbs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fastlockfinder.com/services" />
+        <meta property="og:image" content="https://fastlockfinder.com/og-services.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Professional Locksmith Services | Chicago Suburbs" />
+        <meta name="twitter:description" content="24/7 locksmith services - emergency lockouts, residential, commercial, automotive. Licensed professionals." />
+        <meta name="twitter:image" content="https://fastlockfinder.com/og-services.jpg" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Professional Locksmith Services",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "FastLockFinder",
+              "url": "https://fastlockfinder.com"
+            },
+            "serviceType": ["Emergency Locksmith", "Residential Locksmith", "Commercial Locksmith", "Automotive Locksmith"],
+            "areaServed": {
+              "@type": "Place",
+              "name": "Chicago South & Southwest Suburbs"
+            }
+          })}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
