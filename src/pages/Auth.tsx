@@ -58,16 +58,34 @@ const Auth = () => {
     setLoading(false);
   };
 
+  const validatePassword = (password: string) => {
+    if (password.length < 8) {
+      return "Password must be at least 8 characters long";
+    }
+    if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(password)) {
+      return "Password must contain at least one uppercase letter, one lowercase letter, and one number";
+    }
+    return null;
+  };
+
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
-    // Bypass email verification for development
+    // Validate password strength
+    const passwordError = validatePassword(password);
+    if (passwordError) {
+      setError(passwordError);
+      setLoading(false);
+      return;
+    }
+
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
+        emailRedirectTo: `${window.location.origin}/admin`,
         data: {
           name,
         },
@@ -227,14 +245,17 @@ const Auth = () => {
                       <Input
                         id="signup-password"
                         type="password"
-                        placeholder="Create a strong password"
+                        placeholder="Min 8 chars with uppercase, lowercase & number"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="pl-10"
-                        minLength={6}
+                        minLength={8}
                         required
                       />
                     </div>
+                    <p className="text-xs text-muted-foreground">
+                      Password must be at least 8 characters with uppercase, lowercase, and number
+                    </p>
                   </div>
                   
                   <Button 
