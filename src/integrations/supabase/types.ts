@@ -262,7 +262,14 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      claim_code: {
+        Args: { p_code: string; p_from: string; p_sid: string }
+        Returns: {
+          lead_id: string
+          lead_phone: string
+          locksmith_id: string
+        }[]
+      }
     }
     Enums: {
       call_status: "answered" | "missed" | "failed"
