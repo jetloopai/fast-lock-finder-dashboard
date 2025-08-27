@@ -213,13 +213,13 @@ const CityPage = () => {
               house lockouts, car lockout services, and commercial locksmith needs. Serving {city.majorStreets[0]} and {city.majorStreets[1]} areas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-left">
-              <Button variant="cta" size="lg" asChild>
+              <Button variant="city-primary" size="lg" asChild>
                 <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
                   <span>Call Now</span>
                 </a>
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="city-secondary" size="lg">
                 Get Unlocked Fast
               </Button>
             </div>
