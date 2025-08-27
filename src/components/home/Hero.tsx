@@ -22,7 +22,7 @@ const Hero = () => {
               <Button variant="hero" size="lg" className="animate-glow hover-glow" asChild>
                 <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
-                  <span>📞 Get Connected Instantly</span>
+                  <span>Get Connected Instantly</span>
                 </a>
               </Button>
               <Button variant="outline" size="lg">
