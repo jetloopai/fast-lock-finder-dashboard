@@ -135,7 +135,7 @@ const ServicesGrid = () => {
                 </CardHeader>
                 <CardContent className="text-center space-y-4">
                   <CardDescription>{service.description}</CardDescription>
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="cta" size="sm" asChild>
                     <Link to={service.link}>Learn More</Link>
                   </Button>
                 </CardContent>
