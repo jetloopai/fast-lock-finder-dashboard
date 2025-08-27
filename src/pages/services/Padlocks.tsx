@@ -53,10 +53,10 @@ const Padlocks = () => {
               <Button variant="cta" size="lg" asChild>
                 <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
-                  <span>Call Now</span>
+                  <span>Get Services Now</span>
                 </a>
               </Button>
-              <Button variant="secondary" size="lg">
+              <Button variant="navy" size="lg">
                 Get Quote
               </Button>
             </div>
@@ -276,13 +276,13 @@ const Padlocks = () => {
             reliable protection for your gates, storage, and valuable assets.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg" asChild>
+            <Button variant="cta" size="lg" asChild>
               <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call Now</span>
+                <span>Get Services Now</span>
               </a>
             </Button>
-            <Button variant="secondary" size="lg">
+            <Button variant="navy" size="lg">
               Get Free Quote
             </Button>
           </div>

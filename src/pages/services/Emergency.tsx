@@ -33,10 +33,10 @@ const Emergency = () => {
               <Button variant="cta" size="lg" asChild>
                 <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
-                  <span>Call Now</span>
+                  <span>Get Services Now</span>
                 </a>
               </Button>
-              <Button variant="secondary" size="lg">
+              <Button variant="navy" size="lg">
                 Get Emergency Help
               </Button>
             </div>
@@ -259,10 +259,10 @@ const Emergency = () => {
             <Button variant="default" size="lg" asChild>
               <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call Now</span>
+                <span>Get Services Now</span>
               </a>
             </Button>
-            <Button variant="secondary" size="lg">
+            <Button variant="navy" size="lg">
               Text for Service
             </Button>
           </div>
