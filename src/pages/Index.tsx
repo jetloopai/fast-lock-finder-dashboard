@@ -30,7 +30,7 @@ const Index = () => {
             "name": "FastLockFinder",
             "description": "Professional locksmith services across Chicago's South & Southwest suburbs",
             "url": "https://fastlockfinder.com",
-            "telephone": "+1-555-FAST-LOCK",
+            "telephone": "+1-773-377-6511",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Chicago",

@@ -73,7 +73,7 @@ const EmergencySituations = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="default" size="lg">
-              Call Emergency Line: (555) FAST-LOCK
+              Call Emergency Line Now
             </Button>
             <Button variant="default" size="lg" className="bg-accent-foreground text-accent hover:bg-accent-foreground/90">
               Request Emergency Service

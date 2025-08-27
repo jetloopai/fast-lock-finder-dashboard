@@ -79,11 +79,11 @@ const Footer = () => {
             <h3 className="font-semibold text-lg">Contact</h3>
             <div className="space-y-3">
               <a 
-                href="tel:+1-555-FAST-LOCK"
+                href="tel:+1-773-377-6511"
                 className="flex items-center space-x-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span>(555) FAST-LOCK</span>
+                <span>Call Now</span>
               </a>
               <div className="flex items-center space-x-2 text-primary-foreground/80">
                 <MapPin className="h-4 w-4" />

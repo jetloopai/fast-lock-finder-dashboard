@@ -31,9 +31,9 @@ const Emergency = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
-                <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
+                <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
-                  <span>Call: (555) FAST-LOCK</span>
+                  <span>Call Now</span>
                 </a>
               </Button>
               <Button variant="secondary" size="lg">
@@ -211,7 +211,7 @@ const Emergency = () => {
               </div>
               <h3 className="font-semibold mb-2">Call Us</h3>
               <p className="text-sm text-muted-foreground">
-                Call (555) FAST-LOCK for immediate assistance, 24/7
+                Call for immediate assistance, 24/7
               </p>
             </div>
             <div className="text-center">
@@ -257,9 +257,9 @@ const Emergency = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="default" size="lg" asChild>
-              <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
+              <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call: (555) FAST-LOCK</span>
+                <span>Call Now</span>
               </a>
             </Button>
             <Button variant="secondary" size="lg">

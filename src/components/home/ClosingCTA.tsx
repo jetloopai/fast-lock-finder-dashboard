@@ -16,11 +16,11 @@ const ClosingCTA = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-in-left">
             <Button variant="hero" size="lg" className="animate-glow hover-glow" asChild>
-              <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-3">
+              <a href="tel:+1-773-377-6511" className="flex items-center space-x-3">
                 <Phone className="h-6 w-6" />
                 <div className="text-left">
                   <div className="font-bold text-lg">Call Now</div>
-                  <div className="text-sm opacity-90">(555) FAST-LOCK</div>
+                  <div className="text-sm opacity-90">Emergency Help</div>
                 </div>
               </a>
             </Button>

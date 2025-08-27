@@ -211,7 +211,7 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent" asChild>
-              <a href="tel:+1-555-FAST-LOCK">Call: (555) FAST-LOCK</a>
+              <a href="tel:+1-773-377-6511">Call Now</a>
             </Button>
             <Button variant="secondary" size="lg">
               Get Unlocked Fast

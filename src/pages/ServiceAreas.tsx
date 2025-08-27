@@ -228,7 +228,7 @@ const ServiceAreas = () => {
             We may still be able to help! Call us to check if we can provide service in your area.
           </p>
           <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent" asChild>
-            <a href="tel:+1-555-FAST-LOCK">Call: (555) FAST-LOCK</a>
+            <a href="tel:+1-773-377-6511">Call Now</a>
           </Button>
         </div>
       </section>

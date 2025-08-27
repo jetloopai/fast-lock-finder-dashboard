@@ -6,7 +6,7 @@ const steps = [
     icon: Phone,
     step: "1",
     title: "Call Us",
-    description: "Call (555) FAST-LOCK or submit our quick form. We'll gather your location and service details."
+    description: "Call our emergency line or submit our quick form. We'll gather your location and service details."
   },
   {
     icon: UserCheck,

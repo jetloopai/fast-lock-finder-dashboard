@@ -22,9 +22,9 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 animate-slide-in-left">
               <Button variant="hero" size="lg" className="animate-glow hover-glow" asChild>
-                <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
+                <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
-                  <span>Call Now: (555) FAST-LOCK</span>
+                  <span>Call Now</span>
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">

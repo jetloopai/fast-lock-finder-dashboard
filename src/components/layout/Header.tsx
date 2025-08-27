@@ -42,13 +42,13 @@ const Header = () => {
           {/* Phone CTA & Mobile Menu */}
           <div className="flex items-center space-x-2">
             <Button variant="outline" size="sm" className="hidden md:flex" asChild>
-              <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
+              <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>(555) FAST-LOCK</span>
+                <span>Call Now</span>
               </a>
             </Button>
             <Button variant="cta" size="sm" asChild>
-              <a href="tel:+1-555-FAST-LOCK" className="flex items-center space-x-2">
+              <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
                 <span className="hidden sm:inline">Call Now</span>
                 <span className="sm:hidden">Call</span>
@@ -82,13 +82,13 @@ const Header = () => {
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 <Button variant="outline" size="sm" asChild>
-                  <a href="tel:+1-555-FAST-LOCK" className="flex items-center justify-center space-x-2">
+                  <a href="tel:+1-773-377-6511" className="flex items-center justify-center space-x-2">
                     <Phone className="h-4 w-4" />
-                    <span>(555) FAST-LOCK</span>
+                    <span>Call Now</span>
                   </a>
                 </Button>
                 <Button variant="cta" size="sm" asChild>
-                  <a href="tel:+1-555-FAST-LOCK" className="flex items-center justify-center space-x-2">
+                  <a href="tel:+1-773-377-6511" className="flex items-center justify-center space-x-2">
                     <Phone className="h-4 w-4" />
                     <span>Call Now</span>
                   </a>

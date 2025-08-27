@@ -6,7 +6,7 @@ const OrganizationSchema = () => {
     "image": "https://fastlockfinder.com/logo.png",
     "logo": "https://fastlockfinder.com/logo.png",
     "url": "https://fastlockfinder.com",
-    "telephone": "(555) FAST-LOCK",
+    "telephone": "+1-773-377-6511",
     "email": "info@fastlockfinder.com",
     "description": "Professional locksmith services available 24/7 across Chicago's South & Southwest suburbs. Fast response times, licensed and insured technicians.",
     "address": {
@@ -100,7 +100,7 @@ const OrganizationSchema = () => {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "(555) FAST-LOCK",
+        "telephone": "+1-773-377-6511",
         "contactType": "Emergency Service",
         "availableLanguage": "English",
         "hoursAvailable": {
