@@ -406,13 +406,13 @@ const CityPage = () => {
             Don't wait - we're standing by to help you get back inside quickly and safely.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="city-primary" size="lg" asChild>
               <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
                 <span>Call Now</span>
               </a>
             </Button>
-            <Button variant="default" size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button variant="city-secondary" size="lg">
               Request Service Online
             </Button>
           </div>
