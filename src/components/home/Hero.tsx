@@ -25,7 +25,7 @@ const Hero = () => {
                   <span>Get Connected Instantly</span>
                 </a>
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="secondary" size="lg">
                 Get Unlocked Fast
               </Button>
             </div>
