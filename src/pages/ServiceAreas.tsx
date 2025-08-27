@@ -176,7 +176,7 @@ const ServiceAreas = () => {
                     {southSuburbs.map((city) => (
                       <Button
                         key={city.slug}
-                        variant="outline"
+                        variant="outline-navy"
                         className="justify-start h-auto py-3"
                         asChild
                       >
@@ -201,7 +201,7 @@ const ServiceAreas = () => {
                     {southwestSuburbs.map((city) => (
                       <Button
                         key={city.slug}
-                        variant="outline"
+                        variant="outline-navy"
                         className="justify-start h-auto py-3"
                         asChild
                       >
