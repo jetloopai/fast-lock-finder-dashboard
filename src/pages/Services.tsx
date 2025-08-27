@@ -210,7 +210,7 @@ const Services = () => {
             Don't wait - our professional locksmiths are standing by 24/7 to help you get unlocked fast.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent" asChild>
+            <Button variant="cta" size="lg" asChild>
               <a href="tel:+1-773-377-6511">Call Now</a>
             </Button>
             <Button variant="secondary" size="lg">

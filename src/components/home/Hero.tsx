@@ -27,7 +27,7 @@ const Hero = () => {
                   <span>Call Now</span>
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button variant="outline" size="lg">
                 Get Unlocked Fast
               </Button>
             </div>

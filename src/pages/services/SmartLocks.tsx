@@ -106,7 +106,7 @@ const SmartLocks = () => {
                   <span>Call Now</span>
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button variant="outline" size="lg">
                 Smart Lock Consultation
               </Button>
             </div>
@@ -404,7 +404,7 @@ const SmartLocks = () => {
             smart lock installation and setup services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent" asChild>
+            <Button variant="cta" size="lg" asChild>
               <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
                 <span>Call Now</span>

@@ -61,7 +61,7 @@ const About = () => {
               the South & Southwest suburbs with professional, reliable locksmith solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-left">
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+              <Button variant="outline" size="lg" asChild>
                 <a href="tel:+1-773-377-6511">Call Now</a>
               </Button>
               <Button variant="secondary" size="lg" asChild>
@@ -207,7 +207,7 @@ const About = () => {
           <p className="text-lg mb-8 opacity-90">
             From Oak Lawn to Orland Park, from Burbank to Tinley Park - we're your local locksmith experts.
           </p>
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+          <Button variant="outline" size="lg" asChild>
             <Link to="/service-areas">View All Service Areas</Link>
           </Button>
         </div>

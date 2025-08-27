@@ -27,7 +27,7 @@ const ClosingCTA = () => {
             
             <div className="text-primary-foreground/60 font-semibold">OR</div>
             
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button variant="outline" size="lg">
               <MessageSquare className="h-5 w-5 mr-2" />
               Get Unlocked Fast
             </Button>
