@@ -11,12 +11,10 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight animate-slide-up">
-                Locked Out?
-                <span className="block text-accent text-glow">We'll Be There in 15 Minutes</span>
+                Trusted Locksmith Services in Chicago & the South Suburbs
               </h1>
               <p className="text-xl text-primary-foreground/90 max-w-lg animate-fade-in-delay">
-                Fast, reliable 24/7 locksmith service across Chicago's South & Southwest suburbs. 
-                Professional locksmiths, upfront pricing, never more than 30 minutes.
+                FastLockFinder connects you with licensed, verified locksmiths serving Oak Lawn, Lansing, Matteson, Orland Park and 50+ South Suburban communities. Safe, reliable, and available 24/7.
               </p>
             </div>
 
@@ -24,7 +22,7 @@ const Hero = () => {
               <Button variant="hero" size="lg" className="animate-glow hover-glow" asChild>
                 <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
-                  <span>Call Now</span>
+                  <span>📞 Get Connected Instantly</span>
                 </a>
               </Button>
               <Button variant="outline" size="lg">
