@@ -69,7 +69,7 @@ const CityPage = () => {
           name="description" 
           content={`Locked out in ${city.name}? Fast 15-minute arrival, 24/7 locksmith service for homes, cars, and businesses near ${primaryLandmark} and ${secondaryLandmark}.`} 
         />
-        <meta name="keywords" content={`locksmith ${city.name}, 24/7 locksmith service, emergency lockout ${city.name}, ${primaryLandmark} locksmith, car lockout, home lockout`} />
+        <meta name="keywords" content={city.keywords.slice(0, 10).join(', ')} />
         <link rel="canonical" href={`https://fastlockfinder.com/service-areas/${city.slug}-locksmith`} />
         
         {/* Open Graph */}
@@ -209,8 +209,8 @@ const CityPage = () => {
               24/7 Locksmith in {city.name}
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8 animate-fade-in-delay">
-              Fast, reliable locksmith services in {city.name}. Professional locksmiths available 24/7 
-              with 15-minute average response time. Licensed, bonded, and insured.
+              Emergency locksmith services available 24/7 in {city.name}. Mobile locksmith team ready to help with 
+              house lockouts, car lockout services, and commercial locksmith needs. Serving {city.majorStreets[0]} and {city.majorStreets[1]} areas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-left">
               <Button variant="cta" size="lg" asChild>
@@ -270,8 +270,9 @@ const CityPage = () => {
               Complete Locksmith Services in {city.name}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From emergency lockouts to security upgrades, FastLockFinder provides comprehensive locksmith services 
-              throughout {city.name} and the surrounding {city.region.toLowerCase()}, including areas near {primaryLandmark} and {secondaryLandmark}.
+              Looking for a cheap locksmith in {city.name}? Our mobile locksmith team provides emergency locksmith services, 
+              lock change service, key duplication, and rekey locks throughout {city.name} including {city.majorStreets[0]}, {city.majorStreets[1]}, 
+              and areas near {primaryLandmark} and {secondaryLandmark}.
             </p>
           </div>
           
@@ -315,41 +316,43 @@ const CityPage = () => {
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="arrival-time">
                 <AccordionTrigger className="text-left">
-                  How fast can you arrive in {city.name} near {primaryLandmark}?
+                  How fast can a locksmith near me in {city.name} arrive?
                 </AccordionTrigger>
                 <AccordionContent>
-                  Our average arrival time in {city.name} is 15 minutes, depending on traffic and your exact location. 
-                  We service the entire {city.name} area including locations near {primaryLandmark} and {secondaryLandmark}.
+                  Our emergency locksmith in {city.name} has an average arrival time of 15 minutes. We're a mobile locksmith 
+                  serving the entire {city.name} area including {city.majorStreets[0]}, {city.majorStreets[1]}, and locations near {primaryLandmark} and {secondaryLandmark}.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="night-service">
                 <AccordionTrigger className="text-left">
-                  Are you available at night in {city.name}?
+                  Do you have a 24 hour locksmith in {city.name}?
                 </AccordionTrigger>
                 <AccordionContent>
-                  Yes, FastLockFinder operates 24/7 in {city.name} and all surrounding suburbs. Whether it's 2 AM or 2 PM, 
-                  we're ready to help with your locksmith emergency.
+                  Yes, our 24 hour locksmith service operates in {city.name} and all surrounding suburbs. Whether you need a 
+                  locksmith open now at 2 AM or 2 PM, we're ready to help with house lockouts, car lockout service, and emergency lockouts.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="services-offered">
                 <AccordionTrigger className="text-left">
-                  What locksmith services do you offer in {city.name}?
+                  What services does your commercial locksmith in {city.name} provide?
                 </AccordionTrigger>
                 <AccordionContent>
-                  We provide complete locksmith services in {city.name} including emergency lockouts, residential and commercial 
-                  lock services, automotive locksmith work, key duplication, rekeying, smart lock installation, and safe services.
+                  Our commercial locksmith in {city.name} provides storefront lock repair, lock change service, rekey locks, 
+                  lost car key replacement, key duplication, and locksmith for businesses. We also offer residential locksmith 
+                  services including house lockout assistance and emergency locksmith support.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="area-coverage">
                 <AccordionTrigger className="text-left">
-                  Can you come to the {secondaryLandmark} area in {city.name}?
+                  Do you service {city.majorStreets[0]} and {city.majorStreets[1]} in {city.name}?
                 </AccordionTrigger>
                 <AccordionContent>
-                  Absolutely! We regularly service the {secondaryLandmark} area and all parts of {city.name}. 
-                  Our technicians are familiar with the entire city and can reach you quickly wherever you are.
+                  Yes! Our mobile locksmith covers all major streets in {city.name} including {city.majorStreets[0]}, {city.majorStreets[1]}, 
+                  {city.majorStreets[2]}, and {city.majorStreets[3]}. We also service the {secondaryLandmark} area and all parts of {city.name} 
+                  with our emergency locksmith and residential locksmith services.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
