@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Phone, Clock, Shield, Star, MapPin, Home, Building, Car, Key, Lock, DollarSign, Wrench } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import CityReviews from "@/components/home/CityReviews";
+import { getCityFAQs } from "@/utils/cityFAQs";
 
 const CityPage = () => {
   const { citySlug } = useParams();
@@ -314,47 +315,16 @@ const CityPage = () => {
             </div>
             
             <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem value="arrival-time">
-                <AccordionTrigger className="text-left">
-                  How fast can a locksmith near me in {city.name} arrive?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Our emergency locksmith in {city.name} has an average arrival time of 15 minutes. We're a mobile locksmith 
-                  serving the entire {city.name} area including {city.majorStreets[0]}, {city.majorStreets[1]}, and locations near {primaryLandmark} and {secondaryLandmark}.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="night-service">
-                <AccordionTrigger className="text-left">
-                  Do you have a 24 hour locksmith in {city.name}?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes, our 24 hour locksmith service operates in {city.name} and all surrounding suburbs. Whether you need a 
-                  locksmith open now at 2 AM or 2 PM, we're ready to help with house lockouts, car lockout service, and emergency lockouts.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="services-offered">
-                <AccordionTrigger className="text-left">
-                  What services does your commercial locksmith in {city.name} provide?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Our commercial locksmith in {city.name} provides storefront lock repair, lock change service, rekey locks, 
-                  lost car key replacement, key duplication, and locksmith for businesses. We also offer residential locksmith 
-                  services including house lockout assistance and emergency locksmith support.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="area-coverage">
-                <AccordionTrigger className="text-left">
-                  Do you service {city.majorStreets[0]} and {city.majorStreets[1]} in {city.name}?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes! Our mobile locksmith covers all major streets in {city.name} including {city.majorStreets[0]}, {city.majorStreets[1]}, 
-                  {city.majorStreets[2]}, and {city.majorStreets[3]}. We also service the {secondaryLandmark} area and all parts of {city.name} 
-                  with our emergency locksmith and residential locksmith services.
-                </AccordionContent>
-              </AccordionItem>
+              {getCityFAQs(city.name, city.landmarks, city.majorStreets).map((faq, index) => (
+                <AccordionItem key={index} value={`faq-${index}`}>
+                  <AccordionTrigger className="text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
         </div>
