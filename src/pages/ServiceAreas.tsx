@@ -60,21 +60,52 @@ const southwestSuburbs = [
   { name: "Lemont", slug: "lemont" }
 ];
 
+const chicagoAreas = [
+  { name: "Streeterville (60601)", slug: "chicago-60601-streeterville" },
+  { name: "Central Loop (60602)", slug: "chicago-60602-central-loop" },
+  { name: "South Loop (60603)", slug: "chicago-60603-south-loop" },
+  { name: "Museum Campus (60604)", slug: "chicago-60604-museum-campus" },
+  { name: "Printer's Row (60605)", slug: "chicago-60605-printers-row" },
+  { name: "West Loop Gate (60606)", slug: "chicago-60606-west-loop-gate" },
+  { name: "West Loop (60607)", slug: "chicago-60607-west-loop" },
+  { name: "Pilsen (60608)", slug: "chicago-60608-pilsen" },
+  { name: "Old Town (60610)", slug: "chicago-60610-old-town" },
+  { name: "Magnificent Mile (60611)", slug: "chicago-60611-mag-mile" },
+  { name: "Medical District (60612)", slug: "chicago-60612-medical-district" },
+  { name: "Hyde Park (60615)", slug: "chicago-60615-hyde-park" },
+  { name: "Chatham (60619)", slug: "chicago-60619-chatham" },
+  { name: "Auburn Gresham (60620)", slug: "chicago-60620-auburn-gresham" },
+  { name: "Englewood (60621)", slug: "chicago-60621-englewood" },
+  { name: "West Englewood (60636)", slug: "chicago-60636-west-englewood" },
+  { name: "Woodlawn (60637)", slug: "chicago-60637-woodlawn" },
+  { name: "South Shore (60649)", slug: "chicago-60649-south-shore" },
+  { name: "Bronzeville (60653)", slug: "chicago-60653-bronzeville" },
+  { name: "Roseland (60628)", slug: "chicago-60628-roseland" },
+  { name: "Chicago Lawn (60629)", slug: "chicago-60629-chicago-lawn" },
+  { name: "Brighton Park (60632)", slug: "chicago-60632-brighton-park" },
+  { name: "Hegewisch (60633)", slug: "chicago-60633-hegewisch" },
+  { name: "Garfield Ridge (60638)", slug: "chicago-60638-garfield-ridge" },
+  { name: "Beverly (60643)", slug: "chicago-60643-beverly" },
+  { name: "Mount Greenwood (60655)", slug: "chicago-60655-mount-greenwood" },
+  { name: "Riverdale (60827)", slug: "chicago-60827-riverdale" },
+  { name: "Near West Loop (60661)", slug: "chicago-60661-near-west-loop" }
+];
+
 const ServiceAreas = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Service Areas | Chicago South & Southwest Suburbs Locksmith | FastLockFinder</title>
+        <title>Service Areas | Chicago & Suburbs Locksmith | FastLockFinder</title>
         <meta 
           name="description" 
-          content="Locksmith service areas across Chicago South & Southwest suburbs - Oak Lawn, Orland Park, Tinley Park, Blue Island and 50+ cities. 15-min average response." 
+          content="Locksmith service areas across Chicago and South & Southwest suburbs - Downtown Chicago, Oak Lawn, Orland Park, Tinley Park and 75+ areas. 15-min average response." 
         />
-        <meta name="keywords" content="locksmith service areas Chicago, Oak Lawn locksmith, Orland Park locksmith, Tinley Park locksmith, Blue Island locksmith, Chicago suburbs locksmith" />
+        <meta name="keywords" content="locksmith service areas Chicago, downtown Chicago locksmith, Loop locksmith, Oak Lawn locksmith, Orland Park locksmith, Tinley Park locksmith, Chicago suburbs locksmith" />
         <link rel="canonical" href="https://fastlockfinder.com/service-areas" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Service Areas | Chicago South & Southwest Suburbs Locksmith" />
-        <meta property="og:description" content="50+ cities served with 15-minute average response time. Professional locksmith services across Chicago suburbs." />
+        <meta property="og:title" content="Service Areas | Chicago & Suburbs Locksmith" />
+        <meta property="og:description" content="75+ areas served with 15-minute average response time. Professional locksmith services across Chicago and suburbs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fastlockfinder.com/service-areas" />
         <meta property="og:image" content="https://fastlockfinder.com/og-service-areas.jpg" />
@@ -84,7 +115,7 @@ const ServiceAreas = () => {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Service Areas | Chicago Suburbs Locksmith" />
-        <meta name="twitter:description" content="50+ cities served with 15-minute average response time. Professional locksmith services." />
+        <meta name="twitter:description" content="75+ areas served with 15-minute average response time. Professional locksmith services." />
         <meta name="twitter:image" content="https://fastlockfinder.com/og-service-areas.jpg" />
         
         {/* Structured Data */}
@@ -94,8 +125,9 @@ const ServiceAreas = () => {
             "@type": "LocalBusiness",
             "name": "FastLockFinder",
             "serviceArea": [
-              "Oak Lawn, IL", "Orland Park, IL", "Tinley Park, IL", "Blue Island, IL", 
-              "Evergreen Park, IL", "Hickory Hills, IL", "Palos Hills, IL", "Chicago Ridge, IL"
+              "Chicago, IL", "Oak Lawn, IL", "Orland Park, IL", "Tinley Park, IL", "Blue Island, IL", 
+              "Evergreen Park, IL", "Hickory Hills, IL", "Palos Hills, IL", "Chicago Ridge, IL",
+              "Streeterville, IL", "Loop, IL", "Hyde Park, IL", "Pilsen, IL"
             ],
             "geo": {
               "@type": "GeoCircle",
@@ -117,7 +149,7 @@ const ServiceAreas = () => {
             Service Areas
           </h1>
           <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto animate-fade-in-delay">
-            FastLockFinder serves Chicago's South & Southwest suburbs with fast, reliable locksmith services. 
+            FastLockFinder serves Chicago and the South & Southwest suburbs with fast, reliable locksmith services. 
             Our professional locksmiths are available 24/7 in your area.
           </p>
         </div>
@@ -141,8 +173,8 @@ const ServiceAreas = () => {
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="h-8 w-8 text-accent-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">50+ Cities</h3>
-                <p className="text-muted-foreground">Complete coverage across South & Southwest suburbs</p>
+                <h3 className="text-xl font-semibold mb-2">75+ Areas</h3>
+                <p className="text-muted-foreground">Complete coverage across Chicago and suburbs</p>
               </CardContent>
             </Card>
             <Card className="text-center gradient-card-subtle border border-border/50 shadow-sm">
@@ -164,7 +196,32 @@ const ServiceAreas = () => {
       {/* Service Areas Grid */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Chicago */}
+            <div>
+              <Card className="gradient-card-subtle border border-border/50 shadow-sm">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-center">Chicago</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 gap-2">
+                    {chicagoAreas.map((area) => (
+                      <Button
+                        key={area.slug}
+                        variant="outline-navy"
+                        className="justify-start h-auto py-2 text-sm"
+                        asChild
+                      >
+                        <Link to={`/service-areas/${area.slug}-locksmith`}>
+                          {area.name}
+                        </Link>
+                      </Button>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
             {/* South Suburbs */}
             <div>
               <Card className="gradient-card-subtle border border-border/50 shadow-sm">
@@ -172,7 +229,7 @@ const ServiceAreas = () => {
                   <CardTitle className="text-2xl text-center">South Suburbs</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 gap-3">
                     {southSuburbs.map((city) => (
                       <Button
                         key={city.slug}
@@ -197,7 +254,7 @@ const ServiceAreas = () => {
                   <CardTitle className="text-2xl text-center">Southwest Suburbs</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 gap-3">
                     {southwestSuburbs.map((city) => (
                       <Button
                         key={city.slug}

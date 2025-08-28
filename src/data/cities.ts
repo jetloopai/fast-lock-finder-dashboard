@@ -2,12 +2,434 @@ interface City {
   name: string;
   slug: string;
   landmarks: string[];
-  region: "South Suburbs" | "Southwest Suburbs";
+  region: "South Suburbs" | "Southwest Suburbs" | "Chicago";
   keywords: string[];
   majorStreets: string[];
 }
 
 export const cityData: Record<string, City> = {
+  // Chicago
+  "chicago-60601-streeterville": {
+    name: "Chicago 60601 - Streeterville",
+    slug: "chicago-60601-streeterville",
+    landmarks: ["Navy Pier", "Millennium Park", "Aon Center", "Maggie Daley Park"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Streeterville", "emergency locksmith in 60601", "24 hour locksmith in Streeterville",
+      "car lockout service in Streeterville", "cheap locksmith in 60601", "mobile locksmith in Streeterville",
+      "locksmith open now in Streeterville", "commercial locksmith in 60601", "residential locksmith in Streeterville",
+      "house lockout in Streeterville", "rekey locks in 60601", "lock change service in Streeterville",
+      "lost car key replacement in Streeterville", "key duplication in 60601", "locksmith for businesses in Streeterville",
+      "storefront lock repair in 60601"
+    ],
+    majorStreets: ["Michigan Avenue & Wacker Drive", "Lake Shore Drive & Randolph Street", "Columbus Drive & South Water Street"]
+  },
+  "chicago-60602-central-loop": {
+    name: "Chicago 60602 - Central Loop",
+    slug: "chicago-60602-central-loop",
+    landmarks: ["Daley Plaza", "Chicago Theatre", "Thompson Center", "City Hall"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Loop", "emergency locksmith in 60602", "24 hour locksmith in Central Loop",
+      "car lockout service in Loop", "cheap locksmith in 60602", "mobile locksmith in Central Loop",
+      "locksmith open now in Loop", "commercial locksmith in 60602", "residential locksmith in Central Loop",
+      "house lockout in Loop", "rekey locks in 60602", "lock change service in Central Loop",
+      "lost car key replacement in Loop", "key duplication in 60602", "locksmith for businesses in Loop",
+      "storefront lock repair in 60602"
+    ],
+    majorStreets: ["Clark Street & Washington Street", "State Street & Lake Street", "LaSalle Street & Madison Street"]
+  },
+  "chicago-60603-south-loop": {
+    name: "Chicago 60603 - South Loop",
+    slug: "chicago-60603-south-loop",
+    landmarks: ["Art Institute of Chicago", "Buckingham Fountain", "Symphony Center", "Congress Plaza Hotel"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in South Loop", "emergency locksmith in 60603", "24 hour locksmith in South Loop",
+      "car lockout service in South Loop", "cheap locksmith in 60603", "mobile locksmith in South Loop",
+      "locksmith open now in South Loop", "commercial locksmith in 60603", "residential locksmith in South Loop",
+      "house lockout in South Loop", "rekey locks in 60603", "lock change service in South Loop",
+      "lost car key replacement in South Loop", "key duplication in 60603", "locksmith for businesses in South Loop",
+      "storefront lock repair in 60603"
+    ],
+    majorStreets: ["Michigan Avenue & Jackson Boulevard", "Wabash Avenue & Van Buren Street", "Dearborn Street & Congress Parkway"]
+  },
+  "chicago-60604-museum-campus": {
+    name: "Chicago 60604 - Museum Campus",
+    slug: "chicago-60604-museum-campus",
+    landmarks: ["Shedd Aquarium", "Field Museum", "Adler Planetarium", "Roosevelt University"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Museum Campus", "emergency locksmith in 60604", "24 hour locksmith in Museum Campus",
+      "car lockout service in Museum Campus", "cheap locksmith in 60604", "mobile locksmith in Museum Campus",
+      "locksmith open now in Museum Campus", "commercial locksmith in 60604", "residential locksmith in Museum Campus",
+      "house lockout in Museum Campus", "rekey locks in 60604", "lock change service in Museum Campus",
+      "lost car key replacement in Museum Campus", "key duplication in 60604", "locksmith for businesses in Museum Campus",
+      "storefront lock repair in 60604"
+    ],
+    majorStreets: ["Roosevelt Road & Michigan Avenue", "Columbus Drive & Balbo Drive", "Lake Shore Drive & 18th Street"]
+  },
+  "chicago-60605-printers-row": {
+    name: "Chicago 60605 - Printer's Row",
+    slug: "chicago-60605-printers-row",
+    landmarks: ["Printer's Row Historic District", "Roosevelt Collection Shops", "Dearborn Station", "South Loop Elementary"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Printer's Row", "emergency locksmith in 60605", "24 hour locksmith in Printer's Row",
+      "car lockout service in Printer's Row", "cheap locksmith in 60605", "mobile locksmith in Printer's Row",
+      "locksmith open now in Printer's Row", "commercial locksmith in 60605", "residential locksmith in Printer's Row",
+      "house lockout in Printer's Row", "rekey locks in 60605", "lock change service in Printer's Row",
+      "lost car key replacement in Printer's Row", "key duplication in 60605", "locksmith for businesses in Printer's Row",
+      "storefront lock repair in 60605"
+    ],
+    majorStreets: ["Clark Street & Polk Street", "Michigan Avenue & Roosevelt Road", "State Street & Harrison Street"]
+  },
+  "chicago-60606-west-loop-gate": {
+    name: "Chicago 60606 - West Loop Gate",
+    slug: "chicago-60606-west-loop-gate",
+    landmarks: ["Willis Tower", "Union Station", "Ogilvie Transportation Center", "Civic Opera House"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in West Loop Gate", "emergency locksmith in 60606", "24 hour locksmith in West Loop Gate",
+      "car lockout service in West Loop Gate", "cheap locksmith in 60606", "mobile locksmith in West Loop Gate",
+      "locksmith open now in West Loop Gate", "commercial locksmith in 60606", "residential locksmith in West Loop Gate",
+      "house lockout in West Loop Gate", "rekey locks in 60606", "lock change service in West Loop Gate",
+      "lost car key replacement in West Loop Gate", "key duplication in 60606", "locksmith for businesses in West Loop Gate",
+      "storefront lock repair in 60606"
+    ],
+    majorStreets: ["Canal Street & Madison Street", "Wacker Drive & Adams Street", "Clinton Street & Jackson Boulevard"]
+  },
+  "chicago-60607-west-loop": {
+    name: "Chicago 60607 - West Loop",
+    slug: "chicago-60607-west-loop",
+    landmarks: ["Fulton Market", "UIC Pavilion", "Randolph Street Market", "Mary Bartelme Park"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in West Loop", "emergency locksmith in 60607", "24 hour locksmith in West Loop",
+      "car lockout service in West Loop", "cheap locksmith in 60607", "mobile locksmith in West Loop",
+      "locksmith open now in West Loop", "commercial locksmith in 60607", "residential locksmith in West Loop",
+      "house lockout in West Loop", "rekey locks in 60607", "lock change service in West Loop",
+      "lost car key replacement in West Loop", "key duplication in 60607", "locksmith for businesses in West Loop",
+      "storefront lock repair in 60607"
+    ],
+    majorStreets: ["Halsted Street & Randolph Street", "Racine Avenue & Jackson Boulevard", "Madison Street & Ogden Avenue"]
+  },
+  "chicago-60608-pilsen": {
+    name: "Chicago 60608 - Pilsen",
+    slug: "chicago-60608-pilsen",
+    landmarks: ["National Museum of Mexican Art", "Harrison Park", "Throop Park", "Dvorak Park"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Pilsen", "emergency locksmith in 60608", "24 hour locksmith in Pilsen",
+      "car lockout service in Pilsen", "cheap locksmith in 60608", "mobile locksmith in Pilsen",
+      "locksmith open now in Pilsen", "commercial locksmith in 60608", "residential locksmith in Pilsen",
+      "house lockout in Pilsen", "rekey locks in 60608", "lock change service in Pilsen",
+      "lost car key replacement in Pilsen", "key duplication in 60608", "locksmith for businesses in Pilsen",
+      "storefront lock repair in 60608"
+    ],
+    majorStreets: ["18th Street & Halsted Street", "Damen Avenue & Blue Island Avenue", "Ashland Avenue & Cermak Road"]
+  },
+  "chicago-60610-old-town": {
+    name: "Chicago 60610 - Old Town",
+    slug: "chicago-60610-old-town",
+    landmarks: ["Second City Theater", "Moody Bible Institute", "Seward Park", "Newberry Library"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Old Town", "emergency locksmith in 60610", "24 hour locksmith in Old Town",
+      "car lockout service in Old Town", "cheap locksmith in 60610", "mobile locksmith in Old Town",
+      "locksmith open now in Old Town", "commercial locksmith in 60610", "residential locksmith in Old Town",
+      "house lockout in Old Town", "rekey locks in 60610", "lock change service in Old Town",
+      "lost car key replacement in Old Town", "key duplication in 60610", "locksmith for businesses in Old Town",
+      "storefront lock repair in 60610"
+    ],
+    majorStreets: ["Clark Street & Division Street", "Wells Street & North Avenue", "LaSalle Drive & North Avenue"]
+  },
+  "chicago-60611-mag-mile": {
+    name: "Chicago 60611 - Magnificent Mile",
+    slug: "chicago-60611-mag-mile",
+    landmarks: ["John Hancock Center", "Navy Pier", "Northwestern Memorial Hospital", "Ohio Street Beach"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Magnificent Mile", "emergency locksmith in 60611", "24 hour locksmith in Mag Mile",
+      "car lockout service in Magnificent Mile", "cheap locksmith in 60611", "mobile locksmith in Mag Mile",
+      "locksmith open now in Magnificent Mile", "commercial locksmith in 60611", "residential locksmith in Mag Mile",
+      "house lockout in Magnificent Mile", "rekey locks in 60611", "lock change service in Mag Mile",
+      "lost car key replacement in Magnificent Mile", "key duplication in 60611", "locksmith for businesses in Mag Mile",
+      "storefront lock repair in 60611"
+    ],
+    majorStreets: ["Michigan Avenue & Chicago Avenue", "Lake Shore Drive & Ontario Street", "Fairbanks Court & Erie Street"]
+  },
+  "chicago-60612-medical-district": {
+    name: "Chicago 60612 - Medical District",
+    slug: "chicago-60612-medical-district",
+    landmarks: ["United Center", "Malcolm X College", "Rush University Hospital", "Stroger Hospital"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Medical District", "emergency locksmith in 60612", "24 hour locksmith in Medical District",
+      "car lockout service in Medical District", "cheap locksmith in 60612", "mobile locksmith in Medical District",
+      "locksmith open now in Medical District", "commercial locksmith in 60612", "residential locksmith in Medical District",
+      "house lockout in Medical District", "rekey locks in 60612", "lock change service in Medical District",
+      "lost car key replacement in Medical District", "key duplication in 60612", "locksmith for businesses in Medical District",
+      "storefront lock repair in 60612"
+    ],
+    majorStreets: ["Ashland Avenue & Harrison Street", "Damen Avenue & Warren Boulevard", "Ogden Avenue & Polk Street"]
+  },
+  "chicago-60615-hyde-park": {
+    name: "Chicago 60615 - Hyde Park",
+    slug: "chicago-60615-hyde-park",
+    landmarks: ["University of Chicago", "Museum of Science & Industry", "Jackson Park", "DuSable Museum"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Hyde Park", "emergency locksmith in 60615", "24 hour locksmith in Hyde Park",
+      "car lockout service in Hyde Park", "cheap locksmith in 60615", "mobile locksmith in Hyde Park",
+      "locksmith open now in Hyde Park", "commercial locksmith in 60615", "residential locksmith in Hyde Park",
+      "house lockout in Hyde Park", "rekey locks in 60615", "lock change service in Hyde Park",
+      "lost car key replacement in Hyde Park", "key duplication in 60615", "locksmith for businesses in Hyde Park",
+      "storefront lock repair in 60615"
+    ],
+    majorStreets: ["53rd Street & Lake Park Avenue", "55th Street & Ellis Avenue", "57th Street & Stony Island Avenue"]
+  },
+  "chicago-60619-chatham": {
+    name: "Chicago 60619 - Chatham",
+    slug: "chicago-60619-chatham",
+    landmarks: ["Avalon Regal Theater", "Tuley Park", "Simeon Career Academy", "Chatham Village Square"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Chatham", "emergency locksmith in 60619", "24 hour locksmith in Chatham",
+      "car lockout service in Chatham", "cheap locksmith in 60619", "mobile locksmith in Chatham",
+      "locksmith open now in Chatham", "commercial locksmith in 60619", "residential locksmith in Chatham",
+      "house lockout in Chatham", "rekey locks in 60619", "lock change service in Chatham",
+      "lost car key replacement in Chatham", "key duplication in 60619", "locksmith for businesses in Chatham",
+      "storefront lock repair in 60619"
+    ],
+    majorStreets: ["79th Street & Cottage Grove", "83rd Street & King Drive", "87th Street & Stony Island Avenue"]
+  },
+  "chicago-60620-auburn-gresham": {
+    name: "Chicago 60620 - Auburn Gresham",
+    slug: "chicago-60620-auburn-gresham",
+    landmarks: ["St. Sabina Church", "Simeon Career Academy", "Foster Park", "Auburn Park"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Auburn Gresham", "emergency locksmith in 60620", "24 hour locksmith in Auburn Gresham",
+      "car lockout service in Auburn Gresham", "cheap locksmith in 60620", "mobile locksmith in Auburn Gresham",
+      "locksmith open now in Auburn Gresham", "commercial locksmith in 60620", "residential locksmith in Auburn Gresham",
+      "house lockout in Auburn Gresham", "rekey locks in 60620", "lock change service in Auburn Gresham",
+      "lost car key replacement in Auburn Gresham", "key duplication in 60620", "locksmith for businesses in Auburn Gresham",
+      "storefront lock repair in 60620"
+    ],
+    majorStreets: ["79th Street & Halsted Street", "83rd Street & Ashland Avenue", "87th Street & Vincennes Avenue"]
+  },
+  "chicago-60621-englewood": {
+    name: "Chicago 60621 - Englewood",
+    slug: "chicago-60621-englewood",
+    landmarks: ["Kennedy-King College", "Ogden Park", "Englewood Square", "St. Bernard Hospital"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Englewood", "emergency locksmith in 60621", "24 hour locksmith in Englewood",
+      "car lockout service in Englewood", "cheap locksmith in 60621", "mobile locksmith in Englewood",
+      "locksmith open now in Englewood", "commercial locksmith in 60621", "residential locksmith in Englewood",
+      "house lockout in Englewood", "rekey locks in 60621", "lock change service in Englewood",
+      "lost car key replacement in Englewood", "key duplication in 60621", "locksmith for businesses in Englewood",
+      "storefront lock repair in 60621"
+    ],
+    majorStreets: ["63rd Street & Halsted Street", "69th Street & Ashland Avenue", "71st Street & Racine Avenue"]
+  },
+  "chicago-60636-west-englewood": {
+    name: "Chicago 60636 - West Englewood",
+    slug: "chicago-60636-west-englewood",
+    landmarks: ["Lindblom High School", "Hamilton Park", "South Side YMCA", "69th Street Retail"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in West Englewood", "emergency locksmith in 60636", "24 hour locksmith in West Englewood",
+      "car lockout service in West Englewood", "cheap locksmith in 60636", "mobile locksmith in West Englewood",
+      "locksmith open now in West Englewood", "commercial locksmith in 60636", "residential locksmith in West Englewood",
+      "house lockout in West Englewood", "rekey locks in 60636", "lock change service in West Englewood",
+      "lost car key replacement in West Englewood", "key duplication in 60636", "locksmith for businesses in West Englewood",
+      "storefront lock repair in 60636"
+    ],
+    majorStreets: ["69th Street & Ashland Avenue", "71st Street & Loomis Avenue", "67th Street & Damen Avenue"]
+  },
+  "chicago-60637-woodlawn": {
+    name: "Chicago 60637 - Woodlawn",
+    slug: "chicago-60637-woodlawn",
+    landmarks: ["Obama Presidential Center site", "Jackson Park", "University of Chicago Hospitals", "Midway Plaisance"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Woodlawn", "emergency locksmith in 60637", "24 hour locksmith in Woodlawn",
+      "car lockout service in Woodlawn", "cheap locksmith in 60637", "mobile locksmith in Woodlawn",
+      "locksmith open now in Woodlawn", "commercial locksmith in 60637", "residential locksmith in Woodlawn",
+      "house lockout in Woodlawn", "rekey locks in 60637", "lock change service in Woodlawn",
+      "lost car key replacement in Woodlawn", "key duplication in 60637", "locksmith for businesses in Woodlawn",
+      "storefront lock repair in 60637"
+    ],
+    majorStreets: ["63rd Street & Stony Island Avenue", "67th Street & Cottage Grove Avenue", "61st Street & Dorchester Avenue"]
+  },
+  "chicago-60649-south-shore": {
+    name: "Chicago 60649 - South Shore",
+    slug: "chicago-60649-south-shore",
+    landmarks: ["South Shore Cultural Center", "Rainbow Beach", "South Shore Nature Sanctuary", "Stony Island Plaza"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in South Shore", "emergency locksmith in 60649", "24 hour locksmith in South Shore",
+      "car lockout service in South Shore", "cheap locksmith in 60649", "mobile locksmith in South Shore",
+      "locksmith open now in South Shore", "commercial locksmith in 60649", "residential locksmith in South Shore",
+      "house lockout in South Shore", "rekey locks in 60649", "lock change service in South Shore",
+      "lost car key replacement in South Shore", "key duplication in 60649", "locksmith for businesses in South Shore",
+      "storefront lock repair in 60649"
+    ],
+    majorStreets: ["71st Street & Jeffery Boulevard", "75th Street & Yates Avenue", "79th Street & South Shore Drive"]
+  },
+  "chicago-60653-bronzeville": {
+    name: "Chicago 60653 - Bronzeville",
+    slug: "chicago-60653-bronzeville",
+    landmarks: ["IIT Campus", "Oakwood Beach", "35th Street Bridge", "Bronzeville Children's Museum"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Bronzeville", "emergency locksmith in 60653", "24 hour locksmith in Bronzeville",
+      "car lockout service in Bronzeville", "cheap locksmith in 60653", "mobile locksmith in Bronzeville",
+      "locksmith open now in Bronzeville", "commercial locksmith in 60653", "residential locksmith in Bronzeville",
+      "house lockout in Bronzeville", "rekey locks in 60653", "lock change service in Bronzeville",
+      "lost car key replacement in Bronzeville", "key duplication in 60653", "locksmith for businesses in Bronzeville",
+      "storefront lock repair in 60653"
+    ],
+    majorStreets: ["35th Street & King Drive", "39th Street & Cottage Grove", "43rd Street & State Street"]
+  },
+  "chicago-60628-roseland": {
+    name: "Chicago 60628 - Roseland",
+    slug: "chicago-60628-roseland",
+    landmarks: ["Pullman National Monument", "Palmer Park", "Gately Stadium", "Chicago State University"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Roseland", "emergency locksmith in 60628", "24 hour locksmith in Roseland",
+      "car lockout service in Roseland", "cheap locksmith in 60628", "mobile locksmith in Roseland",
+      "locksmith open now in Roseland", "commercial locksmith in 60628", "residential locksmith in Roseland",
+      "house lockout in Roseland", "rekey locks in 60628", "lock change service in Roseland",
+      "lost car key replacement in Roseland", "key duplication in 60628", "locksmith for businesses in Roseland",
+      "storefront lock repair in 60628"
+    ],
+    majorStreets: ["111th Street & Michigan Avenue", "115th Street & Halsted Street", "119th Street & State Street"]
+  },
+  "chicago-60629-chicago-lawn": {
+    name: "Chicago 60629 - Chicago Lawn",
+    slug: "chicago-60629-chicago-lawn",
+    landmarks: ["Midway Airport", "Marquette Park", "Ford City Mall", "St. Rita High School"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Chicago Lawn", "emergency locksmith in 60629", "24 hour locksmith in Chicago Lawn",
+      "car lockout service in Chicago Lawn", "cheap locksmith in 60629", "mobile locksmith in Chicago Lawn",
+      "locksmith open now in Chicago Lawn", "commercial locksmith in 60629", "residential locksmith in Chicago Lawn",
+      "house lockout in Chicago Lawn", "rekey locks in 60629", "lock change service in Chicago Lawn",
+      "lost car key replacement in Chicago Lawn", "key duplication in 60629", "locksmith for businesses in Chicago Lawn",
+      "storefront lock repair in 60629"
+    ],
+    majorStreets: ["63rd Street & Pulaski Road", "67th Street & Cicero Avenue", "71st Street & Kostner Avenue"]
+  },
+  "chicago-60632-brighton-park": {
+    name: "Chicago 60632 - Brighton Park",
+    slug: "chicago-60632-brighton-park",
+    landmarks: ["McKinley Park", "Curie High School", "Archer Park", "Brighton Park Library"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Brighton Park", "emergency locksmith in 60632", "24 hour locksmith in Brighton Park",
+      "car lockout service in Brighton Park", "cheap locksmith in 60632", "mobile locksmith in Brighton Park",
+      "locksmith open now in Brighton Park", "commercial locksmith in 60632", "residential locksmith in Brighton Park",
+      "house lockout in Brighton Park", "rekey locks in 60632", "lock change service in Brighton Park",
+      "lost car key replacement in Brighton Park", "key duplication in 60632", "locksmith for businesses in Brighton Park",
+      "storefront lock repair in 60632"
+    ],
+    majorStreets: ["Archer Avenue & Pulaski Road", "47th Street & Kedzie Avenue", "51st Street & Archer Avenue"]
+  },
+  "chicago-60633-hegewisch": {
+    name: "Chicago 60633 - Hegewisch",
+    slug: "chicago-60633-hegewisch",
+    landmarks: ["Wolf Lake", "Big Marsh Park", "Ford Assembly Plant", "Hegewisch Marsh"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Hegewisch", "emergency locksmith in 60633", "24 hour locksmith in Hegewisch",
+      "car lockout service in Hegewisch", "cheap locksmith in 60633", "mobile locksmith in Hegewisch",
+      "locksmith open now in Hegewisch", "commercial locksmith in 60633", "residential locksmith in Hegewisch",
+      "house lockout in Hegewisch", "rekey locks in 60633", "lock change service in Hegewisch",
+      "lost car key replacement in Hegewisch", "key duplication in 60633", "locksmith for businesses in Hegewisch",
+      "storefront lock repair in 60633"
+    ],
+    majorStreets: ["130th Street & Torrence Avenue", "126th Street & Avenue O", "118th Street & Ewing Avenue"]
+  },
+  "chicago-60638-garfield-ridge": {
+    name: "Chicago 60638 - Garfield Ridge",
+    slug: "chicago-60638-garfield-ridge",
+    landmarks: ["Midway Airport", "Hale Park", "Normandy Plaza", "Wentworth Park"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Garfield Ridge", "emergency locksmith in 60638", "24 hour locksmith in Garfield Ridge",
+      "car lockout service in Garfield Ridge", "cheap locksmith in 60638", "mobile locksmith in Garfield Ridge",
+      "locksmith open now in Garfield Ridge", "commercial locksmith in 60638", "residential locksmith in Garfield Ridge",
+      "house lockout in Garfield Ridge", "rekey locks in 60638", "lock change service in Garfield Ridge",
+      "lost car key replacement in Garfield Ridge", "key duplication in 60638", "locksmith for businesses in Garfield Ridge",
+      "storefront lock repair in 60638"
+    ],
+    majorStreets: ["55th Street & Cicero Avenue", "63rd Street & Central Avenue", "Archer Avenue & Harlem Avenue"]
+  },
+  "chicago-60643-beverly": {
+    name: "Chicago 60643 - Beverly",
+    slug: "chicago-60643-beverly",
+    landmarks: ["Beverly Arts Center", "Dan Ryan Woods", "Morgan Park High School", "Ridge Park"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Beverly", "emergency locksmith in 60643", "24 hour locksmith in Beverly",
+      "car lockout service in Beverly", "cheap locksmith in 60643", "mobile locksmith in Beverly",
+      "locksmith open now in Beverly", "commercial locksmith in 60643", "residential locksmith in Beverly",
+      "house lockout in Beverly", "rekey locks in 60643", "lock change service in Beverly",
+      "lost car key replacement in Beverly", "key duplication in 60643", "locksmith for businesses in Beverly",
+      "storefront lock repair in 60643"
+    ],
+    majorStreets: ["95th Street & Western Avenue", "103rd Street & Longwood Drive", "111th Street & Vincennes Avenue"]
+  },
+  "chicago-60655-mount-greenwood": {
+    name: "Chicago 60655 - Mount Greenwood",
+    slug: "chicago-60655-mount-greenwood",
+    landmarks: ["Saint Xavier University", "Mount Greenwood Park", "Chicago High School for Agricultural Sciences", "Mount Greenwood Cemetery"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Mount Greenwood", "emergency locksmith in 60655", "24 hour locksmith in Mount Greenwood",
+      "car lockout service in Mount Greenwood", "cheap locksmith in 60655", "mobile locksmith in Mount Greenwood",
+      "locksmith open now in Mount Greenwood", "commercial locksmith in 60655", "residential locksmith in Mount Greenwood",
+      "house lockout in Mount Greenwood", "rekey locks in 60655", "lock change service in Mount Greenwood",
+      "lost car key replacement in Mount Greenwood", "key duplication in 60655", "locksmith for businesses in Mount Greenwood",
+      "storefront lock repair in 60655"
+    ],
+    majorStreets: ["111th Street & Pulaski Road", "115th Street & Kedzie Avenue", "119th Street & Central Park Avenue"]
+  },
+  "chicago-60827-riverdale": {
+    name: "Chicago 60827 - Riverdale",
+    slug: "chicago-60827-riverdale",
+    landmarks: ["Altgeld Gardens Homes", "Riverdale Park", "Beaubien Woods Forest Preserve", "Carver Military Academy"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Riverdale", "emergency locksmith in 60827", "24 hour locksmith in Riverdale",
+      "car lockout service in Riverdale", "cheap locksmith in 60827", "mobile locksmith in Riverdale",
+      "locksmith open now in Riverdale", "commercial locksmith in 60827", "residential locksmith in Riverdale",
+      "house lockout in Riverdale", "rekey locks in 60827", "lock change service in Riverdale",
+      "lost car key replacement in Riverdale", "key duplication in 60827", "locksmith for businesses in Riverdale",
+      "storefront lock repair in 60827"
+    ],
+    majorStreets: ["130th Street & Indiana Avenue", "134th Street & Sibley Boulevard", "138th Street & Halsted Street"]
+  },
+  "chicago-60661-near-west-loop": {
+    name: "Chicago 60661 - Near West Loop",
+    slug: "chicago-60661-near-west-loop",
+    landmarks: ["Ogilvie Transportation Center", "Chicago French Market", "Fulton River Park", "Blommer Chocolate Factory"],
+    region: "Chicago",
+    keywords: [
+      "locksmith near me in Near West Loop", "emergency locksmith in 60661", "24 hour locksmith in Near West Loop",
+      "car lockout service in Near West Loop", "cheap locksmith in 60661", "mobile locksmith in Near West Loop",
+      "locksmith open now in Near West Loop", "commercial locksmith in 60661", "residential locksmith in Near West Loop",
+      "house lockout in Near West Loop", "rekey locks in 60661", "lock change service in Near West Loop",
+      "lost car key replacement in Near West Loop", "key duplication in 60661", "locksmith for businesses in Near West Loop",
+      "storefront lock repair in 60661"
+    ],
+    majorStreets: ["Clinton Street & Lake Street", "Canal Street & Washington Boulevard", "Fulton Street & Jefferson Street"]
+  },
+  
   // South Suburbs
   "oak-lawn": {
     name: "Oak Lawn",

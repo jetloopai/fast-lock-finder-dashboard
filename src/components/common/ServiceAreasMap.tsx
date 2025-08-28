@@ -32,9 +32,9 @@ const ServiceAreasMap = () => {
           {/* SEO-Friendly Caption */}
           <p className="text-center text-sm text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             FastLockFinder provides 24/7 locksmith services across Chicago and the South & Southwest Suburbs, 
-            including Oak Lawn, Orland Park, Tinley Park, Calumet City, Homewood, Frankfort, New Lenox, 
-            Mokena, and more. Our certified locksmiths deliver fast, reliable service throughout the greater 
-            Chicago metropolitan area.
+            including downtown Chicago areas (Loop, Streeterville, West Loop), Oak Lawn, Orland Park, Tinley Park, 
+            Calumet City, Homewood, Frankfort, New Lenox, Mokena, and more. Our certified locksmiths deliver fast, 
+            reliable service throughout the greater Chicago metropolitan area.
           </p>
         </div>
       </div>
