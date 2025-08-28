@@ -1,20 +1,40 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Phone, Shield, MapPin, Key, CheckCircle } from "lucide-react";
+import { FileText, Phone, Shield, MapPin, Key, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-const Emergency = () => {
+const FileCabinets = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Emergency Locksmith Chicago | 24/7 Lockout Service | 15-Min Response</title>
+        <title>File Cabinet Lock Services Chicago | Office Security & Key Replacement</title>
         <meta 
           name="description" 
-          content="Emergency locksmith Chicago suburbs - 24/7 car, home & business lockout service. Fast 15-minute response, licensed technicians. Call now for immediate help!" 
+          content="Professional file cabinet lock services in Chicago suburbs. Installation, repair, key replacement, and security upgrades for office file cabinets and desk locks." 
         />
-        <meta name="keywords" content="emergency locksmith, 24/7 locksmith Chicago, car lockout service, home lockout, business lockout, fast locksmith, emergency key replacement, locked out of car, locked out of house" />
-        <link rel="canonical" href="https://fastlockfinder.com/services/emergency" />
+        <meta name="keywords" content="file cabinet locks, office security, desk locks, file cabinet key replacement, office locksmith, business security Chicago" />
+        <link rel="canonical" href="https://fastlockfinder.com/services/file-cabinets" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "File Cabinet Lock Services",
+            "description": "Professional file cabinet lock installation, repair, and key replacement services",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "FastLockFinder",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "IL",
+                "addressCountry": "US"
+              }
+            },
+            "serviceType": "Locksmith Service",
+            "areaServed": "Chicago South & Southwest Suburbs"
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -23,11 +43,11 @@ const Emergency = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
-              Emergency Locksmith Chicago | 24/7 Lockout Service
+              File Cabinet Lock Services Chicago
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Locked out of your car, home, or business? Our emergency locksmith service covers Chicago's 
-              South & Southwest suburbs with rapid 15-minute response times. Licensed, bonded, and available 24/7.
+              Secure your important documents with professional file cabinet lock services. Installation, 
+              repair, and key replacement for all types of office furniture across Chicago suburbs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
@@ -37,24 +57,24 @@ const Emergency = () => {
                 </a>
               </Button>
               <Button variant="navy" size="lg">
-                Get Emergency Help
+                Get Quote
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Emergency Stats */}
+      {/* Service Stats */}
       <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="text-center">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="h-6 w-6 text-accent-foreground" />
+                  <FileText className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">15 Minutes</h3>
-                <p className="text-sm text-muted-foreground">Average arrival time</p>
+                <h3 className="text-2xl font-bold mb-2">Document Security</h3>
+                <p className="text-sm text-muted-foreground">Protect sensitive files</p>
               </CardContent>
             </Card>
             <Card className="text-center">
@@ -62,8 +82,8 @@ const Emergency = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">24/7</h3>
-                <p className="text-sm text-muted-foreground">Always available</p>
+                <h3 className="text-2xl font-bold mb-2">All Brands</h3>
+                <p className="text-sm text-muted-foreground">Universal compatibility</p>
               </CardContent>
             </Card>
             <Card className="text-center">
@@ -79,16 +99,16 @@ const Emergency = () => {
         </div>
       </section>
 
-      {/* Emergency Services */}
+      {/* File Cabinet Lock Services */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Emergency Locksmith Services Chicago
+              Professional File Cabinet Lock Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Need an emergency locksmith? Our licensed Chicago locksmith technicians provide fast lockout service 
-              for cars, homes, and businesses. No damage guaranteed - we'll get you back inside safely.
+              Keep your confidential documents secure with professional file cabinet locks. From installation 
+              to emergency access, we service all brands and types of office furniture.
             </p>
           </div>
 
@@ -98,28 +118,28 @@ const Emergency = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Emergency Car Lockout Service</CardTitle>
+                <CardTitle>Lock Installation</CardTitle>
                 <CardDescription>
-                  Locked out of your car? Our emergency auto locksmith will unlock your vehicle fast with no damage.
+                  Professional installation of high-security locks for file cabinets, desks, and office furniture.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>All vehicle makes and models</span>
+                    <span>All cabinet brands</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Keys locked inside</span>
+                    <span>Cam locks & cylinder locks</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Broken key in lock</span>
+                    <span>High-security options</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>No damage guarantee</span>
+                    <span>Master key systems</span>
                   </li>
                 </ul>
               </CardContent>
@@ -128,30 +148,30 @@ const Emergency = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Key className="h-6 w-6 text-accent-foreground" />
+                  <FileText className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Emergency Home Lockout Service</CardTitle>
+                <CardTitle>Key Replacement & Duplication</CardTitle>
                 <CardDescription>
-                  Locked out of your house? Our residential locksmith provides immediate home lockout assistance.
+                  Lost your file cabinet key? We provide key replacement and duplication services for all lock types.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Front door lockouts</span>
+                    <span>Key cutting by code</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Back door access</span>
+                    <span>Duplicate keys available</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Window security checks</span>
+                    <span>Emergency access service</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Non-destructive entry</span>
+                    <span>Non-destructive opening</span>
                   </li>
                 </ul>
               </CardContent>
@@ -160,30 +180,30 @@ const Emergency = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Key className="h-6 w-6 text-accent-foreground" />
+                  <Shield className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Commercial Emergency Locksmith</CardTitle>
+                <CardTitle>Lock Repair & Upgrades</CardTitle>
                 <CardDescription>
-                  Locked out of your business? Our commercial locksmith provides priority emergency service.
+                  Repair damaged locks or upgrade to higher security options for better document protection.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Office buildings</span>
+                    <span>Stuck lock repair</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Retail stores</span>
+                    <span>Broken key extraction</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Industrial facilities</span>
+                    <span>Security upgrades</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Priority service</span>
+                    <span>Lock rekeying service</span>
                   </li>
                 </ul>
               </CardContent>
@@ -192,15 +212,15 @@ const Emergency = () => {
         </div>
       </section>
 
-      {/* Emergency Process */}
+      {/* Service Process */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              How Our Emergency Service Works
+              How Our File Cabinet Service Works
             </h2>
             <p className="text-xl text-muted-foreground">
-              Simple, fast, and reliable emergency lockout assistance
+              Professional office security service process
             </p>
           </div>
 
@@ -209,61 +229,61 @@ const Emergency = () => {
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
                 1
               </div>
-              <h3 className="font-semibold mb-2">Call Us</h3>
+              <h3 className="font-semibold mb-2">Assessment</h3>
               <p className="text-sm text-muted-foreground">
-                Call for immediate assistance, 24/7
+                Evaluate your cabinet and security needs
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
                 2
               </div>
-              <h3 className="font-semibold mb-2">We Dispatch</h3>
+              <h3 className="font-semibold mb-2">Recommendation</h3>
               <p className="text-sm text-muted-foreground">
-                Nearest technician dispatched to your location immediately
+                Suggest best lock type for your office
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
                 3
               </div>
-              <h3 className="font-semibold mb-2">Fast Arrival</h3>
+              <h3 className="font-semibold mb-2">Installation</h3>
               <p className="text-sm text-muted-foreground">
-                Average 15-minute arrival time to your location
+                Professional installation with minimal disruption
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
                 4
               </div>
-              <h3 className="font-semibold mb-2">Get Unlocked</h3>
+              <h3 className="font-semibold mb-2">Key Management</h3>
               <p className="text-sm text-muted-foreground">
-                Professional, damage-free entry gets you back inside
+                Provide keys and master key options
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Emergency CTA */}
+      {/* CTA Section */}
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Emergency Lockout? Call FastLockFinder Now!
+            Secure Your Office Documents Today
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Don't wait in the cold, rain, or heat. Our emergency locksmiths are standing by 24/7 
-            to get you unlocked and back inside within minutes.
+            Protect sensitive business information with professional file cabinet locks. 
+            Ensure compliance and peace of mind with our expert installation service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg" asChild>
+            <Button variant="cta" size="lg" asChild>
               <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
                 <span>Get Services Now</span>
               </a>
             </Button>
             <Button variant="navy" size="lg">
-              Text for Service
+              Get Free Quote
             </Button>
           </div>
         </div>
@@ -272,4 +292,4 @@ const Emergency = () => {
   );
 };
 
-export default Emergency;
+export default FileCabinets;

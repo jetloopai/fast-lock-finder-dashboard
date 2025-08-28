@@ -1,20 +1,40 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Phone, Shield, MapPin, Key, CheckCircle } from "lucide-react";
+import { Lock, Phone, Shield, MapPin, Key, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-const Emergency = () => {
+const Padlocks = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Emergency Locksmith Chicago | 24/7 Lockout Service | 15-Min Response</title>
+        <title>Padlock Services Chicago | High-Security Lock Installation & Repair</title>
         <meta 
           name="description" 
-          content="Emergency locksmith Chicago suburbs - 24/7 car, home & business lockout service. Fast 15-minute response, licensed technicians. Call now for immediate help!" 
+          content="Professional padlock services in Chicago suburbs. Installation, repair, and replacement of high-security padlocks for gates, sheds, storage, and commercial use." 
         />
-        <meta name="keywords" content="emergency locksmith, 24/7 locksmith Chicago, car lockout service, home lockout, business lockout, fast locksmith, emergency key replacement, locked out of car, locked out of house" />
-        <link rel="canonical" href="https://fastlockfinder.com/services/emergency" />
+        <meta name="keywords" content="padlocks, high security padlocks, gate locks, shed locks, commercial padlocks, weather resistant locks, padlock repair Chicago" />
+        <link rel="canonical" href="https://fastlockfinder.com/services/padlocks" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Padlock Services",
+            "description": "Professional padlock installation, repair, and replacement services",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "FastLockFinder",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "IL",
+                "addressCountry": "US"
+              }
+            },
+            "serviceType": "Locksmith Service",
+            "areaServed": "Chicago South & Southwest Suburbs"
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -23,11 +43,11 @@ const Emergency = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
-              Emergency Locksmith Chicago | 24/7 Lockout Service
+              Padlock Services Chicago
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Locked out of your car, home, or business? Our emergency locksmith service covers Chicago's 
-              South & Southwest suburbs with rapid 15-minute response times. Licensed, bonded, and available 24/7.
+              Professional padlock services for maximum security. Installation, repair, and replacement of 
+              high-security padlocks for gates, sheds, storage, and commercial use across Chicago suburbs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" asChild>
@@ -37,24 +57,24 @@ const Emergency = () => {
                 </a>
               </Button>
               <Button variant="navy" size="lg">
-                Get Emergency Help
+                Get Quote
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Emergency Stats */}
+      {/* Service Stats */}
       <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="text-center">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="h-6 w-6 text-accent-foreground" />
+                  <Lock className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">15 Minutes</h3>
-                <p className="text-sm text-muted-foreground">Average arrival time</p>
+                <h3 className="text-2xl font-bold mb-2">High Security</h3>
+                <p className="text-sm text-muted-foreground">Grade 1 padlocks available</p>
               </CardContent>
             </Card>
             <Card className="text-center">
@@ -62,8 +82,8 @@ const Emergency = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">24/7</h3>
-                <p className="text-sm text-muted-foreground">Always available</p>
+                <h3 className="text-2xl font-bold mb-2">Weather Resistant</h3>
+                <p className="text-sm text-muted-foreground">All-weather protection</p>
               </CardContent>
             </Card>
             <Card className="text-center">
@@ -79,16 +99,16 @@ const Emergency = () => {
         </div>
       </section>
 
-      {/* Emergency Services */}
+      {/* Padlock Services */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Emergency Locksmith Services Chicago
+              Professional Padlock Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Need an emergency locksmith? Our licensed Chicago locksmith technicians provide fast lockout service 
-              for cars, homes, and businesses. No damage guaranteed - we'll get you back inside safely.
+              Secure your property with professional padlock services. From high-security installations 
+              to emergency access, we provide comprehensive padlock solutions for all applications.
             </p>
           </div>
 
@@ -98,28 +118,28 @@ const Emergency = () => {
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <Key className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Emergency Car Lockout Service</CardTitle>
+                <CardTitle>Padlock Installation</CardTitle>
                 <CardDescription>
-                  Locked out of your car? Our emergency auto locksmith will unlock your vehicle fast with no damage.
+                  Professional installation of high-security padlocks for gates, sheds, storage, and commercial use.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>All vehicle makes and models</span>
+                    <span>High-security grades</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Keys locked inside</span>
+                    <span>Weather-resistant options</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Broken key in lock</span>
+                    <span>Combination & keyed locks</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>No damage guarantee</span>
+                    <span>Master keyed systems</span>
                   </li>
                 </ul>
               </CardContent>
@@ -128,30 +148,30 @@ const Emergency = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Key className="h-6 w-6 text-accent-foreground" />
+                  <Lock className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Emergency Home Lockout Service</CardTitle>
+                <CardTitle>Emergency Access</CardTitle>
                 <CardDescription>
-                  Locked out of your house? Our residential locksmith provides immediate home lockout assistance.
+                  Lost keys or forgotten combination? We provide safe, non-destructive padlock opening services.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Front door lockouts</span>
+                    <span>Non-destructive opening</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Back door access</span>
+                    <span>Key cutting services</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Window security checks</span>
+                    <span>Combination reset</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Non-destructive entry</span>
+                    <span>Proof of ownership required</span>
                   </li>
                 </ul>
               </CardContent>
@@ -160,30 +180,30 @@ const Emergency = () => {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
-                  <Key className="h-6 w-6 text-accent-foreground" />
+                  <Shield className="h-6 w-6 text-accent-foreground" />
                 </div>
-                <CardTitle>Commercial Emergency Locksmith</CardTitle>
+                <CardTitle>Repair & Maintenance</CardTitle>
                 <CardDescription>
-                  Locked out of your business? Our commercial locksmith provides priority emergency service.
+                  Keep your padlocks functioning properly with professional repair and maintenance services.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Office buildings</span>
+                    <span>Mechanism cleaning</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Retail stores</span>
+                    <span>Weather seal replacement</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Industrial facilities</span>
+                    <span>Security upgrades</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4 text-accent" />
-                    <span>Priority service</span>
+                    <span>Preventive maintenance</span>
                   </li>
                 </ul>
               </CardContent>
@@ -192,78 +212,78 @@ const Emergency = () => {
         </div>
       </section>
 
-      {/* Emergency Process */}
+      {/* Padlock Types */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              How Our Emergency Service Works
+              Types of Padlocks We Service
             </h2>
             <p className="text-xl text-muted-foreground">
-              Simple, fast, and reliable emergency lockout assistance
+              Professional service for all padlock types and brands
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
-                1
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <Lock className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="font-semibold mb-2">Call Us</h3>
+              <h3 className="font-semibold mb-2">Standard Padlocks</h3>
               <p className="text-sm text-muted-foreground">
-                Call for immediate assistance, 24/7
+                Basic security for general use
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
-                2
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="font-semibold mb-2">We Dispatch</h3>
+              <h3 className="font-semibold mb-2">High-Security</h3>
               <p className="text-sm text-muted-foreground">
-                Nearest technician dispatched to your location immediately
+                Grade 1 security for maximum protection
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
-                3
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <Key className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="font-semibold mb-2">Fast Arrival</h3>
+              <h3 className="font-semibold mb-2">Combination</h3>
               <p className="text-sm text-muted-foreground">
-                Average 15-minute arrival time to your location
+                Keyless convenience with numeric codes
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent-foreground">
-                4
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="font-semibold mb-2">Get Unlocked</h3>
+              <h3 className="font-semibold mb-2">Weatherproof</h3>
               <p className="text-sm text-muted-foreground">
-                Professional, damage-free entry gets you back inside
+                Marine grade for outdoor use
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Emergency CTA */}
+      {/* CTA Section */}
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Emergency Lockout? Call FastLockFinder Now!
+            Secure Your Property with Professional Padlocks
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Don't wait in the cold, rain, or heat. Our emergency locksmiths are standing by 24/7 
-            to get you unlocked and back inside within minutes.
+            Don't compromise on security. Professional padlock installation and service ensures 
+            reliable protection for your gates, storage, and valuable assets.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="default" size="lg" asChild>
+            <Button variant="cta" size="lg" asChild>
               <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
                 <span>Get Services Now</span>
               </a>
             </Button>
             <Button variant="navy" size="lg">
-              Text for Service
+              Get Free Quote
             </Button>
           </div>
         </div>
@@ -272,4 +292,4 @@ const Emergency = () => {
   );
 };
 
-export default Emergency;
+export default Padlocks;
