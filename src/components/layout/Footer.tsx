@@ -78,12 +78,12 @@ const Footer = () => {
           {/* Service Areas */}
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Service Areas</h3>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-              {serviceAreasData.slice(0, 12).map((area) => (
+            <div className="grid grid-cols-4 gap-x-2 gap-y-1">
+              {serviceAreasData.slice(0, 16).map((area) => (
                 <Link 
                   key={area.slug}
                   to={`/areas/${area.slug}`}
-                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors truncate"
+                  className="text-xs text-primary-foreground/80 hover:text-primary-foreground transition-colors truncate"
                 >
                   {area.name}
                 </Link>

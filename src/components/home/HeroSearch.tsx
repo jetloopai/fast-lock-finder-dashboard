@@ -93,10 +93,10 @@ const HeroSearch = () => {
               >
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
                 <div className="flex-1 min-w-0">
-                  <div className="font-medium text-foreground truncate">
+                  <div className="font-medium text-navy-900 truncate">
                     {area.displayName}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-navy-600">
                     {area.region} • {area.zipCodes.slice(0, 3).join(', ')}
                     {area.zipCodes.length > 3 && ` +${area.zipCodes.length - 3} more`}
                   </div>
