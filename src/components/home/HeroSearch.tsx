@@ -67,7 +67,7 @@ const HeroSearch = () => {
             value={searchQuery}
             onChange={handleSearchChange}
             onFocus={() => setShowResults(searchQuery.trim().length > 0)}
-            className="pl-10 pr-20 h-12 text-base text-navy-900 bg-background/95 backdrop-blur border-2 border-primary/20 focus:border-primary/40"
+            className="pl-10 pr-20 h-12 text-base text-foreground bg-background/95 backdrop-blur border-2 border-primary/20 focus:border-primary/40"
           />
           <Button 
             type="submit" 
