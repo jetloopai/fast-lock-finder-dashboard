@@ -79,7 +79,26 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Service Areas</h3>
             <div className="grid grid-cols-4 gap-x-2 gap-y-1">
-              {serviceAreasData.slice(0, 16).map((area) => (
+              {/* Priority suburbs and 4 select Chicago areas */}
+              {[
+                // Main suburbs requested
+                serviceAreasData.find(area => area.name === "Oak Lawn"),
+                serviceAreasData.find(area => area.name === "Tinley Park"),
+                serviceAreasData.find(area => area.name === "Orland Park"),
+                serviceAreasData.find(area => area.name === "Homewood"),
+                serviceAreasData.find(area => area.name === "Matteson"),
+                serviceAreasData.find(area => area.name === "Lansing"),
+                // Additional suburbs
+                serviceAreasData.find(area => area.name === "Evergreen Park"),
+                serviceAreasData.find(area => area.name === "South Holland"),
+                serviceAreasData.find(area => area.name === "Country Club Hills"),
+                serviceAreasData.find(area => area.name === "Oak Forest"),
+                // Select Chicago areas (4)
+                serviceAreasData.find(area => area.name === "Central Loop"),
+                serviceAreasData.find(area => area.name === "South Loop"),
+                serviceAreasData.find(area => area.name === "West Loop"),
+                serviceAreasData.find(area => area.name === "Streeterville"),
+              ].filter(Boolean).slice(0, 16).map((area) => (
                 <Link 
                   key={area.slug}
                   to={`/areas/${area.slug}`}
