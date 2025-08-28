@@ -18,10 +18,6 @@ import Rekeying from "./pages/services/Rekeying";
 import SmartLocks from "./pages/services/SmartLocks";
 import KeyDuplication from "./pages/services/KeyDuplication";
 import Safes from "./pages/services/Safes";
-import StorageUnits from "./pages/services/StorageUnits";
-import Mailboxes from "./pages/services/Mailboxes";
-import FileCabinets from "./pages/services/FileCabinets";
-import Padlocks from "./pages/services/Padlocks";
 import ScrollToTop from "./components/common/ScrollToTop";
 
 // Admin Pages
@@ -55,10 +51,6 @@ const App = () => (
           <Route path="/services/smart-locks" element={<SmartLocks />} />
           <Route path="/services/key-duplication" element={<KeyDuplication />} />
           <Route path="/services/safes" element={<Safes />} />
-          <Route path="/services/storage-units" element={<StorageUnits />} />
-          <Route path="/services/mailboxes" element={<Mailboxes />} />
-          <Route path="/services/file-cabinets" element={<FileCabinets />} />
-          <Route path="/services/padlocks" element={<Padlocks />} />
             <Route path="/service-areas" element={<ServiceAreas />} />
             <Route path="/service-areas/:citySlug" element={<CityPage />} />
             <Route path="/about" element={<About />} />

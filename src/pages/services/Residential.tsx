@@ -74,10 +74,10 @@ const Residential = () => {
               <Button variant="cta" size="lg" asChild>
                 <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
-                  <span>Get Services Now</span>
+                  <span>Call Now</span>
                 </a>
               </Button>
-              <Button variant="navy" size="lg">
+              <Button variant="outline" size="lg">
                 Free Security Assessment
               </Button>
             </div>
@@ -361,10 +361,10 @@ const Residential = () => {
             <Button variant="cta" size="lg" asChild>
               <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Get Services Now</span>
+                <span>Call Now</span>
               </a>
             </Button>
-            <Button variant="navy" size="lg">
+            <Button variant="default" size="lg" className="bg-accent-foreground text-accent hover:bg-accent-foreground/90">
               Schedule Service
             </Button>
           </div>
