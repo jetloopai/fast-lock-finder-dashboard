@@ -79,7 +79,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Service Areas</h3>
             <div className="grid grid-cols-4 gap-x-2 gap-y-1">
-              {/* Priority suburbs and 4 select Chicago areas */}
+              {/* Priority suburbs and south Chicago neighborhoods */}
               {[
                 // Main suburbs requested
                 serviceAreasData.find(area => area.name === "Oak Lawn"),
@@ -93,15 +93,18 @@ const Footer = () => {
                 serviceAreasData.find(area => area.name === "South Holland"),
                 serviceAreasData.find(area => area.name === "Country Club Hills"),
                 serviceAreasData.find(area => area.name === "Oak Forest"),
-                // Select Chicago areas (4)
-                serviceAreasData.find(area => area.name === "Central Loop"),
+                // South Chicago neighborhoods (4)
+                serviceAreasData.find(area => area.name === "Hyde Park"),
+                serviceAreasData.find(area => area.name === "Chatham"),
+                serviceAreasData.find(area => area.name === "South Shore"),
+                serviceAreasData.find(area => area.name === "Bronzeville"),
+                // Key downtown areas (2)
                 serviceAreasData.find(area => area.name === "South Loop"),
                 serviceAreasData.find(area => area.name === "West Loop"),
-                serviceAreasData.find(area => area.name === "Streeterville"),
               ].filter(Boolean).slice(0, 16).map((area) => (
                 <Link 
                   key={area.slug}
-                  to={`/areas/${area.slug}`}
+                  to={`/service-areas/${area.slug}`}
                   className="text-xs text-primary-foreground/80 hover:text-primary-foreground transition-colors truncate"
                 >
                   {area.name}
