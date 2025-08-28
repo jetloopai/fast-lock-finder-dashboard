@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -39,7 +39,6 @@ const ServiceAreaSearch: React.FC<ServiceAreaSearchProps> = ({
   // Filter areas based on search query
   const filteredAreas = useMemo(() => {
     if (!searchQuery.trim()) {
-      onFilter(areas);
       return [];
     }
 
@@ -59,8 +58,25 @@ const ServiceAreaSearch: React.FC<ServiceAreaSearchProps> = ({
       return words.some(word => word.startsWith(query));
     });
 
-    onFilter(results);
     return results.slice(0, 8); // Show top 8 results in dropdown
+  }, [searchQuery, areas]);
+
+  // Handle filtering with useEffect to avoid infinite loops
+  
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      onFilter(areas);
+    } else {
+      const query = searchQuery.toLowerCase().trim();
+      const results = areas.filter(area => {
+        if (area.name.toLowerCase().includes(query)) return true;
+        if (area.zipCodes.some(zip => zip.includes(query))) return true;
+        if (area.region.toLowerCase().includes(query)) return true;
+        const words = area.name.toLowerCase().split(/[\s-]+/);
+        return words.some(word => word.startsWith(query));
+      });
+      onFilter(results);
+    }
   }, [searchQuery, areas, onFilter]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
