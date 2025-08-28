@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Clock, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-locksmith.jpg";
+import HeroSearch from "./HeroSearch";
 
 const Hero = () => {
   return (
@@ -18,16 +19,16 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-slide-in-left">
-              <Button variant="hero" size="lg" className="animate-glow hover-glow" asChild>
-                <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
-                  <Phone className="h-5 w-5" />
-                  <span>Get Connected Instantly</span>
-                </a>
-              </Button>
-              <Button variant="secondary" size="lg">
-                Get Unlocked Fast
-              </Button>
+            <div className="space-y-4 animate-slide-in-left">
+              <HeroSearch />
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="hero" size="lg" className="animate-glow hover-glow" asChild>
+                  <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
+                    <Phone className="h-5 w-5" />
+                    <span>Get Connected Instantly</span>
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Proof Points */}

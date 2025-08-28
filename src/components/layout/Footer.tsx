@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { serviceAreasData } from "@/utils/serviceAreasData";
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="bg-white p-4 rounded-lg inline-block">
@@ -72,6 +73,28 @@ const Footer = () => {
                 Safe Services
               </Link>
             </nav>
+          </div>
+
+          {/* Service Areas */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Service Areas</h3>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+              {serviceAreasData.slice(0, 12).map((area) => (
+                <Link 
+                  key={area.slug}
+                  to={`/areas/${area.slug}`}
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors truncate"
+                >
+                  {area.name}
+                </Link>
+              ))}
+            </div>
+            <Link 
+              to="/service-areas" 
+              className="inline-block text-sm text-accent hover:text-accent/80 transition-colors font-medium"
+            >
+              View All Areas →
+            </Link>
           </div>
 
           {/* Contact */}
