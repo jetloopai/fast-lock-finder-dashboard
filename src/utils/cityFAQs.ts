@@ -37,36 +37,54 @@ const getLocationContext = (cityName: string, landmarks: string[], majorStreets:
   };
 };
 
-export const getCityFAQs = (cityName: string, landmarks: string[], majorStreets: string[]): FAQ[] => {
+export const getCityFAQs = (cityName: string, landmarks: string[], majorStreets: string[], keywords: string[]): FAQ[] => {
   const context = getLocationContext(cityName, landmarks, majorStreets);
   
+  // Extract relevant keywords for natural FAQ integration
+  const keywordQuestions = {
+    cheap: keywords.find(k => k.includes('cheap locksmith')) || '',
+    hours: keywords.find(k => k.includes('24 hour locksmith')) || '',
+    commercial: keywords.find(k => k.includes('commercial locksmith')) || '',
+    residential: keywords.find(k => k.includes('residential locksmith')) || '',
+    carLockout: keywords.find(k => k.includes('car lockout')) || '',
+    houseLockout: keywords.find(k => k.includes('house lockout')) || ''
+  };
+  
   const faqTemplates = [
-    // Response time - natural variations
+    // Response time with keyword integration
     {
-      question: `How quickly can you get to me in ${context.displayName}?`,
-      answer: `Our average response time in ${context.displayName} is ${context.responseTime}. We have mobile locksmiths stationed throughout ${context.serviceAreas[0]} to ensure fast service when you need it most.`
+      question: `How quickly can a ${keywordQuestions.hours ? keywordQuestions.hours.replace('in ', '') : '24 hour locksmith'} get to me in ${context.displayName}?`,
+      answer: `Our average response time in ${context.displayName} is ${context.responseTime}. We have mobile locksmiths stationed throughout ${context.serviceAreas[0]} to ensure fast emergency locksmith service when you need it most.`
     },
     
-    // 24/7 service - contextual
+    // Cost/cheap locksmith question
     {
-      question: context.isChicago 
-        ? `Do you provide 24-hour locksmith service in ${context.displayName}?`
-        : `Are you available 24/7 in ${context.displayName}?`,
-      answer: `Yes! We offer round-the-clock emergency locksmith services in ${context.displayName}. Whether it's 2 AM or 2 PM, our team is ready to help with lockouts, broken keys, and security emergencies throughout ${context.serviceAreas[1]}.`
+      question: keywordQuestions.cheap 
+        ? `How much does a ${keywordQuestions.cheap.replace('in ', '')} cost?`
+        : `What are your locksmith prices in ${context.displayName}?`,
+      answer: `We provide upfront, transparent pricing for all locksmith services in ${context.displayName}. Our rates are competitive throughout ${context.serviceAreas[0]}, and we never charge hidden fees. Emergency lockout service typically starts at $89, with most jobs completed for under $200.`
     },
     
-    // Service types - area-appropriate
+    // Service types with keyword variations
     {
       question: context.areaType === 'urban'
-        ? `What locksmith services do you offer for businesses and residents in ${context.displayName}?`
+        ? `Do you provide both ${keywordQuestions.commercial.replace('in ', '') || 'commercial locksmith'} and ${keywordQuestions.residential.replace('in ', '') || 'residential locksmith'} services?`
         : `What types of locksmith services do you provide in ${context.displayName}?`,
-      answer: `We provide comprehensive locksmith services for ${context.businessContext} in ${context.displayName}. This includes emergency lockouts, lock repairs and replacement, key duplication, rekeying, smart lock installation, and security upgrades for both residential and commercial properties.`
+      answer: `Yes! We provide comprehensive locksmith services for ${context.businessContext} in ${context.displayName}. This includes emergency lockouts, lock repairs and replacement, key duplication, rekeying, smart lock installation, and security upgrades for both residential and commercial properties.`
     },
     
-    // Coverage area - natural street references
+    // Car vs house lockouts
+    {
+      question: keywordQuestions.carLockout
+        ? `Do you handle ${keywordQuestions.carLockout.replace('in ', '')} and ${keywordQuestions.houseLockout.replace('in ', '') || 'house lockout'} emergencies?`
+        : `Do you handle both car and house lockouts in ${context.displayName}?`,
+      answer: `Absolutely! We specialize in both automotive and residential lockout emergencies in ${context.displayName}. Whether you're locked out of your car near ${landmarks[0]} or need house lockout service anywhere in ${context.serviceAreas[0]}, our mobile locksmiths respond quickly 24/7.`
+    },
+    
+    // Coverage area with street references
     {
       question: `Do you service all of ${context.displayName}?`,
-      answer: `Absolutely! Our mobile locksmiths cover all of ${context.displayName}, including major areas like ${majorStreets.slice(0, 2).join(' and ')}. We also service ${context.locationRefs[2]} and throughout ${context.serviceAreas[2]} for complete coverage.`
+      answer: `Yes! Our mobile locksmiths cover all of ${context.displayName}, including major areas like ${majorStreets.slice(0, 2).join(' and ')}. We also service ${context.locationRefs[2]} and throughout ${context.serviceAreas[2]} for complete locksmith coverage.`
     }
   ];
   

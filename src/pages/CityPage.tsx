@@ -53,14 +53,62 @@ const CityPage = () => {
     .slice(0, 8); // Show up to 8 cities
 
   const services = [
-    { icon: Lock, name: "Emergency Lockouts", description: "Car, home, and business lockouts", href: "/services/emergency" },
-    { icon: Home, name: "Residential Services", description: "Lock installation, repair, and rekeying", href: "/services/residential" },
-    { icon: Building, name: "Commercial Services", description: "Business security and access control", href: "/services/commercial" },
-    { icon: Car, name: "Automotive Services", description: "Car key replacement and programming", href: "/services/automotive" },
-    { icon: Key, name: "Key Duplication", description: "Professional key cutting services", href: "/services/key-duplication" },
-    { icon: Wrench, name: "Smart Locks", description: "Installation and programming", href: "/services/smart-locks" },
-    { icon: Shield, name: "Safes", description: "Installation, repair, and opening", href: "/services/safes" },
-    { icon: Lock, name: "Rekeying", description: "Change locks without replacement", href: "/services/rekeying" }
+    { 
+      icon: Lock, 
+      name: "Emergency Lockouts", 
+      description: `24/7 car, home & business lockout service in ${city.name}`, 
+      href: "/services/emergency",
+      alt: `Emergency locksmith service near ${primaryLandmark}` 
+    },
+    { 
+      icon: Home, 
+      name: "Residential Services", 
+      description: `House lockout, lock installation & rekeying in ${city.name}`, 
+      href: "/services/residential",
+      alt: `Residential locksmith services in ${city.name}` 
+    },
+    { 
+      icon: Building, 
+      name: "Commercial Services", 
+      description: `Business security & storefront lock repair in ${city.name}`, 
+      href: "/services/commercial",
+      alt: `Commercial locksmith near ${primaryLandmark}` 
+    },
+    { 
+      icon: Car, 
+      name: "Automotive Services", 
+      description: `Car key replacement & lockout service in ${city.name}`, 
+      href: "/services/automotive",
+      alt: `Auto locksmith services in ${city.name}` 
+    },
+    { 
+      icon: Key, 
+      name: "Key Duplication", 
+      description: `Professional key cutting services in ${city.name}`, 
+      href: "/services/key-duplication",
+      alt: `Key duplication near ${primaryLandmark}` 
+    },
+    { 
+      icon: Wrench, 
+      name: "Smart Locks", 
+      description: `Smart lock installation & programming in ${city.name}`, 
+      href: "/services/smart-locks",
+      alt: `Smart lock installation in ${city.name}` 
+    },
+    { 
+      icon: Shield, 
+      name: "Safes", 
+      description: `Safe installation, repair & opening in ${city.name}`, 
+      href: "/services/safes",
+      alt: `Safe locksmith services near ${primaryLandmark}` 
+    },
+    { 
+      icon: Lock, 
+      name: "Rekeying", 
+      description: `Rekey locks service in ${city.name} - same day`, 
+      href: "/services/rekeying",
+      alt: `Lock rekeying service in ${city.name}` 
+    }
   ];
 
   return (
@@ -269,28 +317,28 @@ const CityPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Complete Locksmith Services in {city.name}
+              24 Hour Locksmith Services in {city.name}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {getCityServiceDescription(city.name, [primaryLandmark, secondaryLandmark], city.majorStreets)}
+              {getCityServiceDescription(city.name, [primaryLandmark, secondaryLandmark], city.majorStreets, city.keywords)}
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <Link key={index} to={service.href}>
-                <Card className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105 h-full gradient-service-card border border-border/50 shadow-sm">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                      <service.icon className="h-6 w-6 text-accent-foreground" />
-                    </div>
-                    <h3 className="font-semibold mb-2">{service.name}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{service.description}</p>
-                    <Button variant="outline" size="sm" className="w-full">
-                      Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
+                  <Card className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105 h-full gradient-service-card border border-border/50 shadow-sm">
+                    <CardContent className="p-6">
+                      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4" role="img" aria-label={service.alt}>
+                        <service.icon className="h-6 w-6 text-accent-foreground" />
+                      </div>
+                      <h3 className="font-semibold mb-2">{service.name}</h3>
+                      <p className="text-sm text-muted-foreground mb-3">{service.description}</p>
+                      <Button variant="outline" size="sm" className="w-full">
+                        Learn More
+                      </Button>
+                    </CardContent>
+                  </Card>
               </Link>
             ))}
           </div>
@@ -306,15 +354,15 @@ const CityPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Frequently Asked Questions - {city.name}
+                Local Locksmith Questions - {city.name} Residents Ask
               </h2>
               <p className="text-xl text-muted-foreground">
-                Common questions about our locksmith services in {city.name}
+                Common questions about our mobile locksmith services in {city.name}
               </p>
             </div>
             
             <Accordion type="single" collapsible className="space-y-4">
-              {getCityFAQs(city.name, city.landmarks, city.majorStreets).map((faq, index) => (
+              {getCityFAQs(city.name, city.landmarks, city.majorStreets, city.keywords).map((faq, index) => (
                 <AccordionItem key={index} value={`faq-${index}`}>
                   <AccordionTrigger className="text-left">
                     {faq.question}
@@ -334,10 +382,10 @@ const CityPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              We Also Cover These Surrounding Areas
+              Emergency Locksmith Service in Surrounding Areas
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              FastLockFinder provides the same fast, reliable 24/7 locksmith service throughout the {city.region.toLowerCase()}.
+              FastLockFinder provides the same fast, reliable 24/7 mobile locksmith service throughout the {city.region.toLowerCase()}.
             </p>
           </div>
           
@@ -347,13 +395,13 @@ const CityPage = () => {
                 <Card className="hover:shadow-md transition-all duration-200 hover:scale-105 h-full border-l-4 border-l-accent">
                   <CardContent className="p-4">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0" role="img" aria-label={`Emergency locksmith in ${surroundingCity.name}`}>
                         <MapPin className="h-4 w-4 text-accent" />
                       </div>
                       <div className="min-w-0 flex-1">
-                        <h3 className="font-medium text-sm truncate">{surroundingCity.name}</h3>
+                        <h3 className="font-medium text-sm truncate">24/7 Locksmith in {surroundingCity.name}</h3>
                         <p className="text-xs text-muted-foreground truncate">
-                          {surroundingCity.landmarks[0]}
+                          Near {surroundingCity.landmarks[0]}
                         </p>
                       </div>
                     </div>
@@ -369,10 +417,10 @@ const CityPage = () => {
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Locked out in {city.name}? Call FastLockFinder now for 24/7 help in minutes.
+            Emergency Locksmith in {city.name} - Call Now for 15-Minute Response
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Don't wait - we're standing by to help you get back inside quickly and safely.
+            Need a mobile locksmith near {primaryLandmark}? We're standing by 24/7 to help you get back inside quickly and safely.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="city-primary" size="lg" asChild>
