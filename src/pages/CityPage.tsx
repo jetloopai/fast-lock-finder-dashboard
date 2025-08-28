@@ -8,6 +8,7 @@ import { Phone, Clock, Shield, Star, MapPin, Home, Building, Car, Key, Lock, Dol
 import { Helmet } from "react-helmet-async";
 import CityReviews from "@/components/home/CityReviews";
 import { getCityFAQs } from "@/utils/cityFAQs";
+import { getCityServiceDescription } from '@/utils/cityServiceDescription';
 
 const CityPage = () => {
   const { citySlug } = useParams();
@@ -271,9 +272,7 @@ const CityPage = () => {
               Complete Locksmith Services in {city.name}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Looking for a cheap locksmith in {city.name}? Our mobile locksmith team provides emergency locksmith services, 
-              lock change service, key duplication, and rekey locks throughout {city.name} including {city.majorStreets[0]}, {city.majorStreets[1]}, 
-              and areas near {primaryLandmark} and {secondaryLandmark}.
+              {getCityServiceDescription(city.name, [primaryLandmark, secondaryLandmark], city.majorStreets)}
             </p>
           </div>
           
