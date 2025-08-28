@@ -43,7 +43,7 @@ const CityPage = () => {
   }
 
   const primaryLandmark = city.landmarks[0];
-  const secondaryLandmark = city.landmarks[1] || city.landmarks[0];
+  const secondaryLandmark = city.landmarks[1] || `${city.majorStreets[0]} area`;
 
   // Get surrounding cities from the same region, excluding current city
   const surroundingCities = getAllCities()
