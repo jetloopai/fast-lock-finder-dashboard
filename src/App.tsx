@@ -33,6 +33,7 @@ import Leads from "./pages/admin/Leads";
 import Jobs from "./pages/admin/Jobs";
 import DispatchCodes from "./pages/admin/DispatchCodes";
 import CallLogs from "./pages/admin/CallLogs";
+import StudioDemo from "./components/studio/StudioDemo";
 
 const queryClient = new QueryClient();
 
@@ -71,6 +72,7 @@ const App = () => (
             <Route path="/admin/jobs" element={<AdminLayout><Jobs /></AdminLayout>} />
             <Route path="/admin/dispatch-codes" element={<AdminLayout><DispatchCodes /></AdminLayout>} />
             <Route path="/admin/call-logs" element={<AdminLayout><CallLogs /></AdminLayout>} />
+            <Route path="/admin/studio" element={<AdminLayout><StudioDemo /></AdminLayout>} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

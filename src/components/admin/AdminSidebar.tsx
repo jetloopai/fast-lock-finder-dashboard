@@ -8,6 +8,7 @@ import {
   Code,
   Settings,
   Lock,
+  Palette,
 } from "lucide-react";
 import {
   Sidebar,
@@ -52,6 +53,11 @@ const navigationItems = [
     title: "Call Logs",
     url: "/admin/call-logs",
     icon: Phone,
+  },
+  {
+    title: "Studio",
+    url: "/admin/studio",
+    icon: Palette,
   },
 ];
 
