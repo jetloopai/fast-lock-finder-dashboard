@@ -30,13 +30,7 @@ const OrganizationSchema = () => {
           "@type": "PostalAddress",
           "addressLocality": "Oak Lawn",
           "addressRegion": "IL",
-          "postalCode": "60453",
           "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 41.6034,
-          "longitude": -87.5665
         },
         "openingHoursSpecification": [
           {
