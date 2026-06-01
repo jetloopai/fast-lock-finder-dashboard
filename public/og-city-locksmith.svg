@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D2B3A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1f2b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F1592A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e04820;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Left orange accent bar -->
+  <rect x="0" y="0" width="8" height="630" fill="url(#orangeGrad)"/>
+
+  <!-- Subtle grid pattern -->
+  <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.04"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Right decorative circles -->
+  <circle cx="960" cy="315" r="290" fill="#F1592A" opacity="0.05"/>
+  <circle cx="1060" cy="180" r="170" fill="#F1592A" opacity="0.05"/>
+  <circle cx="890" cy="470" r="130" fill="#F1592A" opacity="0.04"/>
+
+  <!-- Map pin icon (large, right side decorative) -->
+  <g transform="translate(840, 120)" opacity="0.15">
+    <circle cx="140" cy="120" r="100" fill="#F1592A"/>
+    <path d="M 140 220 Q 80 290 140 370 Q 200 290 140 220Z" fill="#F1592A"/>
+    <circle cx="140" cy="120" r="42" fill="#0D2B3A"/>
+    <!-- House icon inside pin -->
+    <path d="M 115 125 L 140 100 L 165 125 L 165 150 L 115 150 Z" fill="#F1592A" opacity="0.8"/>
+    <rect x="130" y="133" width="20" height="17" rx="2" fill="#0D2B3A"/>
+  </g>
+
+  <!-- Location pin icon (brand mark) -->
+  <g transform="translate(60, 55)">
+    <circle cx="22" cy="18" r="14" fill="#F1592A"/>
+    <path d="M 22 32 Q 10 44 22 60 Q 34 44 22 32Z" fill="#F1592A"/>
+    <circle cx="22" cy="18" r="6" fill="#0D2B3A"/>
+  </g>
+
+  <!-- Brand name -->
+  <text x="108" y="82" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="28" fill="#ffffff" letter-spacing="0.5">FastLock</text>
+  <text x="108" y="110" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="28" fill="#F1592A" letter-spacing="0.5">Finder</text>
+
+  <!-- Divider line -->
+  <rect x="60" y="140" width="520" height="3" fill="#F1592A" rx="2"/>
+
+  <!-- "Serving" label pill -->
+  <rect x="60" y="162" width="190" height="36" rx="18" fill="#F1592A" opacity="0.2"/>
+  <rect x="60" y="162" width="190" height="36" rx="18" fill="none" stroke="#F1592A" stroke-width="1.5"/>
+  <text x="155" y="185" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="15" fill="#F1592A" text-anchor="middle" letter-spacing="2">YOUR AREA</text>
+
+  <!-- Main headline -->
+  <text x="60" y="280" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="74" fill="#ffffff" letter-spacing="-1">Local Locksmith</text>
+  <text x="60" y="370" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="74" fill="#F1592A" letter-spacing="-1">Near You</text>
+
+  <!-- Sub headline -->
+  <text x="60" y="425" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="27" fill="#a8c4d0">Fast · Licensed · Available 24/7</text>
+
+  <!-- Stats row -->
+  <rect x="60" y="460" width="660" height="80" rx="12" fill="#ffffff" opacity="0.07"/>
+
+  <!-- Stat 1: Clock -->
+  <text x="110" y="494" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="26" fill="#F1592A">⚡ 15 MIN</text>
+  <text x="110" y="521" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="17" fill="#a8c4d0">Guaranteed Response</text>
+
+  <rect x="300" y="475" width="2" height="50" fill="#ffffff" opacity="0.2"/>
+
+  <!-- Stat 2 -->
+  <text x="328" y="494" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="26" fill="#F1592A">🔒 ALL LOCKS</text>
+  <text x="328" y="521" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="17" fill="#a8c4d0">Cars · Homes · Business</text>
+
+  <rect x="545" y="475" width="2" height="50" fill="#ffffff" opacity="0.2"/>
+
+  <!-- Stat 3 -->
+  <text x="572" y="494" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="26" fill="#F1592A">★ 4.9</text>
+  <text x="572" y="521" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="17" fill="#a8c4d0">847+ Reviews</text>
+
+  <!-- Phone CTA -->
+  <rect x="60" y="560" width="320" height="40" rx="8" fill="#F1592A"/>
+  <text x="220" y="585" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="18" fill="#ffffff" text-anchor="middle" letter-spacing="1">Call (773) 377-6511</text>
+
+  <!-- Website -->
+  <text x="400" y="585" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="17" fill="#a8c4d0">fastlockfinder.com</text>
+</svg>

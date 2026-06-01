@@ -34,6 +34,13 @@ import Jobs from "./pages/admin/Jobs";
 import DispatchCodes from "./pages/admin/DispatchCodes";
 import CallLogs from "./pages/admin/CallLogs";
 import StudioDemo from "./components/studio/StudioDemo";
+import Reports from "./pages/admin/Reports";
+import Users from "./pages/admin/Users";
+import { RequireRole } from "./components/admin/RequireRole";
+
+// Technician Portal
+import TechnicianLayout from "./components/technician/TechnicianLayout";
+import MyJobs from "./pages/technician/MyJobs";
 
 const queryClient = new QueryClient();
 
@@ -64,8 +71,10 @@ const App = () => (
             <Route path="/service-areas/:citySlug" element={<CityPage />} />
             <Route path="/about" element={<About />} />
             
-            {/* Admin Routes */}
+            {/* Auth */}
             <Route path="/auth" element={<Auth />} />
+
+            {/* Admin Routes */}
             <Route path="/admin" element={<AdminLayout><Dashboard /></AdminLayout>} />
             <Route path="/admin/locksmiths" element={<AdminLayout><Locksmiths /></AdminLayout>} />
             <Route path="/admin/leads" element={<AdminLayout><Leads /></AdminLayout>} />
@@ -73,6 +82,11 @@ const App = () => (
             <Route path="/admin/dispatch-codes" element={<AdminLayout><DispatchCodes /></AdminLayout>} />
             <Route path="/admin/call-logs" element={<AdminLayout><CallLogs /></AdminLayout>} />
             <Route path="/admin/studio" element={<AdminLayout><StudioDemo /></AdminLayout>} />
+            <Route path="/admin/reports" element={<AdminLayout><RequireRole role="owner"><Reports /></RequireRole></AdminLayout>} />
+            <Route path="/admin/users" element={<AdminLayout><RequireRole role="owner"><Users /></RequireRole></AdminLayout>} />
+
+            {/* Technician Portal */}
+            <Route path="/technician/jobs" element={<TechnicianLayout><MyJobs /></TechnicianLayout>} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

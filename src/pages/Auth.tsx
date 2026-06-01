@@ -21,11 +21,12 @@ const Auth = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Check if user is already logged in
     const checkUser = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
-        navigate("/admin");
+        const { data: profile } = await supabase
+          .from('profiles').select('role').eq('id', session.user.id).maybeSingle();
+        navigate(profile?.role === 'technician' ? '/technician/jobs' : '/admin');
       }
     };
     checkUser();
@@ -36,24 +37,16 @@ const Auth = () => {
     setLoading(true);
     setError(null);
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
       setError(error.message);
-      toast({
-        variant: "destructive",
-        title: "Sign In Failed",
-        description: error.message,
-      });
+      toast({ variant: "destructive", title: "Sign In Failed", description: error.message });
     } else {
-      toast({
-        title: "Welcome back!",
-        description: "You have been signed in successfully.",
-      });
-      navigate("/admin");
+      toast({ title: "Welcome back!" });
+      const { data: profile } = await supabase
+        .from('profiles').select('role').eq('id', data.user.id).maybeSingle();
+      navigate(profile?.role === 'technician' ? '/technician/jobs' : '/admin');
     }
     setLoading(false);
   };

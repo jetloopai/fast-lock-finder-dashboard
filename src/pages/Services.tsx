@@ -139,7 +139,7 @@ const Services = () => {
             "@type": "Service",
             "name": "Professional Locksmith Services",
             "provider": {
-              "@type": "LocalBusiness",
+              "@type": "Locksmith",
               "name": "FastLockFinder",
               "url": "https://fastlockfinder.com"
             },

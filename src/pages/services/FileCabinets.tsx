@@ -23,7 +23,7 @@ const FileCabinets = () => {
             "name": "File Cabinet Lock Services",
             "description": "Professional file cabinet lock installation, repair, and key replacement services",
             "provider": {
-              "@type": "LocalBusiness",
+              "@type": "Locksmith",
               "name": "FastLockFinder",
               "address": {
                 "@type": "PostalAddress",

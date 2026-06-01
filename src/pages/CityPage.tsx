@@ -127,7 +127,7 @@ const CityPage = () => {
         <meta property="og:description" content={`Locked out in ${city.name}? Fast 15-minute arrival, 24/7 locksmith service near ${primaryLandmark} and ${secondaryLandmark}.`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://fastlockfinder.com/service-areas/${city.slug}-locksmith`} />
-        <meta property="og:image" content="https://fastlockfinder.com/og-city-locksmith.jpg" />
+        <meta property="og:image" content="https://fastlockfinder.com/og-city-locksmith.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -136,13 +136,13 @@ const CityPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${city.name} Locksmith | FastLockFinder 24/7`} />
         <meta name="twitter:description" content={`Emergency locksmith in ${city.name}. 15-min arrival, licensed & insured.`} />
-        <meta name="twitter:image" content="https://fastlockfinder.com/og-city-locksmith.jpg" />
+        <meta name="twitter:image" content="https://fastlockfinder.com/og-city-locksmith.png" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": "Locksmith",
             "name": `FastLockFinder - ${city.name} Locksmith`,
             "image": "https://fastlockfinder.com/logo.png",
             "url": `https://fastlockfinder.com/service-areas/${city.slug}-locksmith`,
@@ -153,11 +153,6 @@ const CityPage = () => {
               "addressLocality": city.name,
               "addressRegion": "IL",
               "addressCountry": "US"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 41.6034,
-              "longitude": -87.5665
             },
             "openingHours": "Mo-Su 00:00-23:59",
             "serviceArea": {

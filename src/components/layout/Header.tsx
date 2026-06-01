@@ -11,6 +11,7 @@ const Header = () => {
     { label: "Services", href: "/services" },
     { label: "Service Areas", href: "/service-areas" },
     { label: "About", href: "/about" },
+    { label: "Dashboard", href: "/auth" },
   ];
 
   return (
@@ -41,12 +42,6 @@ const Header = () => {
 
           {/* Phone CTA & Mobile Menu */}
           <div className="flex items-center space-x-2">
-            <Button variant="outline" size="sm" className="hidden md:flex" asChild>
-              <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
-                <Phone className="h-4 w-4" />
-                <span>Call Now</span>
-              </a>
-            </Button>
             <Button variant="cta" size="sm" asChild>
               <a href="tel:+1-773-377-6511" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />

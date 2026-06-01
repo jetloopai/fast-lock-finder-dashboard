@@ -51,7 +51,7 @@ const ServiceAreas = () => {
         <meta property="og:description" content="75+ areas served with 15-minute average response time. Professional locksmith services across Chicago and suburbs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fastlockfinder.com/service-areas" />
-        <meta property="og:image" content="https://fastlockfinder.com/og-service-areas.jpg" />
+        <meta property="og:image" content="https://fastlockfinder.com/og-fastlockfinder.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
@@ -59,13 +59,13 @@ const ServiceAreas = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Service Areas | Chicago Suburbs Locksmith" />
         <meta name="twitter:description" content="75+ areas served with 15-minute average response time. Professional locksmith services." />
-        <meta name="twitter:image" content="https://fastlockfinder.com/og-service-areas.jpg" />
+        <meta name="twitter:image" content="https://fastlockfinder.com/og-fastlockfinder.png" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": "Locksmith",
             "name": "FastLockFinder",
             "serviceArea": [
               "Chicago, IL", "Oak Lawn, IL", "Orland Park, IL", "Tinley Park, IL", "Blue Island, IL", 

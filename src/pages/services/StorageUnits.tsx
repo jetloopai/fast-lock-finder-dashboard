@@ -23,7 +23,7 @@ const StorageUnits = () => {
             "name": "Storage Unit Lock Services",
             "description": "Professional storage unit lock installation, repair, and replacement services",
             "provider": {
-              "@type": "LocalBusiness",
+              "@type": "Locksmith",
               "name": "FastLockFinder",
               "address": {
                 "@type": "PostalAddress",

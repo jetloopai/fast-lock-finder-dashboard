@@ -144,7 +144,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            &copy; 2024 FastLockFinder. All rights reserved. | 
+            &copy; 2026 FastLockFinder. All rights reserved. |
             <Link to="/privacy" className="hover:text-primary-foreground transition-colors ml-1">
               Privacy Policy
             </Link> | 

@@ -38,7 +38,7 @@ const Residential = () => {
             "@type": "Service",
             "name": "Residential Locksmith Services",
             "provider": {
-              "@type": "LocalBusiness",
+              "@type": "Locksmith",
               "name": "FastLockFinder",
               "url": "https://fastlockfinder.com",
               "telephone": "+1-773-377-6511"

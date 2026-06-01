@@ -23,7 +23,7 @@ const Mailboxes = () => {
             "name": "Mailbox Lock Services",
             "description": "Professional mailbox lock installation, repair, and key replacement services",
             "provider": {
-              "@type": "LocalBusiness",
+              "@type": "Locksmith",
               "name": "FastLockFinder",
               "address": {
                 "@type": "PostalAddress",

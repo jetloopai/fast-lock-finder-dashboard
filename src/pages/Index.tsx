@@ -26,7 +26,7 @@ const Index = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": "Locksmith",
             "name": "FastLockFinder",
             "description": "Professional locksmith services across Chicago's South & Southwest suburbs",
             "url": "https://fastlockfinder.com",

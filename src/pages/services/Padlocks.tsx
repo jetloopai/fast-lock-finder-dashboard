@@ -23,7 +23,7 @@ const Padlocks = () => {
             "name": "Padlock Services",
             "description": "Professional padlock installation, repair, and replacement services",
             "provider": {
-              "@type": "LocalBusiness",
+              "@type": "Locksmith",
               "name": "FastLockFinder",
               "address": {
                 "@type": "PostalAddress",

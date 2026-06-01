@@ -1,7 +1,7 @@
 const OrganizationSchema = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Locksmith",
     "name": "FastLockFinder",
     "image": "https://fastlockfinder.com/logo.png",
     "logo": "https://fastlockfinder.com/logo.png",
@@ -11,7 +11,6 @@ const OrganizationSchema = () => {
     "description": "Professional locksmith services available 24/7 across Chicago's South & Southwest suburbs. Fast response times, licensed and insured technicians.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Main Street",
       "addressLocality": "Oak Lawn",
       "addressRegion": "IL",
       "postalCode": "60453",
@@ -28,26 +27,26 @@ const OrganizationSchema = () => {
       "name": "Chicago South & Southwest Suburbs"
     },
     "areaServed": [
-      {
-        "@type": "Place",
-        "name": "Oak Lawn, IL"
-      },
-      {
-        "@type": "Place", 
-        "name": "Orland Park, IL"
-      },
-      {
-        "@type": "Place",
-        "name": "Tinley Park, IL"
-      },
-      {
-        "@type": "Place",
-        "name": "Homewood, IL"
-      },
-      {
-        "@type": "Place",
-        "name": "Frankfort, IL"
-      }
+      { "@type": "Place", "name": "Oak Lawn, IL" },
+      { "@type": "Place", "name": "Orland Park, IL" },
+      { "@type": "Place", "name": "Tinley Park, IL" },
+      { "@type": "Place", "name": "Homewood, IL" },
+      { "@type": "Place", "name": "Frankfort, IL" },
+      { "@type": "Place", "name": "Evergreen Park, IL" },
+      { "@type": "Place", "name": "Burbank, IL" },
+      { "@type": "Place", "name": "Alsip, IL" },
+      { "@type": "Place", "name": "Bridgeview, IL" },
+      { "@type": "Place", "name": "Calumet City, IL" },
+      { "@type": "Place", "name": "Harvey, IL" },
+      { "@type": "Place", "name": "Matteson, IL" },
+      { "@type": "Place", "name": "Palos Hills, IL" },
+      { "@type": "Place", "name": "Blue Island, IL" },
+      { "@type": "Place", "name": "Chicago Ridge, IL" },
+      { "@type": "Place", "name": "Worth, IL" },
+      { "@type": "Place", "name": "Oak Forest, IL" },
+      { "@type": "Place", "name": "Homer Glen, IL" },
+      { "@type": "Place", "name": "Mokena, IL" },
+      { "@type": "Place", "name": "New Lenox, IL" }
     ],
     "priceRange": "$$",
     "currenciesAccepted": "USD",
