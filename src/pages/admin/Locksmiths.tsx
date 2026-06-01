@@ -21,6 +21,8 @@ interface Locksmith {
   assigned_zips: string[];
   payment_method: string | null;
   default_cut_percent: number;
+  escalation_priority: number;
+  role: string | null;
   created_at: string;
 }
 
@@ -37,7 +39,9 @@ const Locksmiths = () => {
     active: true,
     assigned_zips: "",
     payment_method: "",
-    default_cut_percent: 60,
+    default_cut_percent: 40,
+    escalation_priority: 1,
+    role: "technician",
   });
   const { toast } = useToast();
 
@@ -83,6 +87,8 @@ const Locksmiths = () => {
         assigned_zips: zipArray,
         payment_method: formData.payment_method || null,
         default_cut_percent: formData.default_cut_percent,
+        escalation_priority: formData.escalation_priority,
+        role: formData.role,
       };
 
       if (editingLocksmith) {
@@ -132,7 +138,9 @@ const Locksmiths = () => {
       active: true,
       assigned_zips: "",
       payment_method: "",
-      default_cut_percent: 60,
+      default_cut_percent: 40,
+      escalation_priority: 1,
+      role: "technician",
     });
   };
 
@@ -146,6 +154,8 @@ const Locksmiths = () => {
       assigned_zips: locksmith.assigned_zips.join(", "),
       payment_method: locksmith.payment_method || "",
       default_cut_percent: locksmith.default_cut_percent,
+      escalation_priority: locksmith.escalation_priority ?? 1,
+      role: locksmith.role || "technician",
     });
     setIsDialogOpen(true);
   };
@@ -268,7 +278,7 @@ const Locksmiths = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="cut">Default Cut Percentage</Label>
+                  <Label htmlFor="cut">Tech Cut % (their share)</Label>
                   <Input
                     id="cut"
                     type="number"
@@ -277,6 +287,32 @@ const Locksmiths = () => {
                     value={formData.default_cut_percent}
                     onChange={(e) => setFormData({ ...formData, default_cut_percent: Number(e.target.value) })}
                   />
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-2">
+                    <Label htmlFor="priority">Call Order</Label>
+                    <Input
+                      id="priority"
+                      type="number"
+                      min="0"
+                      placeholder="0=first, 1=second..."
+                      value={formData.escalation_priority}
+                      onChange={(e) => setFormData({ ...formData, escalation_priority: Number(e.target.value) })}
+                    />
+                    <p className="text-xs text-muted-foreground">0 = rings first on new jobs</p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="role">Role</Label>
+                    <select
+                      id="role"
+                      className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm"
+                      value={formData.role}
+                      onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                    >
+                      <option value="dispatcher">Dispatcher</option>
+                      <option value="technician">Technician</option>
+                    </select>
+                  </div>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Switch
@@ -323,6 +359,8 @@ const Locksmiths = () => {
                 <TableRow>
                   <TableHead>Name</TableHead>
                   <TableHead>Contact</TableHead>
+                  <TableHead>Role</TableHead>
+                  <TableHead>Call Order</TableHead>
                   <TableHead>Status</TableHead>
                   <TableHead>ZIP Codes</TableHead>
                   <TableHead>Cut %</TableHead>
@@ -346,6 +384,14 @@ const Locksmiths = () => {
                           </div>
                         )}
                       </div>
+                    </TableCell>
+                    <TableCell>
+                      <Badge variant={locksmith.role === 'dispatcher' ? 'default' : 'secondary'} className="capitalize">
+                        {locksmith.role || 'technician'}
+                      </Badge>
+                    </TableCell>
+                    <TableCell className="text-center font-mono text-sm">
+                      #{locksmith.escalation_priority ?? '—'}
                     </TableCell>
                     <TableCell>
                       <Badge 
