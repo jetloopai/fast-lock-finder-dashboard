@@ -6,10 +6,10 @@ import HowItWorks from "@/components/home/HowItWorks";
 import Reviews from "@/components/home/Reviews";
 import FAQ from "@/components/home/FAQ";
 import ClosingCTA from "@/components/home/ClosingCTA";
-
 import EmergencySituations from "@/components/home/EmergencySituations";
 import PricingInfo from "@/components/home/PricingInfo";
 import BrandsEquipment from "@/components/home/BrandsEquipment";
+import GoogleReviews from "@/components/common/GoogleReviews";
 import { Helmet } from "react-helmet-async";
 
 const Index = () => {
@@ -74,6 +74,7 @@ const Index = () => {
       <BrandsEquipment />
       
       <Reviews />
+      <GoogleReviews />
       <FAQ />
       <ClosingCTA />
     </Layout>
